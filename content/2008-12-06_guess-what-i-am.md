@@ -1,0 +1,10 @@
+Title: Guess What I am?
+Date: 2008-12-06 14:10
+Tags: animation
+Slug: guess-what-i-am
+
+Mr Stick A and Mr Stick B are playing the game "Guess who I am". Mr
+Stick A needs to act like a soldier. Mr Stick B keeps guessing wrong...  
+Assignment for Animation I. Made with Maya.
+
+<!--more-->[vimeo]http://vimeo.com/2438621[/vimeo]
