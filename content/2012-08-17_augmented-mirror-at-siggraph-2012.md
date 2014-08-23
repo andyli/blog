@@ -3,10 +3,7 @@ Date: 2012-08-17 17:11
 Tags: Augmented Mirror, installation, SIGGRAPH
 Slug: augmented-mirror-at-siggraph-2012
 
-![Augmented Mirror at SIGGRAPH 2012](http://farm9.staticflickr.com/8426/7800537904_60b399ac1e_n.jpg)
-![Augmented Mirror at SIGGRAPH 2012](http://farm8.staticflickr.com/7260/7800578518_991d89b90a_n.jpg)
-![Augmented Mirror at SIGGRAPH 2012](http://farm9.staticflickr.com/8300/7800532140_7bfeb38cc1_n.jpg)
-![Augmented Mirror at SIGGRAPH 2012](http://farm8.staticflickr.com/7110/7800583172_921da5264e_n.jpg)
+![Augmented Mirror at SIGGRAPH 2012](http://farm9.staticflickr.com/8426/7800537904_60b399ac1e_n.jpg) ![Augmented Mirror at SIGGRAPH 2012](http://farm8.staticflickr.com/7260/7800578518_991d89b90a_n.jpg) ![Augmented Mirror at SIGGRAPH 2012](http://farm9.staticflickr.com/8300/7800532140_7bfeb38cc1_n.jpg) ![Augmented Mirror at SIGGRAPH 2012](http://farm8.staticflickr.com/7110/7800583172_921da5264e_n.jpg)
 
 I am back from [SIGGRAPH][]! It was a great experience to be with all
 the cool guys in Los Angeles showcasing [Augmented Mirror][], the

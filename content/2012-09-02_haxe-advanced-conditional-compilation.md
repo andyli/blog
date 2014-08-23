@@ -9,7 +9,7 @@ compiler flag of non-boolean type.
 
 ### The traditional way
 
-Usually we can define a flag **mydebug** in hxml:
+Usually we can define a flag `mydebug` in hxml:
 
 ```text
 -D mydebug
@@ -38,11 +38,11 @@ trace("some code for IE7");
 
 As shown above we need to specify every version before 7 for a piece of
 code that is for IE7.  
-It is problematic because for now we at most put **\#if (supportIE6 ||
-supportIE7 || supportIE8 || supportIE9 || supportIE10 || supportIE11)**
+It is problematic because for now we at most put `#if (supportIE6 ||
+supportIE7 || supportIE8 || supportIE9 || supportIE10 || supportIE11)`
 for a piece of IE11-specific code. But we don't know if IE will have
-version 99 and definitely we ~~do not care IE users~~ do not want to
-write **\#if (supportIE6 || supportIE7 || ... || supportIE99)** for a
+version 99 and definitely we <del>do not care IE users</del> do not want to
+write `#if (supportIE6 || supportIE7 || ... || supportIE99)` for a
 piece of IE99-specific code.
 
 ### The macros way
@@ -157,7 +157,7 @@ class CompilationOption {
 ### Alternative
 
 One alternative to the above is to have a macro that define all the
-**supportIE7**...**supportIE11** when **supportIE7** is passed.  
+`supportIE7`...`supportIE11` when `supportIE7` is passed.  
 The source code can now be:
 
 ```haxe
@@ -167,13 +167,13 @@ trace("some code for IE7");
 ```
 
 It is very similar to how the Haxe compiler handles Haxe version
-currently (**haxe\_208**, **haxe\_209**, **haxe\_210** are defined when
+currently (`haxe_208`, `haxe_209`, `haxe_210` are defined when
 using Haxe 2.10).
 
 ### Improvement
 
 Generally it is better to integrate the macro into specific class when
-needed, instead of using the **CompilationOption** class above. Because:
+needed, instead of using the `CompilationOption` class above. Because:
 
 Firstly, the value type is unspecified. Although it is still typed after
 one specified a value, but user may have to guess or look it up before

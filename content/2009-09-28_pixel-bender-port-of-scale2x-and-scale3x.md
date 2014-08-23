@@ -18,7 +18,7 @@ convert the image to 4-color-only, and than use the scale2x filter to
 enlarge the low resolution capture. The top-left corner thumbnail-like
 image is actually the original 1:1 input(160\*120).
 
-[youtube]http://www.youtube.com/watch?v=3PHPc2it4ww[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/3PHPc2it4ww" frameborder="0" allowfullscreen></iframe>
 
 It is quite interesting to see for scale2x, PB's version nearly doubles
 the performance of AS3's. But for scale3x, there is not much different

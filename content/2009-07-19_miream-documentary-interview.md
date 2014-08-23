@@ -6,7 +6,7 @@ Slug: miream-documentary-interview
 This is a documentary interview video of the installation project,
 Miream.
 
-[vimeo]http://www.vimeo.com/5641980[/vimeo]
+<iframe src="//player.vimeo.com/video/5641980" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 [download HD version (1920x1080 25p MP4 651MB)][]
 

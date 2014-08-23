@@ -27,7 +27,7 @@ Since its put on haxelib, you can install it using the command:
 
     haxelib install jQueryExtern
 
-and then add "-lib jQueryExtern" in the hxml.
+and then add `-lib jQueryExtern` in the hxml.
 
 OR, you can download the cutting edge version from github:
 <http://github.com/andyli/jQueryExternForHaxe>, extract and place
@@ -54,9 +54,9 @@ $(document).ready(function(){
 });
 ```
 
-HaXe does not allow using "\$" as a class name or a function name, but
-"\$" is just a short-hand to "jQuery". However, haXe requires all class
-names start with capital letter, so it is "JQuery" not "jQuery". You
+HaXe does not allow using `$` as a class name or a function name, but
+`$` is just a short-hand to `jQuery`. However, haXe requires all class
+names start with capital letter, so it is `JQuery` not `jQuery`. You
 start your haXe/JS codes using the jQuery extern as following:
 
 ```haXe
@@ -73,19 +73,19 @@ class Main {
 
 It seems to be a few lines more than JS, but you should already know,
 the extra lines are the same for all other haXe targets, its how haXe
-program starts. The main point is "new JQuery(...)" which is the same as
-"\$(...)" in JS.
+program starts. The main point is `new JQuery(...)` which is the same as
+`$(...)` in JS.
 
 So, when you code in JS like:
 
 ```JavaScript
- $("#myMightyDiv").hide();
+$("#myMightyDiv").hide();
 ```
 
 now you do the same in haXe:
 
 ```haXe
-   new JQuery("#myMightyDiv").hide();
+new JQuery("#myMightyDiv").hide();
 ```
 
 Simple.
@@ -93,21 +93,21 @@ Simple.
 ### Static functions
 
 One thing to aware, that is the static methods of jQuery are placed to
-"JQueryS" in the extern. The reason is haXe does not allow using same
+`JQueryS` in the extern. The reason is haXe does not allow using same
 name for both static and instance methods. For example in the original
-jQuery, there is "\$.data()" and "\$(...).data()", they are now in the
-extern as "JQueryS.data()" and "new JQuery(...).data()".
+jQuery, there is `$.data()` and `$(...).data()`, they are now in the
+extern as `JQueryS.data()` and `new JQuery(...).data()`.
 
 ### Extra methods in the jQuery extern
 
 And there are some extra methods appears in the extern comparing to the
-original jQuery. For example, there is "cssSet()", and it is just the
-same as "css()" but limiting you to really setting a css property and it
+original jQuery. For example, there is `cssSet()`, and it is just the
+same as `css()` but limiting you to really setting a css property and it
 is properly typed as returning a JQuery object, so you can happily
 chaining the methods with code completion and type checking. All the
-extra methods are like that and they are all set as "inline", so that
-the haXe compiler will generate correct codes, that is "css()" not
-"cssSet()" in the compiled JS, because "cssSet()" is not really existing
+extra methods are like that and they are all set as `inline`, so that
+the haXe compiler will generate correct codes, that is `css()` not
+`cssSet()` in the compiled JS, because `cssSet()` is not really existing
 in jQuery. And because they are not really existing, don't try to call
 the extra methods with Reflect.
 
@@ -135,18 +135,21 @@ In haXe, with my extern, you have to write:
 import JQuery;
 //there are several classes in Overlay.hx, we "using" only the "Overlay" class.
 using jQueryPlugins.jQueryTools.Overlay.Overlay;
-...
-new JQuery(".my_overlay_trigger").overlay({...});
-...
+
+/* ... */
+
+new JQuery(".my_overlay_trigger").overlay({/* ... */});
+
+/* ... */
 ```
 
 Because this implementation doesn't deal with optional parameter very
 well, in most of the cases I made the optional parameters mandatory. If
 the method has a optional config parameter, but you just want to use the
-defaults, simply pass in "{}".
+defaults, simply pass in `{}`.
 
 And there are many cases some functions does not fit that well, I've
-wrap them into classes/methods with "inline". You may have to look at
+wrap them into classes/methods with `inline`. You may have to look at
 the source file to fully understand how to use.
 
 There will be more plug-ins to come when I need them. Feel free to

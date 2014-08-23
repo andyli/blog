@@ -11,23 +11,15 @@ It is of course fine to detect memory leak in this way, but it is always
 good to have a way that asserts your objects are really [GC][]'ed at
 some point.
 
-The trick is to use a Dictionary with weak-reference keys and check its
+The trick is to use a `Dictionary` with weak-reference keys and check its
 element count. It is already quite popular in the Java world but look
 like there aren't many Flash devs talking about it.
 
-A simple demo on how to write such test, source is available in
-wonderfl:
-
-<p>
-[RAW]  
+A simple demo on how to write such test, [source is available in
+wonderfl](http://wonderfl.net/c/ohTv):
 
 <script type="text/javascript" src="http://wonderfl.net/blogparts/ohTv/js"></script>
-[Memory leak unit test - wonderfl build flash online][]
-
-[/RAW]
 
   [Memory leak]: http://en.wikipedia.org/wiki/Memory_leak
   [GC]: http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)
     "garbage collection"
-  [Memory leak unit test - wonderfl build flash online]: http://wonderfl.net/c/ohTv
-    "Memory leak unit test"

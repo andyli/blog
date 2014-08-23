@@ -24,7 +24,7 @@ run one or multiple `TestCase` instances.
 I usually create one class for each class I want to test and create one
 test method for each of the methods.
 
-For example we want to test the `[StringTools][]`
+For example we want to test the [StringTools][]
 class in the top-level package of the Haxe std library. Here we wrote
 the test function for 2 methods, `endsWith` and `hex`:
 
@@ -100,7 +100,7 @@ possible. Let's start doing it today if you haven't!
 
   [haxe.unit]: http://haxe.org/doc/cross/unit
   [Haxe 1.02]: https://code.google.com/p/haxe/source/browse/trunk/doc/CHANGES.txt#1051
-  [StringTools]: http://haxe.org/api/StringTools
+  [StringTools]: http://api.haxe.org/StringTools.html
   [CI]: http://en.wikipedia.org/wiki/Continuous_integration
   [TravisCI]: http://blog.onthewings.net/2013/03/19/automated-unit-testing-for-haxe-project-using-travis-ci/
   [munit]: https://github.com/massiveinteractive/MassiveUnit

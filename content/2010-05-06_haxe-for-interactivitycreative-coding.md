@@ -5,9 +5,8 @@ Slug: haxe-for-interactivitycreative-coding
 
 ### haXe fits the gap in interactivity/creative coding
 
-[caption id="attachment\_802" align="alignright" width="360"
-caption="Processing, one of the most well-known language/framework for
-creative coding."][![][]][][/caption]
+[![Processing, one of the most well-known language/framework for
+creative coding.](http://blog.onthewings.net/wp-content/uploads/2010/05/processing-webpage-450x297.png)](http://processing.org/exhibition/)
 
 For interactivity/creative coding, except the graphical
 programming platforms like [Pure Data][], [Max][] and [Isadora][], there
@@ -47,9 +46,10 @@ First of all, a real solid IDE. Yes, there are [several IDEs with haXe
 plug-in][] you can choose: On Windows you have [FlashDevelop][], on Mac
 you have TextMate(I haven't tried) and Linux there is Gedit.
 
-[caption id="attachment\_810" align="alignleft" width="315"
-caption="FlashDevelop has build in support for haXe as well as
-ActionScript."][![][1]][FlashDevelop][/caption]
+FlashDevelop has build in support for haXe as well as
+ActionScript:
+[![FlashDevelop has build in support for haXe as well as
+ActionScript.](http://blog.onthewings.net/wp-content/uploads/2010/05/haXe-FD-450x399.png)](http://www.flashdevelop.org/)
 
 But if you want a cross-platform one, no, not yet. Cross-platform is
 important for creative coding as designers/artistes really love Mac. The
@@ -87,9 +87,6 @@ lib and 2D physic engine from [polygonal lab][] ([available from
 haxelib][]). But for interactivity/creative coding, libraries for vector
 graphics, image processing, hardware integration etc. are still missing.
 
-[caption id="" align="alignright" width="316" caption="Arduino. Photo by
-Nicholas Zambetti"][![][2]][][/caption]
-
 I'm working on this area, trying to port some of the libraries from
 different languages or at least to create a haXe binding. I first
 [ported Casa Lib][], as [CasaHx][], which is a big collection of small
@@ -97,7 +94,9 @@ classes. I'm also [working on C++ target of Sandy3D][], but still
 waiting for the next release of [hxcpp][] and the release of
 [nme2][]. [hxSerial][] is my latest creation, based on ofSerial in
 OpenFrameworks, enabling serial port communication from haXe/C++
-program, so that you can talk to [Arduino][![][2]], for example.
+program, so that you can talk to [Arduino](http://arduino.cc/), for example.
+
+[![Arduino. Photo by Nicholas Zambetti](http://arduino.cc/en/uploads/Main/arduino316.jpg)](http://arduino.cc/)
 
 Some ideas I will try later in the future (if I have time) will be:
 
@@ -120,9 +119,6 @@ is always a good thing if there are more people you can share your
 creations with and ask question from. Hope the community will grow after
 the above is improved :)
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/05/processing-webpage-450x297.png
-    "Processing Webpage"
-  [![][]]: http://processing.org/exhibition/
   [Pure Data]: http://puredata.info/
   [Max]: http://cycling74.com/products/maxmspjitter/
   [Isadora]: http://www.troikatronix.com/isadora.html
@@ -133,8 +129,6 @@ the above is improved :)
   [canvas-nme]: http://bitbucket.org/grumpytoad/canvas-nme
   [several IDEs with haXe plug-in]: http://haxe.org/com/ide
   [FlashDevelop]: http://www.flashdevelop.org/
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/05/haXe-FD-450x399.png
-    "Create haXe project in FlashDevelop"
   [eclihx]: http://code.google.com/p/eclihx/
   [FDT]: http://fdt.powerflasher.com/
   [open source developers can get a free license from them]: http://www.fdt.powerflasher.com/developer-tools/fdt-3/meta-content/os-request/
@@ -143,8 +137,6 @@ the above is improved :)
   [Google group created over there]: http://groups.google.at/group/hide_haxe
   [polygonal lab]: http://lab.polygonal.de/
   [available from haxelib]: http://lib.haxe.org/p/polygonal
-  [2]: http://arduino.cc/en/uploads/Main/arduino316.jpg "Arduino"
-  [![][2]]: http://arduino.cc/
   [ported Casa Lib]: http://blog.onthewings.net/2010/04/06/casahx-casa-lib-for-haxe/
   [CasaHx]: http://github.com/andyli/casahx
   [working on C++ target of Sandy3D]: http://blog.onthewings.net/2010/03/18/sandy3d-c-haxe/

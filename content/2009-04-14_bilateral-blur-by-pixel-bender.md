@@ -16,23 +16,19 @@ accessing vector/matrix elements with variable index is not possible.
 
 Anyway, here below is a demo.
 
-[caption id="attachment\_365" align="alignnone" width="450"
-caption="Before applying filter."][![Before applying
-filter.][]][][/caption]
+Before applying filter:
+![Before applying filter.][]
 
-[caption id="attachment\_366" align="alignnone" width="450"
-caption="After applying filter."][![After applying
-filter.][]][][/caption]
+After applying filter:
+![After applying filter.][]
 
 Hope I can further optimize it later. (or better Adobe gives us GPU mode
 :lol: )
 
 UPDATED: [See this blog post][]
 
-  [Before applying filter.]: http://blog.onthewings.net/wp-content/uploads/2009/04/before-450x337.png
+  [Before applying filter.]: http://blog.onthewings.net/wp-content/uploads/2009/04/before.png
     "before"
-  [![Before applying filter.][]]: http://blog.onthewings.net/wp-content/uploads/2009/04/before.png
-  [After applying filter.]: http://blog.onthewings.net/wp-content/uploads/2009/04/after-450x337.png
+  [After applying filter.]: http://blog.onthewings.net/wp-content/uploads/2009/04/after.png
     "after"
-  [![After applying filter.][]]: http://blog.onthewings.net/wp-content/uploads/2009/04/after.png
   [See this blog post]: http://blog.onthewings.net/2009/04/24/the-bilateral-blur-filter-for-flash-is-now-on-pixel-bender-exchange-in-staff-picks/

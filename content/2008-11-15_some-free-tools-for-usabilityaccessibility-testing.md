@@ -10,17 +10,7 @@ faster, easier and cheaper. Here below are some tools I found useful:
 HTML VALIDATOR (Firefox add-on)
 -------------------------------
 
-<div class="imageframe alignleft" style="width: 200px;">
-
-[![HTML Validator in action][]][]
-</p>
-<div class="imagecaption">
-
-HTML Validator in action
-
-</div>
-
-</div>
+![HTML Validator in action][]
 
 Homepage: <http://users.skynet.be/mgueury/mozilla/>
 
@@ -65,6 +55,4 @@ a few: button to resize your window to 800\*600 (or any other presets),
 button for W3C validation service, disable cache, disable javascript
 etc.
 
-  [HTML Validator in action]: http://blog.onthewings.net/wp-content/uploads/2008/11/tidy80_preview.thumbnail.png
-  [![HTML Validator in action][]]: http://blog.onthewings.net/wp-content/uploads/2008/11/tidy80_preview.png
-    "HTML Validator in action"
+  [HTML Validator in action]: http://blog.onthewings.net/wp-content/uploads/2008/11/tidy80_preview.png

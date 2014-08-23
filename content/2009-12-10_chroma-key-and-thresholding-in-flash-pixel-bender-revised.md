@@ -5,7 +5,7 @@ Slug: chroma-key-and-thresholding-in-flash-pixel-bender-revised
 
 ![yellowFiltered][]
 
-### [\>\>Demo\<\< <span style="font-size: smaller;">(Click to toggle filter)</span>][]
+### [Demo][] (Click to toggle filter)
 
 [source (Flex project including pbk)][]
 
@@ -18,6 +18,5 @@ measure it and post the different?
 
   [yellowFiltered]: http://blog.onthewings.net/wp-content/uploads/2009/12/yellowFiltered-450x337.png
     "yellowFiltered"
-  [\>\>Demo\<\< <span style="font-size: smaller;">(Click to toggle
-  filter)</span>]: http://blog.onthewings.net/wp-content/uploads/2009/12/colorDifference.html
+  [Demo]: http://blog.onthewings.net/wp-content/uploads/2009/12/colorDifference.html
   [source (Flex project including pbk)]: http://blog.onthewings.net/wp-content/uploads/2009/12/colorDifference.zip

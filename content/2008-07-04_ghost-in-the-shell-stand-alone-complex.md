@@ -5,7 +5,7 @@ Slug: ghost-in-the-shell-stand-alone-complex
 
 Finally finished watching the whole series (26 episodes).
 
-[![Opening of 攻殻機動隊 STAND ALONE COMPLEX][]][]I really love the
+![Opening of 攻殻機動隊 STAND ALONE COMPLEX][]I really love the
 story, the characters and the meanings behind. Several elements I loved
 are presented in the story - cg effects, computer (or IT) related yet
 close-to-reality backgrounds, machines, wars etc.
@@ -17,7 +17,7 @@ you can do nearly anything (virtually, at least). Also, the armors
 (我指機動裝甲, 有人控制那種, 不是攻殻車) in Ghost in the Shell are very
 similar to those in Matrix, or even more similar to those in Appleseed.
 
-[![Remaining three 攻殻車 talking about their fellows.][]][]I think I
+![Remaining three 攻殻車 talking about their fellows.][]I think I
 really need to mention those 攻殻車 which are soooooo cute and human!
 They are machines that equipped with high-end AI. They help session9
 attack, can be loaded with and/or controlled by humen. In the story,
@@ -35,9 +35,5 @@ to lab).
 <script src="http://shots.snap.com//client/inject.js?site_name=0" type="text/javascript"></script>
 </p>
 
-  [Opening of 攻殻機動隊 STAND ALONE COMPLEX]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac_title.thumbnail.jpg
-  [![Opening of 攻殻機動隊 STAND ALONE COMPLEX][]]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac_title.jpg
-    "Opening of 攻殻機動隊 STAND ALONE COMPLEX"
-  [Remaining three 攻殻車 talking about their fellows.]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac.thumbnail.jpg
-  [![Remaining three 攻殻車 talking about their fellows.][]]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac.jpg
-    "Remaining three 攻殻車 talking about their fellows."
+  [Opening of 攻殻機動隊 STAND ALONE COMPLEX]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac_title.jpg
+  [Remaining three 攻殻車 talking about their fellows.]: http://blog.onthewings.net/wp-content/uploads/2008/07/ghostintheshellsac.jpg

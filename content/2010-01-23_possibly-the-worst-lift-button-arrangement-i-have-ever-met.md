@@ -7,7 +7,7 @@ Here we have many lifts in Hong Kong since we have so many tall
 buildings. One of the lift I am using very often is the one inside
 Festival Walk(a shopping mall). Here are its buttons:
 
-[![Buttons in the lift of Festival Walk][]][]
+![Buttons in the lift of Festival Walk][]
 
 First of all, the mixed use of letters and numbers (also an icon) to
 name floor is confusing. I have seen many people had difficulty finding
@@ -30,12 +30,12 @@ Lastly, the arrangement of the grid is confusing. The arrangement is
 different from written English(left to right, top to bottom)
 or traditional Chinese(top to bottom, right to left). See below:
 
-[![][]][]
+![arrangments](http://blog.onthewings.net/wp-content/uploads/2010/01/arrangments.png)
 
 Not only Festival Walk, but also City University of Hong Kong has this
 arrangment:
 
-[![Buttons in the lift of City University of Hong Kong][]][]
+![Buttons in the lift of City University of Hong Kong][]
 
 Is that only Hong Kong has these kind of lift? If so, maybe that's
 because we Hong Kong people are proud to have both Western and Chinese
@@ -45,12 +45,5 @@ Update:
 I finally have found another example of the arrangement, that is...
 Japanese comic?!
 
-  [Buttons in the lift of Festival Walk]: http://farm3.staticflickr.com/2714/4297220330_e87d036e51_z.jpg?zz=1
-  [![Buttons in the lift of Festival Walk][]]: http://www.flickr.com/photos/andy-li/4297220330/
-    "Buttons in the lift of Festival Walk by on_the_wings, on Flickr"
-  []: http://blog.onthewings.net/wp-content/uploads/2010/01/arrangments.png
-    "arrangments"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/01/arrangments.png
+  [Buttons in the lift of Festival Walk]: http://farm3.staticflickr.com/2714/4297220330_e87d036e51_z.jpg
   [Buttons in the lift of City University of Hong Kong]: http://farm3.staticflickr.com/2709/4296473837_c11e29626a_z.jpg?zz=1
-  [![Buttons in the lift of City University of Hong Kong][]]: http://www.flickr.com/photos/andy-li/4296473837/
-    "Buttons in the lift of City University of Hong Kong by on_the_wings, on Flickr"

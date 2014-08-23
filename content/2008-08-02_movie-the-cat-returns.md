@@ -4,4 +4,4 @@ Tags: movie
 Slug: movie-%e8%b2%93%e4%b9%8b%e5%a0%b1%e6%81%a9-the-cat-returns
 
 到今時今日先睇... 認真out... XD  
-不過套野唔錯AR\~
+不過套野唔錯AR~

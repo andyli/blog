@@ -29,7 +29,7 @@ For those haven't tried haxe/cpp:
 4.  Browse to hxOpenFramework and try compiling the examples.
     1.  Windows: `cd C:\Motion-Twin\haxe\lib\hxOpenFrameworks\0,062,0`  
         Mac/Linux: `cd /usr/lib/haxe/lib/hxOpenFrameworks/0,062,0`
-    2.  Open *of/examples/Main.hx*(previously is in the root dir, see
+    2.  Open *of/examples/Main.hx* (previously is in the root dir, see
         [issue 1][]) and uncomment one of the examples.
     3.  `haxe compile-{your_platform}.hxml`
 

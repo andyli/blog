@@ -3,8 +3,7 @@ Date: 2009-07-14 01:49
 Tags: experiment, Flash, Flex
 Slug: simulating-atomic-model-of-metal-by-box2dflash
 
-[flickr-gallery mode="photoset" photoset="72157621394341446"]Click
-images above to enlarge.
+<iframe src="https://www.flickr.com/photos/andy-li/3716779279/in/set-72157621394341446/player/" width="640" height="480" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 Impressed by the video [here][], I tried to simulate the atomic model of
 metal in Flash using Box2DFlash.
@@ -21,8 +20,8 @@ movement). It can save some time from not rendering them in each frame.
 for a few seconds after "start" is pressed. And it takes several minutes
 to an hour to finish (when sleep count == atom count).  
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/07/atomicModelSim.swf,
-640, 480[/SWF]  
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/07/atomicModelSim.swf" width="640" height="480" id="swf35721" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
+
 [source][]
 
   [here]: http://createdigitalmotion.com/2009/07/06/a-different-view-of-particles-real-world-pinscreens/

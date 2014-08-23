@@ -51,7 +51,7 @@ All we have to do is to create a base class, for example:
 /**
  * Horse is... some kind of four-legged animal.
  */
-class Horse>
+class Horse<This:Horse<This>>
 {
     /*
      * Horse is a base abstract class, so private constructor here.
@@ -71,7 +71,7 @@ class Horse>
 And create a class that actually used by others:
 
 ```haxe
-class NormalHorse extends Horse {
+class NormalHorse extends Horse<NormalHorse> {
     public function new() {
         super();
     }
@@ -89,7 +89,7 @@ subclass:
 /*
  * When a SpecialHorse is cloned, there is some chance it gives birth to a unicorn(!).
  */
-class SpecialHorse extends Horse {
+class SpecialHorse extends Horse<SpecialHorse> {
     public var hasHorn(default, null):Bool;
     
     public function new() {
@@ -142,7 +142,7 @@ But of course, if you want to extend SpecialHorse, it suffers the same
 problem, unless you turn SpecialHorse into a base abstract class too.
 
 ```haxe
-class SpecialHorse> extends Horse{
+class SpecialHorse<This:SpecialHorse<This>> extends Horse<This> {
     public var hasHorn(default, null):Bool;
     
     private function new() {

@@ -3,12 +3,12 @@ Date: 2010-02-02 15:58
 Tags: Apple, Firefox, iPhone
 Slug: a-greasemonkey-script-for-you-to-try-the-amazingawesomegreatincredible-ipad-web-experience
 
-[caption id="attachment\_702" align="alignleft" width="314"
-caption="Concept image from The Flash Blog demostrates iPad's ultimate
-browsing experience."][![][]][][/caption]
+Concept image from The Flash Blog demostrates iPad's ultimate
+browsing experience:
+![](http://blog.onthewings.net/wp-content/uploads/2010/02/Aviary-theflashblog-com-Picture-1.png)
 
 Steve Jobs says the iPad is ["Amazing, Awesome, Beautiful, Great,
-Incredible, Really Nice and Unbelievable"][]. I'm sure you wanna try it.
+Incredible, Really Nice and Unbelievable"](http://gizmodo.com/5461445/the-apple-ipad-keynote-in-3-minutes-of-adjectives). I'm sure you wanna try it.
 If you still haven't get one to experience by yourself, here I made a
 little GreaseMonkey script for you to feel it first.
 
@@ -22,9 +22,4 @@ glory of Apple.
 Update:  
 You can use it in Chrome now (if you have extension enabled)!
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/02/Aviary-theflashblog-com-Picture-1.png
-    "ultimate browsing experience of iPad"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/02/Aviary-theflashblog-com-Picture-1.png
-  ["Amazing, Awesome, Beautiful, Great, Incredible, Really Nice and
-  Unbelievable"]: http://gizmodo.com/5461445/the-apple-ipad-keynote-in-3-minutes-of-adjectives
   [iPad experience script]: http://userscripts.org/scripts/show/67828

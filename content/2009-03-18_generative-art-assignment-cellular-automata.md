@@ -3,7 +3,7 @@ Date: 2009-03-18 11:50
 Tags: Flash
 Slug: generative-art-assignment-cellular-automata
 
-[flickr-gallery mode="photoset" photoset="72157615576255590"]
+<iframe src="https://www.flickr.com/photos/andy-li/3365645006/in/set-72157615576255590/player/" width="100%" height="400" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 Finally I can post some recent Flash stuff I've done... So many stuffs
 are not yet ready and some are just silly.
@@ -11,8 +11,7 @@ are not yet ready and some are just silly.
 This week's Flash assignment, is to generate music with [Cellular
 Automata][].
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/03/main.swf,
-800, 600[/SWF]
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/03/main.swf" width="800" height="600" id="swf0e301" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
 
 The seed should be comma-separated values of 0-3.
 

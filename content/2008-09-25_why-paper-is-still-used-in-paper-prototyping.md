@@ -10,7 +10,7 @@ before building the interface out. It is widely used in the industry
 because it do not cause much and easy to do. If you have no idea what
 paper prototype is, here is a video demonstrating it:
 
-[youtube]http://www.youtube.com/watch?v=GrV2SZuRPv0[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/GrV2SZuRPv0" frameborder="0" allowfullscreen></iframe>
 
 I was surprised when I first know what they are... Testing cyber things
 in such a old-school way (and still be widely used) is just

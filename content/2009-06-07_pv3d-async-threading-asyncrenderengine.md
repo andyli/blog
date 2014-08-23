@@ -29,7 +29,7 @@ One last thing, Flash's drawing algorithm seems affecting the async
 rendering performance too. So I do not add the viewport to stage.
 Instead, once RENDER\_DONE, I draw the viewport on a Bitmap on stage.
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/06/asyncrendererdemo.swf,820,620[/SWF]
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/06/asyncrendererdemo.swf" width="820" height="620" id="swf4c3e1" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
 
 [source][]
 

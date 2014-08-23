@@ -3,21 +3,18 @@ Date: 2008-10-31 06:02
 Tags: Processing
 Slug: my-first-processing-work-bullethell
 
-<p>
 Here is my first Processing work, shown to you by the mighty
 processing.js.  
-It can't be shown on IE.  
-<!--more-->  
-<!--–start_raw–-->  
+It can't be shown on IE.
+
+<!-- PELICAN_END_SUMMARY -->
 
 <canvas id="bulletHellCanvas" width="680" height="480">
 </canvas>
-  
 
-</p>
 Source code:
 
-``` {#bulletHellSrc lang="processing" line="1"}
+```java
 float[][] rocks = new float[50][4];
 float[] ship = new float[2];
 int lifetime = 0;
@@ -112,16 +109,8 @@ void init_var(){
 }
 ```
 
-<p>
-<script src="http://www.onthewings.net/script/processing.js" type="text/javascript"></script>
-<script src="http://www.onthewings.net/script/jquery.js" type="text/javascript"></script>
-  
-
-<script type="text/javascript"><!--<br />
-Processing("bulletHellCanvas", $("#bulletHellSrc").text());<br />
-// --></script>
-  
-<!--–end_raw–-->
-
-</p>
+<script src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+new Processing("bulletHellCanvas", document.getElementsByTagName("pre")[0].textContent);
+</script>
 

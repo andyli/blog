@@ -4,7 +4,7 @@ Tags: Flash, web 2.0
 Slug: here-is-another-reason-flash-is-better-than-ajax-for-web-apps
 
 [AppleInsider | IE8's JavaScript performance lags well behind Safari,
-Chrome][]
+Chrome](http://www.appleinsider.com/articles/09/01/27/ie8s_javascript_performance_lags_well_behind_safari_chrome.html)
 
 Above is a recent article on the JavaScript performance of the
 next-generation web browsers/rendering engines, including IE8, Firefox
@@ -30,6 +30,4 @@ but seems that there is no recent benchmark that aims for this (only [a
 2007 one][]). Hopefully I will have time to do it by myself in this
 week.
 
-  [AppleInsider | IE8's JavaScript performance lags well behind Safari,
-  Chrome]: http://www.appleinsider.com/articles/09/01/27/ie8s_javascript_performance_lags_well_behind_safari_chrome.html
   [a 2007 one]: http://www.jamesward.com/blog/2007/04/30/ajax-and-flex-data-loading-benchmarks/

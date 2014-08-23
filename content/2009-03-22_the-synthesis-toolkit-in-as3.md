@@ -17,8 +17,7 @@ Updated 2009-09-19: More instruments are ported and added to the demo.
 **Note that every element's loudness is different, adjust your speaker
 so that your ears wouldn't hurt :)**
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/03/stkDemo\_20090919.swf,
-400, 300[/SWF]
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/03/stkDemo_20090919.swf" width="400" height="300" id="swf33401" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
 
 Download link can be found in [STK in AS3 in Google Code][].
 

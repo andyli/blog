@@ -31,7 +31,7 @@ when using the `untyped` keyword in an expression.
 
 For illustration, I will explain a frequently faced problem that is how
 to use jQuery plug-in in Haxe (following will use [jQueryExtern][]). In
-case there is a plug-in that will add a method "`.imageLoader(config)`"
+case there is a plug-in that will add a method, `.imageLoader(config)`,
 to jQuery. But since there is no such method declared in the JQuery
 extern class, if you simply compile `new JQuery("#images").imageLoader({});`, 
 it will certainly fail with error "**jQuery.JQuery has no field imageLoader**".

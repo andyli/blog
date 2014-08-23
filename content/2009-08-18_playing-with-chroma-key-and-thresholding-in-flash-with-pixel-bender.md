@@ -7,7 +7,7 @@ While [traveling with my gf in Europe][], I'm planning to develop a
 better technique to use color marker in FLARtoolkit (which I've [tried
 before][]).
 
-[youtube]http://www.youtube.com/watch?v=coDZ7VUogh4[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/coDZ7VUogh4" frameborder="0" allowfullscreen></iframe>
 
 For the first step of doing so is to find a algorithm of matching
 colors. Using blend mode "difference" on the image is not flexible and

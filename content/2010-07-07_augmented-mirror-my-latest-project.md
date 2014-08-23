@@ -16,20 +16,12 @@ show of [School of Creative Media][]).
 
 Here below is an interview done in Playful Media:
 
-[youtube width="740"
-height="440"]http://www.youtube.com/watch?v=xDm\_wB07gwc[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/xDm_wB07gwc" frameborder="0" allowfullscreen></iframe>
 
 I'm glad that the artwork is mentioned in some of the news on the
 exhibitions:
 
-+--------------------------------------+--------------------------------------+
-| <p>                                  | <p>                                  |
-| [caption id="attachment\_814"        | [caption id="attachment\_815"        |
-| align="alignnone" width="235"        | align="alignnone" width="450"        |
-| caption="Augmented Mirror appearing  | caption="Augmented Mirror appearing  |
-| on the CityU                         | on HK Headline                       |
-| News."][![][]][][/caption]           | (頭條日報)."][![][1]][][/caption]    |
-+--------------------------------------+--------------------------------------+
+[![Augmented Mirror appearing on the CityU News.](http://blog.onthewings.net/wp-content/uploads/2010/06/cityu-news-235x450.png)](http://wikisites.cityu.edu.hk/sites/newscentre/en/Pages/201006030900.aspx) [![Augmented Mirror appearing on HK Headline (頭條日報).](http://blog.onthewings.net/wp-content/uploads/2010/06/hkheadline-450x225.png)](http://blog.onthewings.net/wp-content/uploads/2010/06/hkheadline.png)
 
 By the way, thanks for my teachers and schoolmates for all the efforts
 put in the exhibitions!
@@ -40,9 +32,3 @@ put in the exhibitions!
   [BSc Creative Media]: http://sweb.cityu.edu.hk/bsccm/
   [The SCM Annual]: http://www.thescmannual.hk/
   [School of Creative Media]: http://www.cityu.edu.hk/scm/
-  []: http://blog.onthewings.net/wp-content/uploads/2010/06/cityu-news-235x450.png
-    "CityU News"
-  [![][]]: http://wikisites.cityu.edu.hk/sites/newscentre/en/Pages/201006030900.aspx
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/06/hkheadline-450x225.png
-    "HK Headline (頭條日報)"
-  [![][1]]: http://blog.onthewings.net/wp-content/uploads/2010/06/hkheadline.png

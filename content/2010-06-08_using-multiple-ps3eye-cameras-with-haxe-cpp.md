@@ -15,15 +15,9 @@ calibrate them and compute a disparity map to get the depth info of the
 capture subject. What it means is you can do 3D tracking and probably
 3D gesturing like [Project Natal][]. And yes, I use PS3Eyes.
 
-<div style="width:700px;height: 320px;">
+[![4 PS3Eyes combined with their original parts (Front view).](http://farm5.static.flickr.com/4061/4681572508_07db8a3c62.jpg)](http://www.flickr.com/photos/andy-li/4681572508/)
 
-[caption id="" align="alignleft" width="315" caption="4 PS3Eyes combined
-with their original parts (Front view)."][![][]][][/caption]
-
-[caption id="" align="alignleft" width="315" caption="4 PS3Eyes combined
-with their original parts (Rear view)."][![][1]][][/caption]
-
-</div>
+[![4 PS3Eyes combined with their original parts (Rear view).](http://farm5.static.flickr.com/4049/4681573632_d1cfdf5010.jpg)](http://www.flickr.com/photos/andy-li/4681573632/)
 
 I was using Ubuntu and [OpenFrameworks][] for the project and everything
 is fine. You do not need to install a driver for using PS3Eye, however,
@@ -41,12 +35,6 @@ it is quite stable I think.
   [Sony PS3Eye]: http://peauproductions.com/ps3.html
   [OpenCV]: http://opencv.willowgarage.com/
   [Project Natal]: http://www.xbox.com/en-us/live/projectnatal/
-  []: http://farm5.static.flickr.com/4061/4681572508_07db8a3c62.jpg
-    "PS3Eyes"
-  [![][]]: http://www.flickr.com/photos/andy-li/4681572508/
-  [1]: http://farm5.static.flickr.com/4049/4681573632_d1cfdf5010.jpg
-    "PS3Eyes"
-  [![][1]]: http://www.flickr.com/photos/andy-li/4681573632/
   [OpenFrameworks]: http://www.openframeworks.cc/
   [a patched driver]: http://bear24rw.blogspot.com/2009/11/ps3-eye-driver-patch.html
   [haXe]: http://haxe.org/

@@ -15,7 +15,7 @@ tweening classes, layout helper and a huge set of utilities.
 I try to make all the classes as cross-target as possible so that you
 can use it in JS/C++/PHP/Neko (some of them need nme/neash/canvas-nme).
 
-With haXe's "using" keyword, the utility classes are even sweeter than
+With haXe's `using` keyword, the utility classes are even sweeter than
 the AS3 version. Let's take an example form the official
 documentation(in AS3):
 
@@ -43,12 +43,12 @@ var person = people.getItemByKeys({sex: "Female", hair: "Brown"});
 trace(person.name); // Traces "Katie"
 ```
 
-Note that with "using", auto-completion can also show the added methods
-(from ArrayUtil, for the above example).
+Note that with `using`, auto-completion can also show the added methods
+(from `ArrayUtil`, for the above example).
 
 I've also typed all the methods. That means, for
-ArrayUtil.getItemByKeys() with a Array\<Point\> input, its output will
-be typed as Point. Nice feature of haXe isn't it?
+`ArrayUtil.getItemByKeys()` with a `Array<Point>` input, its output will
+be typed as `Point`. Nice feature of haXe isn't it?
 
 PS. Aaron Clinger, the author of CASA Lib, has found me some days ago.
 He is very nice that may put CasaHx as the official branch of CASA Lib

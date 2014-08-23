@@ -32,8 +32,7 @@ will be in wav format, encoded by the [WavEncoder from popforge][]) .
 If you hear nothing, you may try to increase the buffer size or use the
 export function.
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/05/vectorsoundwave.swf,
-600, 450[/SWF]
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/05/vectorsoundwave.swf" width="600" height="450" id="swf86781" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
 
 [source][]
 

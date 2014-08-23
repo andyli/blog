@@ -3,12 +3,7 @@ Date: 2008-07-11 03:05
 Tags: experiment, Flash
 Slug: bezier-curves-tree
 
-<div>
-
-[SWF]http://blog.onthewings.net/wp-content/uploads/2008/07/testb.swf,
-480, 400[/SWF]
-
-</div>
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2008/07/testb.swf" width="480" height="400" id="swfb7e61" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
 
 Click to redraw.
 

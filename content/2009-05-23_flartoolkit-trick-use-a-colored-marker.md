@@ -3,7 +3,7 @@ Date: 2009-05-23 10:40
 Tags: FLARtoolkit, Flash, Pixel Bender, trick
 Slug: flartoolkit-trick-use-a-colored-marker
 
-[youtube]http://www.youtube.com/watch?v=DY7TPBRPpFI[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/DY7TPBRPpFI" frameborder="0" allowfullscreen></iframe>
 
 Reasons why should we use colored marker instead of standard black and white only marker
 ----------------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ We now want to detect red markers, so just try to turn everything black
 except the red regions to white. You may use ColorTransform if you want,
 but I am now obsessed with PixelBender. My version of kernel is:
 
-```pixelbender" escaped="true
+```pixelbender
 kernel extractRedARMarker
 <   namespace : "net.onthewings.filters";
     vendor : "Andy Li";
@@ -118,8 +118,6 @@ Happy AR!
 * * * * *
 
 Update: Here I have a PB kernel that works with any color. [Try it][]!
-
-</p>
 
   [FLARmanager]: http://words.transmote.com/wp/20090328/flarmanager-v03/
   [see it in action]: http://www.onthewings.net/

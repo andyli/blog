@@ -3,8 +3,7 @@ Date: 2008-11-08 21:59
 Tags: animation
 Slug: a-little-rose-my-first-stop-motion-animation
 
-[vimeo]http://www.vimeo.com/2162341[/vimeo][  
-][][][]
+<iframe src="//player.vimeo.com/video/2162341" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/2162341">A Little Rose</a> from <a href="http://vimeo.com/andyli">Andy Li</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 Above is my first stop-motion animation made with Keung and Eric. Plenty
 of improvement needed... Especially the camera movement, which is shaky.
@@ -14,8 +13,4 @@ about a lonely rose in a dark place, met a light object. The rose was
 filled with surprise and happiness. But that light went just after it
 arrived. So the rose lost its hope and fell.
 
-And orz^3^ is our group name.
-
-  [  
- ]: http://vimeo.com/2162341
-  []: http://vimeo.com
+"orz3" is our group name.

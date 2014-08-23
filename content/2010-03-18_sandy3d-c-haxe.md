@@ -45,32 +45,25 @@ trunk :) There should be a new release soon if everything is fine.
 
 A note to the ones can't wait for a release:
 
-1.Install hxcpp, nme, neash from haxelib.
+ 1. Install hxcpp, nme, neash from haxelib.
 
-2.Replace contents in neash's neash/display/IBitmapDrawable.hx to a
-simple "typedef IBitmapDrawable =  
-nme.display.IBitmapDrawable;".
+ 2. Replace contents in neash's neash/display/IBitmapDrawable.hx to a simple `typedef IBitmapDrawable = nme.display.IBitmapDrawable;`.
 
-3.To make mouse event work, in neash's neash/Lib.hx, the code:
-
+ 3. To make mouse event work, in neash's neash/Lib.hx, the code:
+    <pre>
 // Process pending timers ...  
 neash.Timer.CheckTimers();  
 // Send frame-enter event  
-var event = new Event( Event.ENTER\_FRAME );  
+var event = new Event( Event.ENTER_FRAME );  
 mStage.Broadcast(event);
+    </pre>
+    should be moved to the end of the do-while loop, just before `mStage.RenderAll();`
 
-should be moved to the end of the do-while loop, just before the:
+ 4. For mouse event in opengl mode to work, additional fix which required a recompile of nme is needed. I haven't tried yet. Now just ingore this...
 
-mStage.RenderAll();
+ 5. You should be able to use Sandy3D in C++ without the above patches for the next release of nme/neash. But for now, please do it.
 
-4.For mouse event in opengl mode to work, additional fix which required
-a recompile of nme is needed. I haven't tried  
-yet. Now just ingore this...
-
-5.You should be able to use Sandy3D in C++ without the above patches for
-the next release of nme/neash. But for now, please do it.
-
-BTW, I am also ~~porting~~ ported [casalib][], which I often use in AS3
+BTW, I am also <del>porting</del> ported [casalib][], which I often use in AS3
 development, to Haxe, see [casahx][].
 
   [Haxe]: http://haxe.org/

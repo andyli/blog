@@ -7,7 +7,7 @@ If you haven't heard about [Brainfuck][] yet, it is a famous esoteric
 programming language. If you want to know why it has such a name take a
 look at its hello-world program source code (from [wikipedia][]):
 
-```brainfuck" escaped="true
+```brainfuck
 +++ +++ +++ +           initialize counter (cell #0) to 10
 [                       use loop to set the next four cells to 70/100/30/10
     > +++ +++ +             add  7 to cell #1
@@ -33,7 +33,7 @@ look at its hello-world program source code (from [wikipedia][]):
 
 the above program can be written as:
 
-```brainfuck" escaped="true
+```brainfuck
 ++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
 ```
 

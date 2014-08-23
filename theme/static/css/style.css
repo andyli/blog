@@ -1,0 +1,212 @@
+html {
+	font-family: 'Merriweather', serif;
+	line-height: 2em;
+}
+
+html, body {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+	max-height: 30em;
+	text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+
+img:only-child {
+	max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+a {
+	color: #099;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin: 2em 0;
+}
+
+pre, code {
+	line-height: 1.5em;
+	font-family: 'Source Code Pro', monospace;
+	background: #f9f9f9;
+	font-size: small;
+}
+
+code {
+	padding: 0.25em;
+}
+
+pre {
+	overflow: auto;
+	background: #f9f9f9;
+	padding: 0.5em;
+}
+
+pre::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+pre::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+pre::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #ccc;
+}
+
+pre::-webkit-scrollbar-track { 
+    background: #f9f9f9;
+    border-radius: 8px; 
+}
+
+pre .hll {#404040 }
+pre .c { font-style: italic; color: #888; } /* Comment */
+pre .err { background-color: #fcc; } /* Error */
+pre .g {} /* Generic */
+pre .k { font-weight: bold; } /* Keyword */
+pre .l {} /* Literal */
+pre .n {} /* Name */
+pre .o {} /* Operator */
+pre .x {} /* Other */
+pre .p {} /* Punctuation */
+pre .cm { font-style: italic; color: #888; } /* Comment.Multiline */
+pre .cp { font-weight: bold; color: #888; } /* Comment.Preproc */
+pre .c1 { font-style: italic; color: #888; } /* Comment.Single */
+pre .cs { font-weight: bold; } /* Comment.Special */
+pre .gd {} /* Generic.Deleted */
+pre .ge { font-style: italic; } /* Generic.Emph */
+pre .gr {} /* Generic.Error */
+pre .gh { font-weight: bold; } /* Generic.Heading */
+pre .gi {} /* Generic.Inserted */
+pre .go {} /* Generic.Output */
+pre .gp {} /* Generic.Prompt */
+pre .gs { font-weight: bold; } /* Generic.Strong */
+pre .gu { text-decoration: underline; } /* Generic.Subheading */
+pre .gt {} /* Generic.Traceback */
+pre .kc { font-weight: bold; } /* Keyword.Constant */
+pre .kd { font-weight: bold; } /* Keyword.Declaration */
+pre .kn { font-weight: bold; } /* Keyword.Namespace */
+pre .kp { font-weight: bold; } /* Keyword.Pseudo */
+pre .kr { font-weight: bold; } /* Keyword.Reserved */
+pre .kt { font-weight: bold; } /* Keyword.Type */
+pre .ld {} /* Literal.Date */
+pre .m { color: #088; } /* Literal.Number */
+pre .s { color: #a00; } /* Literal.String */
+pre .na {} /* Name.Attribute */
+pre .nb {} /* Name.Builtin */
+pre .nc {} /* Name.Class */
+pre .no {} /* Name.Constant */
+pre .nd {} /* Name.Decorator */
+pre .ni {} /* Name.Entity */
+pre .ne {} /* Name.Exception */
+pre .nf {} /* Name.Function */
+pre .nl {} /* Name.Label */
+pre .nn {} /* Name.Namespace */
+pre .nx {} /* Name.Other */
+pre .py {} /* Name.Property */
+pre .nt {} /* Name.Tag */
+pre .nv {} /* Name.Variable */
+pre .ow { font-weight: bold; } /* Operator.Word */
+pre .w {} /* Text.Whitespace */
+pre .mf { color: #088; } /* Literal.Number.Float */
+pre .mh { color: #088; } /* Literal.Number.Hex */
+pre .mi { color: #088; } /* Literal.Number.Integer */
+pre .mo { color: #088; } /* Literal.Number.Oct */
+pre .sb { color: #a00; } /* Literal.String.Backtick */
+pre .sc { color: #a00; } /* Literal.String.Char */
+pre .sd { color: #a00; } /* Literal.String.Doc */
+pre .s2 { color: #a00; } /* Literal.String.Double */
+pre .se { color: #a00; } /* Literal.String.Escape */
+pre .sh { color: #a00; } /* Literal.String.Heredoc */
+pre .si { color: #a00; } /* Literal.String.Interpol */
+pre .sx { color: #a00; } /* Literal.String.Other */
+pre .sr { color: #a00; } /* Literal.String.Regex */
+pre .s1 { color: #a00; } /* Literal.String.Single */
+pre .ss { color: #a00; } /* Literal.String.Symbol */
+pre .bp {} /* Name.Builtin.Pseudo */
+pre .vc {} /* Name.Variable.Class */
+pre .vg {} /* Name.Variable.Global */
+pre .vi {} /* Name.Variable.Instance */
+pre .il {} /* Literal.Number.Integer.Long */
+
+#banner {
+	text-align: center;
+}
+
+#banner h1 a {
+	color: #666;
+}
+
+#menu {
+	text-align: center;
+}
+
+#menu ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+#menu a {
+	color: #666;
+	text-decoration: underline;
+}
+
+#menu a:hover {
+	text-decoration: none;
+}
+
+.paginator {
+	text-align: center;
+}
+
+#post-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+#content {
+	max-width: 42em;
+	margin: auto;
+}
+
+article {
+	padding: 2em 0;
+	border-top: 1px #EEE solid;
+}
+
+#post-list li:last-child article {
+	border-bottom: 1px #EEE solid;
+}
+
+iframe {
+	margin: auto;
+	display: block;
+}
+
+.fb-post.fb_iframe_widget {
+	display: block;
+	position: relative;
+	margin: auto;
+	max-width: 100%;
+	text-align: center;
+}
+
+.social {
+	margin-top: 2em;
+	text-align: center;
+}

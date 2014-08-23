@@ -3,7 +3,7 @@ Date: 2012-03-04 22:19
 Tags: 3D, experiment, Flash, Haxe
 Slug: head-tracking-motion-parallax-3d-in-haxe-flash
 
-[youtube]http://www.youtube.com/watch?v=U6PePKJHOSw[/youtube]
+<iframe class="video" width="640" height="390" src="//www.youtube.com/embed/U6PePKJHOSw" frameborder="0" allowfullscreen></iframe>
 
 Here above is my haXe implementation of head-tracking 3D, creating
 motion-parallax effect using Away3D 4. You can play with the [live

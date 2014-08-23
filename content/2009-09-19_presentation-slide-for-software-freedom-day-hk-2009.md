@@ -11,27 +11,7 @@ Hong Kong". I presented [STK in AS3][] (which is started by me) and a
 few more great open source project related to media/art. Here below is
 the slide I used during presentation.
 
-<div id="__ss_2021666" style="width: 425px; text-align: left;">
-
-[Open Source Development And Media][]
-<object style="margin:0px" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
-<param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=opensourcedevelopmentandmediasoftwarefr-090919072826-phpapp02&amp;stripped_title=open-source-development-and-media-software-fr"></param><param name="allowfullscreen" value="true"></param>
-<embed style="margin:0px" type="application/x-shockwave-flash" width="425" height="355" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=opensourcedevelopmentandmediasoftwarefr-090919072826-phpapp02&amp;stripped_title=open-source-development-and-media-software-fr" allowscriptaccess="always" allowfullscreen="true">
-</embed>
-</object>
-</p>
-<div
-style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px;">
-
-View more [presentations][] from [Andy Li][].
-
-</div>
-
-</div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/2021666" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/andy_li/open-source-development-and-media-software-fr" title="Open Source Development And Media" target="_blank">Open Source Development And Media</a> </strong> from <strong><a href="http://www.slideshare.net/andy_li" target="_blank">Andy Li</a></strong> </div>
 
   [Software Freedom Day (Hong Kong) 2009]: http://wiki.opensource.hk/index.php/Software_Freedom_Day_2009%2C_Hong_Kong
   [STK in AS3]: http://code.google.com/p/stk-in-as3/
-  [Open Source Development And Media]: http://www.slideshare.net/andy_li/open-source-development-and-media-software-fr
-    "Open Source Development And Media"
-  [presentations]: http://www.slideshare.net/
-  [Andy Li]: http://www.slideshare.net/andy_li

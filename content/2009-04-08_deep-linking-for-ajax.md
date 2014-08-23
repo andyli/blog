@@ -8,23 +8,7 @@ course Web 2.0 technology. Seems that most of the info on the web about
 deep linking implementation are for Flash web site but not AJAX's, so I
 release my report and presentation slide here hoping can help somebody.
 
-<!--more-->
-
-<div id="__ss_1262036" style="width: 425px; text-align: left;">
-
-[Deep Linking For Ajax Presentation][]
-<object width="425" height="355" data="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=deeplinkingforajaxpresentation-090407211637-phpapp01&amp;rel=0&amp;stripped_title=deep-linking-for-ajax-presentation" type="application/x-shockwave-flash">
-<param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=deeplinkingforajaxpresentation-090407211637-phpapp01&amp;rel=0&amp;stripped_title=deep-linking-for-ajax-presentation"></param><param name="allowfullscreen" value="true"></param>
-</object>
-</p>
-<div
-style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px;">
-
-View more [presentations][] from [andy\_li][].
-
-</div>
-
-</div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/1262036" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/andy_li/deep-linking-for-ajax-presentation" title="Deep Linking For Ajax Presentation" target="_blank">Deep Linking For Ajax Presentation</a> </strong> from <strong><a href="http://www.slideshare.net/andy_li" target="_blank">Andy Li</a></strong> </div>
 
 * * * * *
 
@@ -79,13 +63,11 @@ hot posts. They are not the main content of the page so no deep link is
 reasonable.But if there are some cases that the main content is loaded
 by AJAX, deep linking should be implemented.
 
-<h2>
-
 * * * * *
 
 How to Implement Deep Linking for AJAX
+--------------------------------------
 
-</h2>
 ### Low Level Concept
 
 There is a trick that use '\#' in the URL. The '\#' is known as a hash,
@@ -193,13 +175,11 @@ function to the anchor tags.
     });
     </script>
 
-<h2>
-
 * * * * *
 
 Limitation
+----------
 
-</h2>
 Note that although using the above technique, the user can now bookmark
 the deep link and using the 'back button' as normal, SEO problem is
 still not solved. It is because the technique require use of JavaScript,
@@ -219,7 +199,6 @@ Reference
 -   Deep Linking is Good Linking, useit.com  
     <http://www.useit.com/alertbox/20020303.html>
 -   Deep Linking in Flash and AJAX Applications, Christian Cantrell  
-
     <http://weblogs.macromedia.com/cantrell/archives/2005/06/deep_linking_in.html>
 -   Unique URLs - Ajax Patterns  
     <http://ajaxpatterns.org/Unique_URLs>

@@ -11,7 +11,7 @@ example, in `JQuery` of
 [jQueryExtern][], the method "`html`" has the
 following declaration:
 
-```text
+```haxe
 @:overload(function(valueOrFunction:Dynamic):JQuery{})
 public function html():String;
 ```
@@ -44,13 +44,13 @@ XML root element. If dataType is `"json"`, a JavaScript
 object will be passed instead. There are also cases for `"script"` and `"html"`. Normally in
 a Haxe extern we can only declare it as:
 
-```text
+```haxe
 static public function get(url:String, ?data:Dynamic, ?callBack:Dynamic->String->JqXHR->Void, ?dataType:String):JqXHR;
 ```
 
 But instead it should be something like:
 
-```text
+```haxe
 //Note: invalid!!!
 @:overload(function get(url:String, ?data:Dynamic, ?callBack:Dom->String->JqXHR->Void, ?dataType:"xml"):JqXHR {})
 @:overload(function get(url:String, ?data:Dynamic, ?callBack:Dynamic->String->JqXHR->Void, ?dataType:"json"):JqXHR {})
@@ -118,15 +118,15 @@ Here is a simple test, that will output the type info when compile:
 class Test {
     static function main():Void {
         var a = "123";
-        $type(R.get("123.xml"));    //src/R.hx:10: characters 19-40 : Warning : Xml
-        $type(R.get("123"));        //src/R.hx:10: characters 19-40 : Warning : String
-        $type(R.get(a));        //src/R.hx:10: characters 19-40 : Warning : Unknown<0>
+        $type(R.get("123.xml"));  //src/R.hx:10: characters 19-40 : Warning : Xml
+        $type(R.get("123"));      //src/R.hx:10: characters 19-40 : Warning : String
+        $type(R.get(a));          //src/R.hx:10: characters 19-40 : Warning : Unknown<0>
     }
 }
 ```
 
 Note that the above implementation used some macro features from Haxe
-2.10, which ~~will be released very soon~~ is released!  
+2.10, which <del>will be released very soon</del> is released!  
 The macro part is a bit too long to write for every method but there is
 nothing to stop you refactoring this trick into an lib ;)
 

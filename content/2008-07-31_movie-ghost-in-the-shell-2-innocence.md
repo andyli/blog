@@ -3,8 +3,8 @@ Date: 2008-07-31 00:43
 Tags: movie
 Slug: movie-ghost-in-the-shell-2-innocence
 
-This piece's style is quite different from the TV series \<Stand Alone
-Complex\>. The style is more serious and the CG effects are much more
+This piece's style is quite different from the TV series &lt;Stand Alone
+Complex&gt;. The style is more serious and the CG effects are much more
 amazing. Unfortunately the English words used in the film are so
 difficult for me to fully understand the story...
 

@@ -3,10 +3,7 @@ Date: 2012-11-07 21:41
 Tags: Art &amp; Design, game
 Slug: the-simulation-and-hyperreality-aspect-of-epic-win
 
-![Epic Win quests screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin1.jpeg) 
-![Epic Win profile screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin2.jpeg) 
-![Epic Win progress screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin13.jpeg)
-![Epic Win progress screenshot 2](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin11.jpeg)
+![Epic Win quests screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin1.jpeg) ![Epic Win profile screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin2.jpeg) ![Epic Win progress screenshot](http://blog.onthewings.net/wp-content/uploads/2012/11/epicwin13.jpeg)
 
 [Epic Win](http://www.rexbox.co.uk/epicwin/) is a game that runs in the Apple iOS platform
 (iPhone/iPad). It is a fusion of role-playing game, referred as RPG, and

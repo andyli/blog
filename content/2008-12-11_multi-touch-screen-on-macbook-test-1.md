@@ -9,4 +9,4 @@ wait for Apple to implement it? I just made myself one.
 PS. Sorry that my camera sucks... Maybe I will make a better version
 later...
 
-<!--more-->[youtube]http://www.youtube.com/watch?v=1Ay8bWKR21U[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/1Ay8bWKR21U" frameborder="0" allowfullscreen></iframe>

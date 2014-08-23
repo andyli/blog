@@ -15,17 +15,8 @@ There are many other special rooms (or labs) for recording, broadcasting
 etc. And the technician who guided me through using the equipment is
 really nice.
 
-<div class="imageframe alignleft" style="width: 200px;">
-
-[![The special computer used for usability testing.][]][]
-</p>
-<div class="imagecaption" style="color: #666666;">
-
-The special computer used for usability testing.
-
-</div>
-
-</div>
+The special computer used for usability testing:
+![The special computer used for usability testing.][]
 
 My site has been tested two times while I also help testing another
 group's web site. What we have got were some heatmaps, eye-tracking
@@ -39,6 +30,4 @@ asking us to play... It will be good to let me try testing my
 forthcoming games, but may be I will never have a chance to come back
 since the lab is not opened for students normally...
 
-  [The special computer used for usability testing.]: http://blog.onthewings.net/wp-content/uploads/2008/11/img_0003.thumbnail.jpg
-  [![The special computer used for usability testing.][]]: http://blog.onthewings.net/wp-content/uploads/2008/11/img_0003.jpg
-    "The special computer used for usability testing."
+  [The special computer used for usability testing.]: http://blog.onthewings.net/wp-content/uploads/2008/11/img_0003.jpg

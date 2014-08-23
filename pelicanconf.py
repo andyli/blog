@@ -21,7 +21,11 @@ SOCIAL = (
 	('Twitter (andy_li)', 'https://twitter.com/andy_li'),
 )
 
-DEFAULT_PAGINATION = 5
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['summary']
+
+THEME = 'theme'
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

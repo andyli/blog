@@ -14,7 +14,8 @@ simple testing program, which is below:
 
 ### ActionScript version
 
-[SWF]http://blog.onthewings.net/wp-content/uploads/2009/10/test.swf,600,400[/SWF]  
+<object type="application/x-shockwave-flash" data="http://blog.onthewings.net/wp-content/uploads/2009/10/test.swf" width="600" height="400" id="swf0a0b1" style="visibility: visible;"><param name="wmode" value="opaque"><param name="menu" value="true"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object>
+
 [source code][]
 
 Methods used are:
@@ -28,7 +29,7 @@ Methods used are:
 6.  byteArray.writeMultiByte(concateString,"us-ascii"); ... str =
     byteArray.readMultiByte(str.length,"us-ascii");
 
-The result shows that fastest method is using "+=", but using
+The result shows that fastest method is using `+=`, but using
 Array/Vector is still very close to it. Using ByteArray is slow and with
 ASCII instead of UTF-8 is even slower...
 
@@ -49,7 +50,7 @@ Methods used are:
 
 Interesting enough, the result is very similar to AS3. It is the
 opposite of what we believe using the Array trick will let it performs
-faster. "+=" is the fastest in most cases, if not, that's not much
+faster. `+=` is the fastest in most cases, if not, that's not much
 difference.
 
 I've only tested in IE8(Win), Firefox 3 (Win/Mac), Safari 4 (Win/Mac),

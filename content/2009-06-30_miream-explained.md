@@ -3,14 +3,12 @@ Date: 2009-06-30 02:01
 Tags: 3D, Art &amp; Design, CityU, installation, Mirage, PLAYFUL MEDIA
 Slug: miream-explained
 
-[youtube]http://www.youtube.com/watch?v=V9sWYOKxooY[/youtube]
+<iframe width="640" height="390" src="//www.youtube.com/embed/V9sWYOKxooY" frameborder="0" allowfullscreen></iframe>
 
 [Mirage][]'s extension, re-work of [The Scream][], "Miream" is exhibited
 at [Playful Media][] this year (2009).
 
 I get Miream re-constructed in [PhotoSynth][] too!
-
-<!--more-->
 
 [Playful Media][] is just over. Our team members were staying in the
 exhibition area explaining the art work. We've heard a lot of comments
@@ -25,12 +23,13 @@ Official project description
 
 It's a bit long, but really informative:
 
-<cite title="Project description of Miream">‘Miream” is an excursion of
+<cite title="Project description of Miream">
+‘Miream” is an excursion of
 artistic and technological collaborations crystallized in form of an
 installation. The title is an amalgamation of two words: “Mirror” and
-“Scream”.</cite>
+“Scream”.
 
-<cite title="Project description of Miream">This work is an inventive
+This work is an inventive
 attempt to create a magical transformation from 2D image to 3D
 installation. The core of the installation is a vertical grid which
 holds drips of hanging metal ball chains with different lengths. A
@@ -39,9 +38,9 @@ reversal effect being viewed from the mirror, the result is a
 3-dimensional interpretation of the acclaimed painting “The Scream”
 (1893) by Norwegians expressionist artist, Edvard Munch. The Hanging
 metal ball chains can also generate trembling motions which intensifies
-an immersive experience for audience.</cite>
+an immersive experience for audience.
 
-<cite title="Project description of Miream">The creative process starts
+The creative process starts
 with studying the visual elements of the painting (twilight sky, bridge,
 scream head, etc.) and analyzes the image’s composition (curves, depth
 and perspectives) in relations to the anguish and fearful emotional
@@ -49,9 +48,9 @@ expressions. With aids from precious computation, the painting was
 translated into 3D pixels then later replaced with 3mm metal balls.
 Lengths and placement of each metal ball chains were preciously
 calculated by computer. More than 2000 yards of metal chains were used
-to transform an image into this captivating 3D entity.</cite>
+to transform an image into this captivating 3D entity.
 
-<cite title="Project description of Miream">It is very intuitive and
+It is very intuitive and
 even meditative for all team members during the process of putting links
 and links of metal balls together in order to unveil the
 three-dimensional representation of both the visual landscape and inner
@@ -133,8 +132,6 @@ this blog**. Or you can email me: <andy@onthewings.net>.
 * * * * *
 
 Update: [See my new post for the documentary interview][].
-
-</p>
 
   [Mirage]: http://blog.onthewings.net/2008/06/25/photo-of-mirage/
   [The Scream]: http://en.wikipedia.org/wiki/The_Scream

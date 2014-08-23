@@ -32,13 +32,13 @@ Chrome on Ubuntu. Other platforms should works too.
 I used haXe instead of writing pure JS. No big reason here, just to see
 if it is possible. Turn out there is no big difference from using JS,
 you just need to copy all the meta data to the compiled JS file. And the
-events listener need to be assigned by "addEventListener" instead of
-something like "onclick = function ...".
+events listener need to be assigned by `addEventListener` instead of
+something like `onclick = function ...`.
 
 Detecting HTML5 tags is easier than detecting Flash objects. Firstly,
 the tags are standardized meaning you can simply use
-"getElementsByTagName". For Flash objects you need to check the params
-of the "object" and the "embed" tags, which is a bit troublesome.
+`getElementsByTagName`. For Flash objects you need to check the params
+of the `object` and the `embed` tags, which is a bit troublesome.
 Secondly, currently no one (at least not much ppl) is creating canvas
 tags on the fly, unlike for Flash the standard way is to use swfobject.
 So I can detect the tags once the DOM is ready, no need to wait for the
@@ -65,9 +65,8 @@ canvas, because different web page have different functions, so no way I
 can work on that. You can completely disable JS, but this is not a
 CanvasBlock should do.
 
-[caption id="attachment\_773" align="alignleft" width="270"
-caption="Browser freezed and an timeout message was shown after blocking
-canvas."][![][]][][/caption]
+Browser freezed and an timeout message was shown after blocking canvas:
+![Browser freezed and an timeout message was shown after blocking canvas](http://blog.onthewings.net/wp-content/uploads/2010/04/errorAfterBlockingCanvas.png)
 
 However, I have tested some more web page and they are ok with the
 blocking script. So maybe only some complex JS will have this problem.
@@ -80,13 +79,15 @@ And the result is, blocking canvas does not bring significant reduction
 on CPU usage. See the following screenshots, which is using [another
 Chrome experiment][]:
 
-[caption id="attachment\_775" align="alignnone" width="717"
-caption="Page opened, canvas blocked. However CPU usage still rise to a
-very high level."][![][1]][][/caption]
+Page opened, canvas blocked. However CPU usage still rise to a
+very high level:
+![Page opened, canvas blocked. However CPU usage still rise to a
+very high level.](http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-1.png)
 
-[caption id="attachment\_777" align="alignnone" width="717"
-caption="Clicked to show back the canvas. CPU usage rose even higher,
-but not much difference."][![][2]][][/caption]
+Clicked to show back the canvas. CPU usage rose even higher,
+but not much difference:
+![Clicked to show back the canvas. CPU usage rose even higher,
+but not much difference.](http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-2.png)
 
 So what's that mean? Again if I want to block the real CPU hog, I should
 block the JS with the canvas. But again, stated above, it is not
@@ -113,15 +114,6 @@ repo][].
 
   [ChromeExperiments]: http://www.chromeexperiments.com/
   [one]: http://www.chromeexperiments.com/detail/asteroids-game/
-  []: http://blog.onthewings.net/wp-content/uploads/2010/04/errorAfterBlockingCanvas-450x281.png
-    "Error was shown after blocking canvas"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/04/errorAfterBlockingCanvas.png
   [another Chrome experiment]: http://www.chromeexperiments.com/detail/aquarium/
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-1-1024x640.png
-    "CPU Usage Screenshot 1"
-  [![][1]]: http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-1.png
-  [2]: http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-2-1024x640.png
-    "CPU Usage Screenshot 2"
-  [![][2]]: http://blog.onthewings.net/wp-content/uploads/2010/04/cpuUsage-2.png
   [CanvasBlock's page on userscripts.org]: http://userscripts.org/scripts/show/74216
   [CanvasBlock's github repo]: http://github.com/andyli/CanvasBlock
