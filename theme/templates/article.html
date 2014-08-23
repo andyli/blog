@@ -9,9 +9,7 @@
     <meta name="description" contents="{{description}}" />
   {% endfor %}
 
-  {% for tag in article.tags %}
-    <meta name="tags" contents="{{tag}}" />
-  {% endfor %}
+    <meta name="keywords" content="{{article.tags|join(',')}}">
 
 {% endblock %}
 
@@ -20,7 +18,7 @@
   <header>
     <h2 class="entry-title">
       <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+         title="Permalink to {{ article.title|striptags|escape }}">{{ article.title }}</a></h2>
  {% import 'translations.html' as translations with context %}
  {{ translations.translations_for(article) }}
   </header>
