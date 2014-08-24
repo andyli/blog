@@ -3,18 +3,38 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Andy Li'
-AUTHOR_SAVE_AS = ''
+AUTHOR_SAVE_AS = False
 SITENAME = u"Andy Li's Blog"
-SITEURL = ''
+# SITEURL = 'http://blog.onthewings.net'
 
 TIMEZONE = 'Hongkong'
 
 DEFAULT_LANG = u'en'
 
-# Feed generation is usually not desired when developing
-FEED_ALL_RSS = 'feeds/all.rss.xml'
-CATEGORY_FEED_ATOM = None
+DEFAULT_CATEGORY = 'uncategorized'
+
+ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+TAG_URL = 'tag/{slug}/'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+CATEGORY_URL = 'category/{slug}/'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+
+FEED_DOMAIN = 'http://feeds.feedburner.com'
+FEED_ALL_ATOM = 'feed/atom.xml'
+TAG_FEED_ATOM = 'tag/%s/feed/atom.xml'
+CATEGORY_FEED_ATOM = 'category/%s/feed/atom.xml'
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 TRANSLATION_FEED_ATOM = None
+FEED_MAX_ITEMS = 10
+
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
 
 # Social widget
 SOCIAL = (
@@ -23,6 +43,10 @@ SOCIAL = (
 
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['summary']
+
+TYPOGRIFY = True
+
+DISQUS_SITENAME = 'blog-onthewings'
 
 THEME = 'theme'
 DEFAULT_PAGINATION = 10
