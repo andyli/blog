@@ -56,6 +56,7 @@ STATIC_PATHS = [
 
 EXTRA_PATH_METADATA = {
     'files/googleb165fe55002fa457.html': {'path': 'googleb165fe55002fa457.html'},
+    'files/robots.txt': {'path': 'robots.txt'},
 }
 
 THEME = 'theme'
