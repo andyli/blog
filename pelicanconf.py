@@ -55,11 +55,11 @@ PATH = 'content'
 
 READERS = {'html': None}
 STATIC_PATHS = [
-	'extra/googleb165fe55002fa457.html',
+	'files',
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/googleb165fe55002fa457.html': {'path': 'googleb165fe55002fa457.html'},
+    'files/googleb165fe55002fa457.html': {'path': 'googleb165fe55002fa457.html'},
 }
 
 THEME = 'theme'

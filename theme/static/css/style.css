@@ -8,15 +8,20 @@ html, body {
 }
 
 img {
-	max-width: 100%;
-	max-height: 30em;
 	text-align: center;
     display: inline-block;
     margin: auto;
 }
 
-img:only-child {
+img:not([width]) {
 	max-width: 100%;
+}
+
+img:not([height]) {
+	max-height: 30em;
+}
+
+img:only-child {
     margin: auto;
     display: block;
 }
@@ -180,7 +185,7 @@ pre .il {} /* Literal.Number.Integer.Long */
 }
 
 #content {
-	max-width: 42em;
+	max-width: 43em;
 	margin: auto;
 }
 

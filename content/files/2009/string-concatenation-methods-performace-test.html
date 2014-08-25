@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>String concatenation methods performace test</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			/**
+			 * @author Andy Li andy@onthewings.net
+			 */
+			
+			var numOfConcate = 10000;
+			var concateString = "someLongLongLongLongLongLongLongLongLongString";
+			
+			var t;
+			var result;
+			
+			function showResultIfNeeded(){
+				if ($("#showResultString").attr("checked")) {
+					$("#resultArea").text(result);
+				}
+			}
+			
+			function testStringPlusEqual() {
+				t = new Date().getTime();
+				var str = "";
+			    for (var i = 0 ; i< numOfConcate; ++i) {
+			    	str += concateString;
+			    }
+				result = str;
+			    showResultIfNeeded();
+			    return (new Date().getTime()-t).toString() + 'ms';
+			}
+			
+			function testStringConcate() {
+				t = new Date().getTime();
+				var str = "";
+			    for (var i = 0 ; i< numOfConcate; ++i) {
+			    	str = str.concat(concateString);
+			    }
+				result = str;
+			    showResultIfNeeded();
+			    return (new Date().getTime()-t).toString() + 'ms';
+			}
+			
+			function testArrayJoin() {
+				t = new Date().getTime();
+				var str = [];
+			    for (var i = 0 ; i< numOfConcate; ++i) {
+			    	str.push(concateString);
+			    }
+				result = str.join("");
+				showResultIfNeeded();
+			    return (new Date().getTime()-t).toString() + 'ms';
+			}
+			
+			$(function(){
+				$("#numOfConcateInput")
+					.val(numOfConcate)
+					.change(function(eventObject){
+						numOfConcate = Number($(this).val());
+					});
+				
+				$("#concateStringInput")
+					.val(concateString)
+					.change(function(eventObject){
+						concateString = $(this).val();
+					});
+					
+				$("#showResultString")
+					.click(function(){
+							if ($("#showResultString").attr("checked")) {
+								$("#resultArea").show();
+							} else {
+								$("#resultArea").hide();
+							}
+							
+							return true;
+					});
+				
+				
+				$("#testStringPlusEqualBtn").click(function(){
+					$(this).text(testStringPlusEqual());
+				});
+				$("#testStringConcateBtn").click(function(){
+					$(this).text(testStringConcate());
+				});
+				$("#testArrayJoinBtn").click(function(){
+					$(this).text(testArrayJoin());
+				});
+				
+				$("#resultArea").hide();
+			});
+		</script>
+		<style type="text/css">
+			#resultArea {
+				width:600px;
+				height:300px;
+			}
+		
+		</style>
+    </head>
+    <body>
+        <h1>String concatenation methods performace test</h1>
+		
+		<ul>
+			<li>
+				<label for="numOfConcateInput">numOfConcate</label>
+				<input id="numOfConcateInput" type="text" />
+			</li>
+			<li>
+				<label for="concateStringInput">concateString</label>
+				<input id="concateStringInput" type="text" />
+			</li>
+			<li>
+				<label>show result string</label>
+				<input id="showResultString" type="checkbox" />
+			</li>
+		</ul>
+		
+		<h2>run test</h2>
+		<ul>
+			<li>
+				<label for="testStringPlusEqualBtn">testStringPlusEqual</label>
+				<button id="testStringPlusEqualBtn" name="testStringPlusEqualBtn">run</button>
+			</li>
+			<li>
+				<label for="testStringConcateBtn">testStringConcate</label>
+				<button id="testStringConcateBtn" name="testStringConcateBtn">run</button>
+			</li>
+			<li>
+				<label for="testArrayJoinBtn">testArrayJoin</label>
+				<button id="testArrayJoinBtn" name="testArrayJoinBtn">run</button>
+			</li>
+		</ul>
+		
+		<textarea id="resultArea"></textarea>
+    </body>
+</html>

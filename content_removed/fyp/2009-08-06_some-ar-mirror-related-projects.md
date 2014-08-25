@@ -56,12 +56,12 @@ The visual effect is very beautiful which is similar to what I want.
 What I want more is to bring the interaction into 3D but not limited in
 the mirror surface.
 
-  [Brainmirror]: http://blog.onthewings.net/wp-content/uploads/2009/08/modes_mri_brain_slice-200x200.jpg
+  [Brainmirror]: /files/2009/modes_mri_brain_slice.jpg
     "Brainmirror"
-  [![Brainmirror][]]: http://blog.onthewings.net/wp-content/uploads/2009/08/modes_mri_brain_slice.jpg
-  [0719a\_1]: http://blog.onthewings.net/wp-content/uploads/2009/08/0719a_1-200x200.jpg
+  [![Brainmirror][]]: /files/2009/modes_mri_brain_slice.jpg
+  [0719a\_1]: /files/2009/0719a_1.jpg
     "Miragraphy"
-  [![0719a\_1][]]: http://blog.onthewings.net/wp-content/uploads/2009/08/0719a_1.jpg
-  [Interactive Mirror]: http://blog.onthewings.net/wp-content/uploads/2009/08/mirrorstill1-200x200.jpg
+  [![0719a\_1][]]: /files/2009/0719a_1.jpg
+  [Interactive Mirror]: /files/2009/mirrorstill1.jpg
     "Interactive Mirror"
-  [![Interactive Mirror][]]: http://blog.onthewings.net/wp-content/uploads/2009/08/mirrorstill1.jpg
+  [![Interactive Mirror][]]: /files/2009/mirrorstill1.jpg

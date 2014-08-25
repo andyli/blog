@@ -21,6 +21,6 @@ suitable for my project. I will take some try and blog about them later.
 Finally, I will reschedule the works after the FYP Briefing Session (9/9
 as stated at [the official course site][]).
 
-  [WBS]: http://blog.onthewings.net/2009/07/26/wbs-draft/
+  [WBS]: |filename|2009-07-26_wbs-draft.md
   [The ACM Portal]: http://portal.acm.org/
   [the official course site]: http://sweb.cityu.edu.hk/sm4601/

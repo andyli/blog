@@ -21,15 +21,15 @@ caption="Header file of another class."][![][2]][][/caption]
 caption="Settings can be loaded from and saved to a xml
 file."][![][3]][][/caption]
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-450x281.png
+  []: /files/2010/02/Screenshot.png
     "calibration app UI remake"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot.png
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-1-450x281.png
+  [![][]]: /files/2010/02/Screenshot.png
+  [1]: /files/2010/02/Screenshot-1.png
     "amCamera header file"
-  [![][1]]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-1.png
-  [2]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-2-450x281.png
+  [![][1]]: /files/2010/02/Screenshot-1.png
+  [2]: /files/2010/02/Screenshot-2.png
     "amCameraPair header file"
-  [![][2]]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-2.png
-  [3]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-3-450x281.png
+  [![][2]]: /files/2010/02/Screenshot-2.png
+  [3]: /files/2010/02/Screenshot-3.png
     "setting file"
-  [![][3]]: http://blog.onthewings.net/wp-content/uploads/2010/02/Screenshot-3.png
+  [![][3]]: /files/2010/02/Screenshot-3.png

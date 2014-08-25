@@ -29,5 +29,5 @@ Flash target if anything failed.
   [Sandy3D]: http://www.flashsandy.org/
   [Hugh]: http://gamehaxe.com/
   [neash]: http://code.google.com/p/neash/
-  [blog post]: http://blog.onthewings.net/2010/03/18/sandy3d-c-haxe/
+  [blog post]: |filename|2010-03-18_sandy3d-c-haxe.md
   [jiglibhaxe]: http://bitbucket.org/ceesam/jiglibhaxe/

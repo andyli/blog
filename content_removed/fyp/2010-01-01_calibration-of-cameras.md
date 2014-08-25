@@ -45,22 +45,22 @@ LEDs placed on left and right side of the glasses the user will put on.
 The LEDs are diffused by sanding them with sand paper. The method is
 found from [here][].
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/01/0-00.jpg
+  []: /files/2010/0-00.jpg
     "0-00"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-00.jpg
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-10.jpg
+  [![][]]: /files/2010/0-00.jpg
+  [1]: /files/2010/0-10.jpg
     "0-10"
-  [![][1]]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-10.jpg
-  [2]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-01.jpg
+  [![][1]]: /files/2010/0-10.jpg
+  [2]: /files/2010/0-01.jpg
     "0-01"
-  [![][2]]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-01.jpg
-  [3]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-11.jpg
+  [![][2]]: /files/2010/0-01.jpg
+  [3]: /files/2010/0-11.jpg
     "0-11"
-  [![][3]]: http://blog.onthewings.net/wp-content/uploads/2010/01/0-11.jpg
-  [4]: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040678-450x337.jpg
+  [![][3]]: /files/2010/0-11.jpg
+  [4]: /files/2010/P1040678.jpg
     "3D glasses"
-  [![][4]]: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040678.jpg
-  [5]: http://blog.onthewings.net/wp-content/uploads/2010/01/Image.jpg
+  [![][4]]: /files/2010/P1040678.jpg
+  [5]: /files/2010/Image.jpg
     "head tracking"
-  [![][5]]: http://blog.onthewings.net/wp-content/uploads/2010/01/Image.jpg
+  [![][5]]: /files/2010/Image.jpg
   [here]: http://www.instructables.com/id/how-to-defuse-an-LED/

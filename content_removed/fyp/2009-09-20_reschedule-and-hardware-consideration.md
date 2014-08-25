@@ -29,6 +29,6 @@ will be a better graphic later.
 
   [FYP Google Calendar]: http://www.google.com/calendar/hosted/onthewings.net/embed?src=onthewings.net_mpc4j34uu4tgmb8532fecuqegk%40group.calendar.google.com&ctz=Asia/Hong_Kong
   [Bumblebee camera from Point Grey Research]: http://www.ptgrey.com/products/stereo.asp
-  [physical-structure]: http://blog.onthewings.net/wp-content/uploads/2009/09/physical-structure-450x328.png
+  [physical-structure]: /files/2009/physical-structure-450x328.png
     "physical-structure"
-  [![physical-structure][]]: http://blog.onthewings.net/wp-content/uploads/2009/09/physical-structure.png
+  [![physical-structure][]]: /files/2009/physical-structure.png

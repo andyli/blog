@@ -12,6 +12,6 @@ will try a different setup...
 stereo matching cameras using on the video are on the sides (left-most
 and right-most)."][![][]][][/caption]
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040680-450x337.jpg
+  []: /files/2010/P1040680.jpg
     "current camera setup"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040680.jpg
+  [![][]]: /files/2010/P1040680.jpg

@@ -31,17 +31,17 @@ to cover it.
 The mirrors will be ordered this week (should be Wed.) and they should
 be available next week by previous experience.
 
-  [Front view of the metal frame.]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040651-337x450.jpg
+  [Front view of the metal frame.]: /files/2009/P1040651.jpg
     "Front view"
-  [![Front view of the metal frame.][]]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040651.JPG
-  [Close-up of the top of metal frame]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040653-450x337.jpg
+  [![Front view of the metal frame.][]]: /files/2009/P1040651.JPG
+  [Close-up of the top of metal frame]: /files/2009/P1040653.jpg
     "Top close-up"
-  [![Close-up of the top of metal frame][]]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040653.JPG
-  [Back view of the metal frame]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040650-337x450.jpg
+  [![Close-up of the top of metal frame][]]: /files/2009/P1040653.JPG
+  [Back view of the metal frame]: /files/2009/P1040650.jpg
     "Back view"
-  [![Back view of the metal frame][]]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040650.JPG
+  [![Back view of the metal frame][]]: /files/2009/P1040650.JPG
   [Inner side of the metal frame. The hook is used to hold the mirror.]:
-    http://blog.onthewings.net/wp-content/uploads/2009/11/P1040654-450x337.jpg
+    /files/2009/P1040654.jpg
     "Inner side"
   [![Inner side of the metal frame. The hook is used to hold the
-  mirror.][]]: http://blog.onthewings.net/wp-content/uploads/2009/11/P1040654.JPG
+  mirror.][]]: /files/2009/P1040654.JPG

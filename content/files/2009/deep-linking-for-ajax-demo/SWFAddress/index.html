@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Deep Linking for AJAX Demo - SWFAddress</title>
+		<script type="text/javascript" src="js/swfaddress.js"></script>
+		<script type="text/javascript">
+        	function handleChange(event) {
+				var page = event.pathNames[0] ? event.pathNames[0] : '';
+				
+				document.getElementById("content").innerHTML = page;
+				
+		    	SWFAddress.setTitle("Deep Linking for AJAX Demo - SWFAddress / " + page);
+			}
+		
+			SWFAddress.addEventListener(SWFAddressEvent.CHANGE, handleChange);
+        </script>
+    </head>
+    <body>
+        <h1><a href="">Deep Linking for AJAX Demo - SWFAddress</a></h1>
+		<p>
+			<a href="#someContent1">Link 1</a>
+			<a href="#someContent2">Link 2</a>
+		</p>
+		<p id="content"></p>
+    </body>
+</html>

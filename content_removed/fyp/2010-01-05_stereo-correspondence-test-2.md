@@ -12,6 +12,6 @@ object is better with the cameras closer to each other.
 camera cases are removed, allowing the cameras being packed closer to
 each others."][![][]][][/caption]
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040690-450x337.jpg
+  []: /files/2010/P1040690.jpg
     "New camera arrangement"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/01/P1040690.jpg
+  [![][]]: /files/2010/P1040690.jpg

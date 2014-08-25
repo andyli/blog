@@ -12,15 +12,15 @@ the depth. So the real usable area is the center. Some scaling will be
 performed.  
 [![][]][][![][1]][][![][2]][][![][3]][]
 
-  []: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-450x281.png
+  []: /files/2010/04/Screenshot.png
     "Screenshot 1"
-  [![][]]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot.png
-  [1]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-1-450x281.png
+  [![][]]: /files/2010/04/Screenshot.png
+  [1]: /files/2010/04/Screenshot-1.png
     "Screenshot 2"
-  [![][1]]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-1.png
-  [2]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-2-450x281.png
+  [![][1]]: /files/2010/04/Screenshot-1.png
+  [2]: /files/2010/04/Screenshot-2.png
     "Screenshot 3"
-  [![][2]]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-2.png
-  [3]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-3-450x281.png
+  [![][2]]: /files/2010/04/Screenshot-2.png
+  [3]: /files/2010/04/Screenshot-3.png
     "Screenshot 4"
-  [![][3]]: http://blog.onthewings.net/wp-content/uploads/2010/04/Screenshot-3.png
+  [![][3]]: /files/2010/04/Screenshot-3.png

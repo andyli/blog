@@ -1,0 +1,33 @@
+application: blog-onthewings
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /wp-content/uploads/(.+)/(.+)/(.+).php
+  static_files: output/files/\1/\3.html
+  upload: output/files/(.+)/(.+).html
+- url: /
+  static_files: output/index.html
+  upload: output/index.html
+- url: /(.+)/
+  static_files: output/\1/index.html
+  upload: output/(.+)/index.html
+- url: /(.*)
+  static_files: output/\1
+  upload: output/(.*)
+# - url: .*
+#   script: main.app
+
+skip_files:
+- cache
+- content
+- content_removed
+- theme
+- uploads
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
