@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Andy Li'
 AUTHOR_SAVE_AS = False
 SITENAME = u"Andy Li's Blog"
-# SITEURL = 'http://blog.onthewings.net'
+SITEURL = 'http://blog.onthewings.net'
 
 TIMEZONE = 'Hongkong'
 
@@ -66,7 +66,7 @@ THEME = 'theme'
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 

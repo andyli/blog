@@ -8,6 +8,9 @@ handlers:
 - url: /wp-content/uploads/(.+)/(.+)/(.+).php
   static_files: output/files/\1/\3.html
   upload: output/files/(.+)/(.+).html
+- url: /(.*)feed/
+  static_files: output/\1feed/atom.xml
+  upload: output/(.*)feed/atom.xml
 - url: /
   static_files: output/index.html
   upload: output/index.html
