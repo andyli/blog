@@ -10,15 +10,21 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = ''
+SITEURL = 'http://blog.onthewings.net'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_DOMAIN = 'http://feeds.feedburner.com'
+FEED_ALL_ATOM = 'feed/atom.xml'
+TAG_FEED_ATOM = 'tag/%s/feed/atom.xml'
+CATEGORY_FEED_ATOM = 'category/%s/feed/atom.xml'
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+TRANSLATION_FEED_ATOM = None
+FEED_MAX_ITEMS = 10
 
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+DISQUS_SITENAME = 'blog-onthewings'
+GOOGLE_ANALYTICS = 'UA-5072043-1'

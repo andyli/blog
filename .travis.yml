@@ -6,9 +6,10 @@ env:
     - APPENGINE_VERSION=1.9.9
     - secure: St2TAUGCgemUZGcVHoV0xaRqF13wm34n8vFCQryC3TdSQHv5FUZjlzjlkQVCuQDelddrpcvoiBwg4i6k3oOJJYoHO0XiDG+lscUu15LAySA5iAsbGSokkVRiqimxHc2zUa23/j/qTSz014FQ0b6P/Gun00y3eDkldHo0dc1UObA=
 install:
+  - cd .. && git clone --recursive https://github.com/getpelican/pelican-plugins && cd $TRAVIS_BUILD_DIR
   - pip install -r requirements.txt
 script:
-  - make html
+  - make publish
 after_success:
   - cd $HOME
   - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_${APPENGINE_VERSION}.zip
