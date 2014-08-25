@@ -44,14 +44,11 @@ the installation at the same time, which aligned to the fact that book
 reading can be a social process, where readers can share thoughts,
 recommend books to each other.
 
-![Chinese sentences that hang inside the
-screen.](/files/2011/IMG_0419.jpg)
+<a href="https://www.flickr.com/photos/andy-li/14850171278" title="Between the lines/書中 by Andy Li, on Flickr"><img src="https://farm4.staticflickr.com/3861/14850171278_ece21aff81_b.jpg" alt="Between the lines/書中"></a>
 
-![The house of gold appears when there is enough golden
-sentences.](/files/2011/IMG_0418.jpg)
+<a href="https://www.flickr.com/photos/andy-li/15033672471" title="Between the lines/書中 by Andy Li, on Flickr"><img src="https://farm6.staticflickr.com/5557/15033672471_5066ff97f1_b.jpg" alt="Between the lines/書中"></a>
 
-![Viewers can touch the sentences and turn them into
-gold.](/files/2011/IMG_0431.jpg)
+<a href="https://www.flickr.com/photos/andy-li/15036440382" title="Between the lines/書中 by Andy Li, on Flickr"><img src="https://farm4.staticflickr.com/3903/15036440382_67b01d92a3_b.jpg" alt="Between the lines/書中"></a>
 
 <div id="fb-root"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-post" data-href="https://www.facebook.com/photo.php?v=255107494499599" data-width="466"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/photo.php?v=255107494499599">Post</a> by <a href="https://www.facebook.com/cityupress">City University of Hong Kong Press</a>.</div></div>

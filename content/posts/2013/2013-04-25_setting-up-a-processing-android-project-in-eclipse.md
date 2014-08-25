@@ -3,7 +3,9 @@ Date: 2013-04-25 04:32
 Tags: Android, Java, Processing
 Slug: setting-up-a-processing-android-project-in-eclipse
 
+<span class="center">
 ![Processing, Android, Eclipse][]
+</span>
 
 [Processing][] is written in Java, and it plays very well with the
 Android platform. Every serious programmer knows that the Processing IDE

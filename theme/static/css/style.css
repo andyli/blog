@@ -8,9 +8,7 @@ html, body {
 }
 
 img {
-	text-align: center;
     display: inline-block;
-    margin: auto;
 }
 
 img:not([width]) {
@@ -19,11 +17,6 @@ img:not([width]) {
 
 img:not([height]) {
 	max-height: 30em;
-}
-
-img:only-child {
-    margin: auto;
-    display: block;
 }
 
 a {
@@ -214,4 +207,10 @@ iframe {
 .social {
 	margin-top: 2em;
 	text-align: center;
+}
+
+.center {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
 }
