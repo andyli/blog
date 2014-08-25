@@ -21,6 +21,8 @@ handlers:
 #   script: main.app
 
 skip_files:
+- .git
+- ^(.*/)?.DS_Store
 - cache
 - content
 - content_removed
