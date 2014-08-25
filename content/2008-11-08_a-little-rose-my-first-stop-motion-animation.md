@@ -3,7 +3,7 @@ Date: 2008-11-08 21:59
 Tags: animation
 Slug: a-little-rose-my-first-stop-motion-animation
 
-<iframe src="//player.vimeo.com/video/2162341" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/2162341">A Little Rose</a> from <a href="http://vimeo.com/andyli">Andy Li</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="//player.vimeo.com/video/2162341" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Above is my first stop-motion animation made with Keung and Eric. Plenty
 of improvement needed... Especially the camera movement, which is shaky.
