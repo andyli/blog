@@ -17,7 +17,7 @@ Video first, description follows:
 
 !["CSS experiment: Mouse shadow by on_the_wings, on Flickr"](http://farm3.staticflickr.com/2777/4129811385_f698cbc966_m.jpg) ![CSS experiment: Mouse shadow][1]
 
-[Open experiment][]
+[Open experiment](/wp-content/uploads/2009/11/css-experiment_mouse-shadow.php)
 
 It works on webkit browsers only (Chrome, Safari).
 
@@ -30,7 +30,7 @@ performance because `div > div > div > ...` is just too slow...
 
 !["CSS experiment: Gear by on_the_wings, on Flickr"](http://farm3.staticflickr.com/2513/4130576756_d12b7ee3e5_m.jpg) ![CSS experiment: Gear][2] ![CSS experiment: Gear][3] ![CSS experiment: Gear][4]
 
-[Open experiment][5]
+[Open experiment](/wp-content/uploads/2009/11/css-experiment_gear.php)
 
 Again, works on webkit browsers only (Chrome, Safari).
 
@@ -46,7 +46,7 @@ more noticeable when using resolution 3.
 
 !["CSS experiment: Pixel art by on_the_wings, on Flickr"](http://farm3.staticflickr.com/2732/4129811095_f867790c2c_m.jpg) ![CSS experiment: Pixel art][6]
 
-[Open experiment][7]
+[Open experiment](/wp-content/uploads/2009/11/css-experiment_pixel-art.php)
 
 This one works on all major browsers (IE 6/7/8, Firefox, Safari, Chrome)
 :)
@@ -61,11 +61,11 @@ will turn the color when you click on it but it does not store it in the
 history. So I switched to use `iframe`, that is setting the links to
 open in the iframe and serve a dummy webpage with random URL...
 
-## Click Challege
+## Click Challenge
 
- !["CSS experiment: Click Challege by on_the_wings, on Flickr"](http://farm3.staticflickr.com/2505/4130576444_f87eb8b7e4_m.jpg) ![CSS experiment: Click Challege][8]
+ !["CSS experiment: Click Challenge by on_the_wings, on Flickr"](http://farm3.staticflickr.com/2505/4130576444_f87eb8b7e4_m.jpg) ![CSS experiment: Click Challenge][8]
 
-[Open experiment][9]
+[Open experiment](/wp-content/uploads/2009/11/css-experiment_click-challenge.php)
 
 This one is webkit browsers only (Chrome, Safari).
 
@@ -85,15 +85,11 @@ CSS-only experiment over there :)
 
   [CSS animation which now available in webkit]: http://webkit.org/blog/138/css-animation/
   [1]: http://farm3.staticflickr.com/2762/4130576658_4419cd860c_m.jpg
-  [Open experiment]: http://codepad.viper-7.com/ii1fjp/55dev?
   [2]: http://farm3.staticflickr.com/2694/4129811585_a120478478_m.jpg
   [3]: http://farm3.staticflickr.com/2693/4130576954_19c1d75638_m.jpg
   [4]: http://farm3.staticflickr.com/2771/4130576994_dc6d7c029f_m.jpg
-  [5]: http://codepad.viper-7.com/2EI1un/55dev?
   [fractal]: http://en.wikipedia.org/wiki/Fractal
   [6]: http://farm3.staticflickr.com/2501/4129811141_a80400e2fd_m.jpg
-  [7]: http://codepad.viper-7.com/XvtmSu/55dev?
   [8]: http://farm3.staticflickr.com/2721/4130576522_c6ae207426_m.jpg
-  [9]: http://codepad.viper-7.com/dQ78aS/55dev?
   [CSS keyframe animation]: http://webkit.org/blog/324/css-animation-2/
   [Gear is now on Chrome Experiments!]: http://www.chromeexperiments.com/detail/gear/
