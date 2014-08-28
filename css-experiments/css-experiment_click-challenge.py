@@ -1,10 +1,10 @@
-<?php
-$id = rand();
-$cellSize = 580;
+from jinja2 import Template
 
-$maxClick = 3000;
-$timeLimit = 30; //in seconds
-?>
+cellSize=580
+maxClick=3000
+timeLimit=30 #in seconds
+
+print Template("""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
 	<head>
@@ -26,15 +26,15 @@ $timeLimit = 30; //in seconds
 			
 			div#base {
 				float:left;
-				width:<?php echo $cellSize;?>px;
-				height:<?php echo $cellSize*0.5;?>px;
+				width:{{cellSize}}px;
+				height:{{cellSize*0.5}}px;
 				overflow: hidden;
 				background-color:#fff;
 			}
 			
 			div#base input{
-				width:<?php echo $cellSize;?>px;
-				height:<?php echo $cellSize + 20;?>px;
+				width:{{cellSize}}px;
+				height:{{cellSize + 20}}px;
 				display:block;
 				border: 50px solid #f00;
 				padding:50px;
@@ -42,7 +42,7 @@ $timeLimit = 30; //in seconds
 			}
 			
 			div#base input:after {
-				font-size:<?php echo $cellSize*0.5;?>px;
+				font-size:{{cellSize*0.5}}px;
 				color:#333;
 				content: counter(c);
 			}
@@ -65,22 +65,22 @@ $timeLimit = 30; //in seconds
 			
 			@-webkit-keyframes stop {
 				0% {
-					top:-<?php echo $cellSize*0.5-20;?>px;
+					top:-{{cellSize*0.5-20}}px;
 					width:0px;
 				}
 				99.99% {
-					top:-<?php echo $cellSize*0.5-20;?>px;
+					top:-{{cellSize*0.5-20}}px;
 				}
 				100% {
 					top:0px;
-					width:<?php echo $cellSize;?>px;
+					width:{{cellSize}}px;
 				}
 			}
 			
 			div#stopper {
 				position: absolute;
-				width:<?php echo $cellSize;?>px;
-				height:<?php echo $cellSize*0.5;?>px;
+				width:{{cellSize}}px;
+				height:{{cellSize*0.5}}px;
 				background-color:#f00;
 				opacity: 0.5;
 				text-align: right;
@@ -95,7 +95,7 @@ $timeLimit = 30; //in seconds
 			input#firstClick:checked + #stopper {
 				display:block;
 				-webkit-animation-name: stop;
-				-webkit-animation-duration: <?php echo $timeLimit; ?>s;
+				-webkit-animation-duration: {{timeLimit}}s;
 				-webkit-animation-timing-function: linear;
 			}
 			
@@ -122,7 +122,7 @@ $timeLimit = 30; //in seconds
 				margin: 0;
 				padding: 10px;
 				width: 256px;
-				height: <?php echo $cellSize*0.5 - 20;?>px;
+				height: {{cellSize*0.5 - 20}}px;
 				font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 			}
 			
@@ -152,7 +152,7 @@ $timeLimit = 30; //in seconds
 			<input id="firstClick" type='checkbox' />
 			<div id="stopper"><a href="">replay?</a></div>
 			<div id="counterReset"></div>
-			<?php echo str_repeat("<input type='checkbox' />",$maxClick); ?>
+			{{ "<input type='checkbox' />" * maxClick }}
 		</div>
 		<div id="info">
 			<h1>CSS experiment: click challenge</h1>
@@ -160,7 +160,7 @@ $timeLimit = 30; //in seconds
 				Author: <a href="http://www.onthewings.net/">Andy Li</a><br />
 				Version: 2009-11-22
 			</p>
-			<h2>Click on the white area as many time as possible in <?php echo $timeLimit; ?> seconds. The timer will start once you clicked (counter shown as 1).</h2>
+			<h2>Click on the white area as many time as possible in {{timeLimit}} seconds. The timer will start once you clicked (counter shown as 1).</h2>
 			<p>This is a CSS-only experiment. It uses CSS counter, CSS keyframe animation and CSS pseudo class ":checked". It works on latest Chrome and Safari.</p>
 			<p>PHP is used in the back-end to generate the HTML. There is no tricky things there, just tired of typing those repeating things.</p>
 			<p><a href="http://blog.onthewings.net/2009/11/24/css-only-experiements/">See my blog post for more info.</a></p>
@@ -178,3 +178,4 @@ $timeLimit = 30; //in seconds
 		</script>
 	</body>
 </html>
+""").render(vars())

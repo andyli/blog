@@ -1,35 +1,67 @@
-<?php
-function map($value, $istart, $istop, $ostart, $ostop) {
-	return $ostart + ($ostop - $ostart) * (($value - $istart) / ($istop - $istart));
-}
+from __future__ import division
+from jinja2 import Template
+import cgi
 
-function extendDivsStr($numOfChildrenPerLevel, $numOfLevel, $currentLevel = 0) {
-	$resultStr = "<div class='tree level" . $currentLevel . "'></div>";
-	$currentLevel++;
-	while($numOfLevel-- > 0){
-		$str = "";
-		for ($i = 0 ; $i < $numOfChildrenPerLevel ; ++$i){
-			$str .= "<div class='tree level" . $currentLevel . "'></div>";
-		}
-		$str = "'>" . $str . "</div>";
+def map(value, istart, istop, ostart, ostop):
+	return ostart + (ostop - ostart) * ((value - istart) / (istop - istart))
+
+def extendDivsStr(numOfChildrenPerLevel, numOfLevel, currentLevel = 0):
+	resultStr = "<div class='tree level" + str(currentLevel) + "'></div>"
+	currentLevel += 1
+	while numOfLevel > 0:
+		numOfLevel -= 1
+		_str = ""
+
+		for i in range(numOfChildrenPerLevel):
+			_str += "<div class='tree level" + str(currentLevel) + "'></div>"
+
+		_str = "'>" + _str + "</div>"
 		
-		$resultStr = str_replace("'></div>", $str, $resultStr);
-		$currentLevel++;
-	}
-	return $resultStr;
-}
+		resultStr = resultStr.replace("'></div>", _str)
+		currentLevel += 1
+	
+	return resultStr
 
-$res_min = 2;
-$res_max = 4;
-$level_min = 3;
-$level_max = 8;
+res_min = 2
+res_max = 4
+level_min = 3
+level_max = 8
 
-$res = isset($_GET["res"]) && $_GET["res"] >= $res_min && $_GET["res"] <= $res_max ? $_GET["res"] : 2;
-$level = isset($_GET["level"]) && $_GET["level"] >= $level_min && $_GET["level"] <= $level_max ? $_GET["level"] : 5;
-$active = $level-1;
+GET = cgi.FieldStorage()
 
-$divSize = 100 / $res . '%';
-?>
+res = int(GET.getvalue("res")) if (("res" in GET) and (res_min <= int(GET.getvalue("res")) <= res_max)) else 2;
+level = int(GET.getvalue("level")) if (("level" in GET) and (level_min <= int(GET.getvalue("level")) <= level_max)) else 5;
+active = level - 1
+
+divSize = str(100 / res) + '%'
+
+def divLevel():
+	startActive = level - active
+	strs = ""
+	for i in range(startActive, level+1):
+		digi = round(map(i,startActive,level,10,90))
+		strs += """
+			div.level{i} {{
+				background-color: hsl(0, 0%, {digi}%);
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+			}}
+			
+			div.level{i}:hover {{
+				background-color: hsl(0, 0%, {digi2}%);
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+			}}
+			""".format(i=i, digi=digi, digi2=90 - digi)
+	return strs
+
+def options(min,max,selected):
+	strs = ""
+	for i in range(min, max+1):
+		strs += "<option {}>{}</option>".format('selected="selected"' if selected == i else "", i)
+	return strs
+
+print Template("""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
 	<head>
@@ -51,8 +83,8 @@ $divSize = 100 / $res . '%';
 			
 			div.tree {
 				float:left;
-				width:<?php echo $divSize; ?>;
-				height:<?php echo $divSize; ?>;
+				width:{{divSize}};
+				height:{{divSize}};
 				opacity: 1;
 				-webkit-transform-origin: 50% 50%;
 				-webkit-transition: -webkit-transform 1s linear, background-color 1s linear;
@@ -67,23 +99,7 @@ $divSize = 100 / $res . '%';
 				background-color:#fff;
 			}
 			
-			<?php 
-			$startActive = $level - $active;
-			for ($i = $startActive ; $i <= $level ; ++$i) { 
-				$digi =  round(map($i,$startActive,$level,10,90));
-			?>
-			div.level<?php echo $i; ?> {
-				background-color: hsl(0, 0%, <?php echo $digi; ?>%);
-				-webkit-transform: rotate(45deg);
-				-moz-transform: rotate(45deg);
-			}
-			
-			div.level<?php echo $i; ?>:hover {
-				background-color: hsl(0, 0%, <?php echo 90 - $digi; ?>%);
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-			}
-			<?php } ?>
+			{{divLevel()}}
 			
 			h1 {
 				font-size: 14x;
@@ -134,7 +150,7 @@ $divSize = 100 / $res . '%';
 		</style>
 	</head>
 	<body>		
-		<?php echo extendDivsStr($res*$res, $level); ?>
+		{{extendDivsStr(res*res, level)}}
 		<div id="info">
 			<h1>CSS experiment: gear</h1>
 			<p>
@@ -149,22 +165,18 @@ $divSize = 100 / $res . '%';
 				<p>
 					<label for="res">resolution</label>
 					<select id="res" name="res">
-						<?php for ($i = $res_min ; $i <= $res_max ; ++$i) {?>
-						<option <?php if ($res == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(res_min,res_max,res)}}
 					</select>
 				</p>
 				<p>
 					<label for="level">number of levels</label>
 					<select id="level" name="level">
-						<?php for ($i = $level_min ; $i <= $level_max ; ++$i) {?>
-						<option <?php if ($level == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(level_min,level_max,level)}}
 					</select>
 				</p>				
 				<p><input type="submit" value="submit" /></p>
 			</form>
-			<p><a href="http://www.chromeexperiments.com/detail/gear/"><img src="badge-black_black.png" alt="See my Experiment on ChromeExperiments.com" /></a></p>
+			<p><a href="http://www.chromeexperiments.com/detail/gear/"><img src="/files/2009/badge-black_black.png" alt="See my Experiment on ChromeExperiments.com" /></a></p>
 		</div>
 		
 		<script type="text/javascript">
@@ -179,3 +191,4 @@ $divSize = 100 / $res . '%';
 		</script>
 	</body>
 </html>
+""").render(vars())

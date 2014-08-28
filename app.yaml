@@ -2,12 +2,11 @@ application: blog-onthewings
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: no
 
 handlers:
-- url: /wp-content/uploads/(.+)/(.+)/(.+).php
-  static_files: output/files/\1/\3.html
-  upload: output/files/(.+)/(.+).html
+- url: /wp-content/uploads/2009/11/(css-experiment_.+).php
+  script: css-experiments/\1.py
 - url: /(.*)feed/
   static_files: output/\1feed/atom.xml
   upload: output/(.*)feed/atom.xml
@@ -20,8 +19,6 @@ handlers:
 - url: /(.*)
   static_files: output/\1
   upload: output/(.*)
-# - url: .*
-#   script: main.app
 
 skip_files:
 - .git
@@ -33,5 +30,7 @@ skip_files:
 
 
 libraries:
-- name: webapp2
-  version: "2.5.2"
+- name: jinja2
+  version: "2.6"
+# - name: webapp2
+#   version: "2.5.2"

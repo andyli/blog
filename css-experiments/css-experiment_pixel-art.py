@@ -1,64 +1,53 @@
-<?php
-function generatePassword($length=9, $strength=0) {
-	$vowels = 'aeuy';
-	$consonants = 'bdghjmnpqrstvz';
-	if ($strength & 1) {
-		$consonants .= 'BDGHJLMNPQRSTVWXZ';
-	}
-	if ($strength & 2) {
-		$vowels .= "AEUY";
-	}
-	if ($strength & 4) {
-		$consonants .= '23456789';
-	}
-	if ($strength & 8) {
-		$consonants .= '@#$%';
-	}
- 
-	$password = '';
-	$alt = time() % 2;
-	for ($i = 0; $i < $length; $i++) {
-		if ($alt == 1) {
-			$password .= $consonants[(rand() % strlen($consonants))];
-			$alt = 0;
-		} else {
-			$password .= $vowels[(rand() % strlen($vowels))];
-			$alt = 1;
-		}
-	}
-	return $password;
-}
+from __future__ import division
+from jinja2 import Template
+import cgi, string, random
 
-$res_min = 2;
-$res_max = 30;
+def generatePassword(length=9, strength=0):
+	return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(length))
 
-$cellSize = 30;
+res_min = 2
+res_max = 30
 
+cellSize = 30
 
-if (!isset($_GET["dummy"])) {
-	if (isset($_GET["res"])) {
-		header( 'Location: ?id='.generatePassword(4,4).'R'.$_GET["res"]);
-	} else if (!isset($_GET["id"])) {
-		header( 'Location: ?id='.generatePassword(4,4).'R8');
-	} else if (strpos($_GET["id"], "R") != 4) {
-		header( 'Location: ?id='.generatePassword(4,4).'R8');
-	} else {
-		$res = substr($_GET["id"],strpos($_GET["id"], "R")+1);
-		if (preg_match("/[^0-9]/",$res) != 0) {
-			header( 'Location: ?id='.generatePassword(4,4).'R8');
-		}
-		
-		$id = $_GET["id"];
-		$res = (int) $res;
-	}
-}
-?>
+GET = cgi.FieldStorage()
+
+_id = None
+res = None
+redirect = False
+
+if "dummy" not in GET:
+	if "res" in GET:
+		redirect = '?id=' + generatePassword(4,4) + 'R' + GET.getvalue("res")
+	elif "id" not in GET:
+		redirect = '?id=' + generatePassword(4,4) + 'R8'
+	elif GET.getvalue("id").index("R") != 4:
+		redirect = '?id=' + generatePassword(4,4) + 'R8'
+	else:
+		res = int(GET.getvalue("id")[GET.getvalue("id").index("R")+1:])
+		if not res_min <= res <= res_max:
+			redirect = '?id=' + generatePassword(4,4) + 'R8'
+		_id = GET.getvalue("id")
+
+def options(min,max,selected):
+	strs = ""
+	for i in range(min, max+1):
+		strs += "<option {}>{}</option>".format('selected="selected"' if selected == i else "", i)
+	return strs
+
+def pixels():
+	return "".join(["<a href='?dummy="+_id+'-'+str(num)+"' target='dummyFrame'></a>" for num in range(res*res)])
+
+print Template("""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>CSS experiment: pixel art</title>
-		<?php if (!isset($_GET["dummy"])) { ?>
+		{% if redirect %}
+		<meta http-equiv="refresh" content="0;url={{redirect}}" /> 
+		{% endif %}
+		{% if not redirect and "dummy" not in GET %}
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css" />
 		<style type="text/css">
 			html, body {
@@ -75,15 +64,15 @@ if (!isset($_GET["dummy"])) {
 			
 			div#base {
 				float:left;
-				width:<?php echo $res*$cellSize;?>px;
-				height:<?php echo $res*$cellSize;?>px;				
+				width:{{res*cellSize}}px;
+				height:{{res*cellSize}}px;				
 				background-color:#fff;
 			}
 			
 			div#base a{
 				float:left;
-				width:<?php echo $cellSize;?>px;
-				height:<?php echo $cellSize;?>px;
+				width:{{cellSize}}px;
+				height:{{cellSize}}px;
 				padding:0;
 				margin:0;
 				font-size:0px;
@@ -150,11 +139,11 @@ if (!isset($_GET["dummy"])) {
 				color: #fff;
 			}
 		</style>
-		<?php } ?>
+		{% endif %}
 	</head>
 	<body>
-		<?php if (!isset($_GET["dummy"])) { ?>
-		<div id="base"><?php $num = $res*$res; while($num--) { echo "<a href='?dummy=".$id.'-'.$num."' target='dummyFrame'></a>";} ?></div>
+		{% if not redirect and ("dummy" not in GET) %}
+		<div id="base">{{pixels()}}</div>
 		<div id="info">
 			<h1>CSS experiment: pixel art</h1>
 			<p>
@@ -171,14 +160,12 @@ if (!isset($_GET["dummy"])) {
 				<p>
 					<label for="res">resolution</label>
 					<select id="res" name="res">
-						<?php for ($i = $res_min ; $i <= $res_max ; ++$i) {?>
-						<option <?php if ($res == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(res_min,res_max,res)}}
 					</select>
 				</p>		
 				<p>
 					<input type="submit" value="new drawing" />
-					<input type="hidden" name="rnd" value="<?php echo rand(); ?>" />
+					<input type="hidden" name="rnd" value="{{generatePassword(4)}}" />
 				</p>
 			</form>
 		</div>
@@ -194,6 +181,7 @@ if (!isset($_GET["dummy"])) {
 		pageTracker._trackPageview();
 		} catch(err) {}
 		</script>
-		<?php } ?>
+		{% endif %}
 	</body>
 </html>
+""").render(vars())

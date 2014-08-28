@@ -1,37 +1,61 @@
-<?php
-function map($value, $istart, $istop, $ostart, $ostop) {
-	return $ostart + ($ostop - $ostart) * (($value - $istart) / ($istop - $istart));
-}
+from __future__ import division
+from jinja2 import Template
+import cgi
 
-function extendDivsStr($numOfChildrenPerLevel, $numOfLevel, $currentLevel = 0) {
-	$resultStr = "<div class='tree level" . $currentLevel . "'></div>";
-	$currentLevel++;
-	while($numOfLevel-- > 0){
-		$str = "";
-		for ($i = 0 ; $i < $numOfChildrenPerLevel ; ++$i){
-			$str .= "<div class='tree level" . $currentLevel . "'></div>";
-		}
-		$str = "'>" . $str . "</div>";
+def map(value, istart, istop, ostart, ostop):
+	return ostart + (ostop - ostart) * ((value - istart) / (istop - istart))
+
+def extendDivsStr(numOfChildrenPerLevel, numOfLevel, currentLevel = 0):
+	resultStr = "<div class='tree level" + str(currentLevel) + "'></div>"
+	currentLevel += 1
+	while numOfLevel > 0:
+		numOfLevel -= 1
+		_str = ""
+
+		for i in range(numOfChildrenPerLevel):
+			_str += "<div class='tree level" + str(currentLevel) + "'></div>"
+
+		_str = "'>" + _str + "</div>"
 		
-		$resultStr = str_replace("'></div>", $str, $resultStr);
-		$currentLevel++;
-	}
-	return $resultStr;
-}
+		resultStr = resultStr.replace("'></div>", _str)
+		currentLevel += 1
+	
+	return resultStr
 
-$res_min = 2;
-$res_max = 4;
-$level_min = 3;
-$level_max = 8;
-$active_min = 3;
-$active_max = 8;
+res_min = 2
+res_max = 4
+level_min = 3
+level_max = 8
+active_min = 3
+active_max = 8
 
-$res = isset($_GET["res"]) && $_GET["res"] >= $res_min && $_GET["res"] <= $res_max ? $_GET["res"] : 2;
-$level = isset($_GET["level"]) && $_GET["level"] >= $level_min && $_GET["level"] <= $level_max ? $_GET["level"] : 6;
-$active = isset($_GET["active"]) && $_GET["active"] >= $active_min && $_GET["active"] <= $active_max ? $_GET["active"] : 3;
+GET = cgi.FieldStorage()
 
-$divSize = 100 / $res . '%';
-?>
+res = int(GET.getvalue("res")) if (("res" in GET) and (res_min <= int(GET.getvalue("res")) <= res_max)) else 2;
+level = int(GET.getvalue("level")) if (("level" in GET) and (level_min <= int(GET.getvalue("level")) <= level_max)) else 6;
+active = int(GET.getvalue("active")) if (("active" in GET) and (active_min <= int(GET.getvalue("active")) <= active_max)) else 3;
+
+divSize = str(100 / res) + '%'
+
+def divLevel():
+	startActive = level - active
+	strs = ""
+	for i in range(startActive, level+1):
+		digi = round(map(i,startActive,level,100,0))
+		strs += """
+			div.level{i}:hover {{
+				background-color: hsl(0, 0%, {digi}%);
+			}}
+			""".format(i=i, digi=digi)
+	return strs
+
+def options(min,max,selected):
+	strs = ""
+	for i in range(min, max+1):
+		strs += "<option {}>{}</option>".format('selected="selected"' if selected == i else "", i)
+	return strs
+
+print Template("""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
 	<head>
@@ -53,8 +77,8 @@ $divSize = 100 / $res . '%';
 			
 			div.tree {
 				float:left;
-				width:<?php echo $divSize; ?>;
-				height:<?php echo $divSize; ?>;
+				width:{{divSize}};
+				height:{{divSize}};
 				opacity: 1;
 				-webkit-transition: background-color 0.5s linear;
 			}
@@ -68,15 +92,7 @@ $divSize = 100 / $res . '%';
 				background-color:hsl(0, 0%, 100%);
 			}
 			
-			<?php 
-			$startActive = $level - $active;
-			for ($i = $startActive ; $i <= $level ; ++$i) { 
-				$digi =  round(map($i,$startActive,$level,100,0));
-			?>			
-			div.level<?php echo $i; ?>:hover {
-				background-color: hsl(0, 0%, <?php echo $digi; ?>%);
-			}
-			<?php } ?>
+			{{divLevel()}}
 			
 			h1 {
 				font-size: 14x;
@@ -126,7 +142,7 @@ $divSize = 100 / $res . '%';
 		</style>
 	</head>
 	<body>		
-		<?php echo extendDivsStr($res*$res, $level); ?>
+		{{extendDivsStr(res*res, level)}}
 		<div id="info">
 			<h1>CSS experiment: mouse shadow</h1>
 			<p>
@@ -141,25 +157,19 @@ $divSize = 100 / $res . '%';
 				<p>
 					<label for="res">resolution</label>
 					<select id="res" name="res">
-						<?php for ($i = $res_min ; $i <= $res_max ; ++$i) {?>
-						<option <?php if ($res == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(res_min,res_max,res)}}
 					</select>
 				</p>
 				<p>
 					<label for="level">number of levels</label>
 					<select id="level" name="level">
-						<?php for ($i = $level_min ; $i <= $level_max ; ++$i) {?>
-						<option <?php if ($level == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(level_min,level_max,level)}}
 					</select>
 				</p>
 				<p>
 					<label for="active">number of mouse-active levels</label>
 					<select id="active" name="active">
-						<?php for ($i = $active_min ; $i <= $active_max ; ++$i) {?>
-						<option <?php if ($active == $i) {echo 'selected="selected"';} ?>><?php echo $i; ?></option>
-						<?php } ?>
+						{{options(active_min,active_max,active)}}
 					</select>
 				</p>			
 				<p><input type="submit" value="submit" /></p>
@@ -178,3 +188,4 @@ $divSize = 100 / $res . '%';
 		</script>
 	</body>
 </html>
+""").render(vars())
