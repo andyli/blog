@@ -31,8 +31,8 @@ above:
 **C++**
 
 ```text
--cpp bin  
--main Test  gue
+-cpp bin
+-main Test
 -cmd ./bin/Test
 ```  
 Notice the resulting file will be *Test-debug* if you compile with
