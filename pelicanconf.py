@@ -42,8 +42,23 @@ SOCIAL = (
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
 	'summary',
+	'sitemap',
 	# 'w3c_validate',
 ]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 1,
+        'indexes': 0.5,
+        'pages': 0.8
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'weekly',
+        'pages': 'monthly'
+    }
+}
 
 TYPOGRIFY = True
 
