@@ -206,7 +206,12 @@ iframe {
 
 .social {
 	margin-top: 2em;
+	margin-bottom: 2em;
 	text-align: center;
+}
+
+.social a {
+	display: block;
 }
 
 .center {
