@@ -187,6 +187,10 @@ article {
 	border-top: 1px #EEE solid;
 }
 
+.entry-content a {
+	display: inline;
+}
+
 #post-list li:last-child article {
 	border-bottom: 1px #EEE solid;
 }
