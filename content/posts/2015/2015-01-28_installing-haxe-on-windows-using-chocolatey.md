@@ -2,7 +2,7 @@ Title: Installing Haxe on Windows Using Chocolatey
 Tags: Haxe
 
 <span class="center">
-![Haxe loves Chocolatey](/files/2015/chocolatey-haxe.png)
+![Haxe loves Chocolatey](this>files/2015/chocolatey-haxe.png)
 </span>
 
 Recently I've created the [Haxe Chocolatey package](https://chocolatey.org/packages/haxe). So yeah, we have yet another way to install Haxe (and Neko) on Windows.

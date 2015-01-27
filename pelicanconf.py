@@ -43,6 +43,7 @@ PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
 	'summary',
 	'sitemap',
+    'interlinks',
 	# 'w3c_validate',
 ]
 

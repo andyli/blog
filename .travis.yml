@@ -6,7 +6,7 @@ env:
     - APPENGINE_VERSION=1.9.17
     - secure: St2TAUGCgemUZGcVHoV0xaRqF13wm34n8vFCQryC3TdSQHv5FUZjlzjlkQVCuQDelddrpcvoiBwg4i6k3oOJJYoHO0XiDG+lscUu15LAySA5iAsbGSokkVRiqimxHc2zUa23/j/qTSz014FQ0b6P/Gun00y3eDkldHo0dc1UObA=
 install:
-  - cd .. && git clone https://github.com/getpelican/pelican-plugins && cd $TRAVIS_BUILD_DIR
+  - cd .. && git clone https://github.com/andyli/pelican-plugins.git --branch interlinks-img && cd $TRAVIS_BUILD_DIR
   - pip install -r requirements.txt
 script:
   - make publish
