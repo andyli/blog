@@ -13,4 +13,4 @@ script:
   - cd $HOME
   - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_${APPENGINE_VERSION}.zip
   - unzip -q google_appengine_${APPENGINE_VERSION}.zip
-  - ./google_appengine/appcfg.py update $TRAVIS_BUILD_DIR --email=andy@onthewings.net --passin <<< $GOOGLE_PW
+  - ./google_appengine/appcfg.py update $TRAVIS_BUILD_DIR --no_oauth2 --email=andy@onthewings.net --passin <<< $GOOGLE_PW
