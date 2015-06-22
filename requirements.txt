@@ -1,5 +1,5 @@
-pelican==3.5.0
-Markdown==2.5.2
+pelican==3.6.0
+Markdown==2.6.2
 typogrify==2.0.7
 Pygments==2.0.2
 beautifulsoup4==4.3.2
