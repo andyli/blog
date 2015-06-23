@@ -6,7 +6,7 @@ Status: draft
 ![Haxe Foundation logo](this>files/2015/haxe-fondation.png)
 </span>
 
-Yeah, I completed my PhD and I'm now working for the [Haxe Foundation](http://haxe.org/foundation/)!
+Yeah, I've completed my PhD and I'm now working for the [Haxe Foundation](http://haxe.org/foundation/)!
 
 # My 4-year-long PhD has come to an end
 
@@ -26,7 +26,7 @@ As mentioned above, I value maintaining open source software very much, so it is
 
 I have been using Haxe for 5 years. I have published a few libraries, like [jQueryExtern](https://github.com/andyli/jQueryExternForHaxe) and [hxSerial](https://github.com/andyli/hxSerial). At some point I've also published [hxOpenFrameworks](https://github.com/andyli/hxOpenFrameworks) and used it to create [generative graphics](https://www.flickr.com/photos/andy-li/sets/72157625719497466). At that time Haxe wasn't very stable and the C++ target was still young. I decided to contribute directly to the Haxe repository since it is definitely the most important part of the Haxe ecosystem. The Haxe compiler (and its standard library) has to be robust and stable such that third party libraries and frameworks, like hxOpenFrameworks and [OpenFL](http://www.openfl.org/), can be built on top of it. In my free time during my PhD study, I introduced continuous integration (CI) to the Haxe repositories. It is satisfying to see the Haxe unit tests are now being run for all the 9 targets on both [Mac/Linux](https://travis-ci.org/HaxeFoundation/haxe), [Windows](https://ci.appveyor.com/project/HaxeFoundation/haxe/), as well as [browsers](https://saucelabs.com/u/haxe).
 
-Since I had defended my PhD thesis, I was free to attend [WWX 2015](http://wwx.silexlabs.org/2015/), in which I presented CI to the Haxe community ([my presentation slides](https://docs.google.com/presentation/d/1AcqUbB_Zn5dQyxpv9BYokOXMPuEcYEXMA7w6E50kpNo/edit?usp=sharing)). Using [TravisCI](https://travis-ci.org/) and [AppVeyor](http://www.appveyor.com/) is so easy that I really want to see every Haxe projects on Github to use them. During the conference I talked with [Nicolas](https://twitter.com/ncannasse) on working for the Haxe Foundation, to help maintain and develop for Haxe, and he was happy about it! So, yes. I am now financially supported by the Haxe Foundation, to work on Haxe in full-time! :)
+Since I had defended my PhD thesis, I was free to attend [WWX 2015](http://wwx.silexlabs.org/2015/), in which I presented CI to the Haxe community ([my presentation slides](https://docs.google.com/presentation/d/1AcqUbB_Zn5dQyxpv9BYokOXMPuEcYEXMA7w6E50kpNo/edit?usp=sharing)). Using [TravisCI](https://travis-ci.org/) and [AppVeyor](http://www.appveyor.com/) is so easy that I really want to see every Haxe projects on Github to use them. During the conference I talked with [Nicolas](https://twitter.com/ncannasse) about working for the Haxe Foundation, and he was happy about it! So, yes. I am now financially supported by the Haxe Foundation to maintain and develop for Haxe in full-time! :)
 
 The very first task that I've just started to work on is to upgrade jQuery support in the Haxe standard library. The build-in support was added back in 2011. It has never been a complete extern, and has been staying at jQuery 1.6.4 (latest version as of writing is 1.11.3).
 
