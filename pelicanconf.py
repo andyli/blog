@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Andy Li'
 AUTHOR_SAVE_AS = False
-SITENAME = u"Andy Li's Blog"
+SITENAME = u"Andy Li’s Blog"
 SITEURL = ''
 
 TIMEZONE = 'Hongkong'
@@ -15,6 +15,8 @@ DEFAULT_CATEGORY = 'uncategorized'
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+DRAFT_URL = ARTICLE_URL
+DRAFT_SAVE_AS = ARTICLE_SAVE_AS
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
