@@ -10,11 +10,29 @@ I have been using Haxe for years and I'm now a member of the Haxe Foundation, co
 
 ### Syntax
 
-TypeScript is designed as a super-set of JS. That means, any valid JS code is also valid TypeScript code. This makes the basic syntax constructs between TypeScript and JS very similar. Haxe syntax is also very JS-like. But it is more technically ECMAScript-like, or similar to ActionScript 3, since Haxe was historically built as an alternative to ActionScript 3 for authoring Flash swf contents.
+TypeScript is designed as a super-set of JS. That means, any valid JS code is also valid TypeScript code. This makes porting code between TypeScript and JS very easily, since they share exactly the same basic syntax constructs.
 
-On top of the JS syntax, TypeScript adds the ability to annotate types to variable, in the form of `var str:string;`. Haxe shares the same syntax, except all the types are first-letter upper-cased, i.e. `var str:String;`. 
+Haxe syntax is also very JS-like. But it is more technically correct to say that it is ECMAScript-like, or similar to ActionScript 3, since Haxe was historically built as an alternative to ActionScript 3 for authoring Flash swf contents. Anyway, the basic syntax constructs are mostly equals to JS's. One exception is the missing of classic C-style for-loop, i.e. `for (int i = 0 ; i < 10; i++) {}`, which is replaced by [`Iterator`](http://haxe.org/manual/lf-iterators.html) based for-loop, i.e. `for (i in 0...10) {}`.
 
-block scope
+TypeScript and Haxe have different decision on variable scoping. TypeScript, like JS, offers only function-level scope. Haxe however provides block-level scope, which is similar to C/C++, Java, and C#. The difference is illustrated as follows:
+```ts
+// TypeScript
+{
+	var a = 1;
+}
+console.log(a); // ok, because `a` exist outside of a block
+```
+```haxe
+// Haxe
+{
+	var a = 1;
+}
+trace(a); // error: Unknown identifier : a
+```
+
+expression-oriented syntax
+
+On top of the JS syntax, TypeScript adds the ability to annotate types to variable, in the form of `var str:string;`. Haxe shares the same syntax, except all the types are first-letter upper-cased, i.e. `var str:String;`.
 
 ### Typing system
 
