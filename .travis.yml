@@ -4,7 +4,6 @@ sudo: false
 env:
   global:
     - APPENGINE_VERSION=1.9.24
-    - secure: St2TAUGCgemUZGcVHoV0xaRqF13wm34n8vFCQryC3TdSQHv5FUZjlzjlkQVCuQDelddrpcvoiBwg4i6k3oOJJYoHO0XiDG+lscUu15LAySA5iAsbGSokkVRiqimxHc2zUa23/j/qTSz014FQ0b6P/Gun00y3eDkldHo0dc1UObA=
 install:
   - cd .. && git clone https://github.com/getpelican/pelican-plugins.git && cd $TRAVIS_BUILD_DIR
   - pip install -r requirements.txt
@@ -13,4 +12,4 @@ script:
   - cd $HOME
   - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_${APPENGINE_VERSION}.zip
   - unzip -q google_appengine_${APPENGINE_VERSION}.zip
-  - ./google_appengine/appcfg.py update $TRAVIS_BUILD_DIR --no_oauth2 --email=andy@onthewings.net --passin <<< $GOOGLE_PW
+  - ./google_appengine/appcfg.py update $TRAVIS_BUILD_DIR --noauth_local_webserver
