@@ -16,4 +16,4 @@ script:
   - google-cloud-sdk/bin/gcloud components update preview app --quiet
   - openssl aes-256-cbc -K $encrypted_3551f66ee127_key -iv $encrypted_3551f66ee127_iv -in "${TRAVIS_BUILD_DIR}/gae_key" -out blog-onthewings-8a1538b1718e.json -d
   - google-cloud-sdk/bin/gcloud auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
-  - google-cloud-sdk/bin/gcloud --project blog-onthewings preview app deploy --quiet "${TRAVIS_BUILD_DIR}/app.yaml"
+  - google-cloud-sdk/bin/gcloud --project blog-onthewings preview app deploy --version 1 --quiet "${TRAVIS_BUILD_DIR}/app.yaml"
