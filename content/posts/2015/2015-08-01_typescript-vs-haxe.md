@@ -4,7 +4,7 @@ Status: draft
 
 [TypeScript](https://github.com/Microsoft/TypeScript) is definitely one of the most well-known compile-to-JS languages nowadays. Positioned as a super-set of JavaScript, TypeScript brings in static-typing for writing large-scale application. [Haxe](http://haxe.org/) is similar to TypeScript in many aspects, particularly its JS-like syntax, static-typing, and module system. Among [the 9 Haxe compilation targets](http://haxe.org/documentation/introduction/compiler-targets.html), the JS target was one of the eldest ones. It was introduced [in March 2006](https://github.com/HaxeFoundation/haxe/blob/3.2.0/extra/CHANGES.txt#L1496-L1497), which was way before Microsoft released TypeScript [in 2012](https://en.wikipedia.org/wiki/TypeScript#History). In fact, Haxe is a language that compiles to JS, ahead of everyone else including TypeScript (2012), [CoffeeScript](http://coffeescript.org/) (2009), [Dart](https://www.dartlang.org/) (2011), and Java via [GWT](http://www.gwtproject.org/) (May 2006). So I wonder, which is the better compile-to-JS language, the (relatively) new shiny TypeScript, or the good-old mature Haxe?
 
-I have been using Haxe for years and I'm now a member of the Haxe Foundation, contributing to Haxe daily. So I can be considered as a Haxe expert. But I didn't have much knowledge of TypeScript other than watched some presentations about it and read some docs on its website. To gain enough knowledge and experience of it to make the comparison as fair as possible, I took a MOOC course from edX, [Introduction to TypeScript](https://www.edx.org/course/introduction-typescript-microsoft-dev201x-0), and completed it. But nevertheless, I'm merely acknowledgeable. If there is any TypeScript experts reading this, feel free to point out my errors via commenting.
+I have been using Haxe for years and I'm now a member of the Haxe Foundation, contributing to Haxe daily. So I can be considered as a Haxe expert. But I didn't have much knowledge of TypeScript other than watched some presentations about it and read some docs on its website. To gain enough knowledge and experience of it to make the comparison as fair as possible, I took a MOOC course from edX, [Introduction to TypeScript](https://www.edx.org/course/introduction-typescript-microsoft-dev201x-0), and completed it. But nevertheless, I'm merely acknowledgeable. If there is any TypeScript experts reading this, feel free to point out my errors via commenting. Note that the differences mentioned below are the major ones - the comparison is not exhaustive.
 
 ## Fight!
 
@@ -14,7 +14,65 @@ TypeScript is designed as a super-set of JS. That means, any valid JS code is al
 
 Haxe syntax is also very JS-like. But it is more technically correct to say that it is ECMAScript-like, or similar to ActionScript 3, since Haxe was historically built as an alternative to ActionScript 3 for authoring Flash swf contents. Anyway, the basic syntax constructs are mostly equals to JS's. One exception is the missing of classic C-style for-loop, i.e. `for (int i = 0 ; i < 10; i++) {}`, which is replaced by [`Iterator`](http://haxe.org/manual/lf-iterators.html) based for-loop, i.e. `for (i in 0...10) {}`.
 
-TypeScript and Haxe have different decision on variable scoping. TypeScript, like JS, offers only function-level scope. Haxe however provides block-level scope, which is similar to C/C++, Java, and C#. The difference is illustrated as follows:
+On top of the JS syntax, TypeScript adds the ability to annotate types to variable, in the form of `var str:string;`. Haxe shares the same syntax, except all the types are first-letter upper-cased, i.e. `var str:String;`.
+
+TypeScript has two way to write an Array type. Haxe only has one.
+```ts
+// TypeScript
+var list:string[] = ["a", "b", "c"];
+var list:Array<string> = ["a", "b", "c"];
+```
+```haxe
+// Haxe
+var list:Array<String> = ["a", "b", "c"];
+```
+
+The syntaxes for class/interface definition of TypeScript and Haxe are slightly different:
+```ts
+// TypeScript
+interface IGreeter {
+	greeting:string;
+	greet():string;
+}
+class Greeter implements IGreeter {
+	// fields are public by default
+	private hello = "Hello, ";
+	greeting:string;
+	constructor(message:string) {
+		this.greeting = message;
+	}
+	greet() {
+		// use of `this.` is mandatory when accessing fields
+		return this.hello + this.greeting;
+	}
+}
+```
+```haxe
+// Haxe
+interface IGreeter {
+	// fields are public by default in interface def.
+	var greeting:String;
+	function greet():String;
+}
+class Greeter implements IGreeter {
+	// fields are private by default in class def.
+	public var greeting:String;
+	var hello = "Hello, ";
+	public function new(message:String) {
+		greeting = message;
+	}
+	public function greet() {
+		// use of `this.` is optional when accessing fields
+		return this.hello + greeting;
+	}
+}
+```
+
+expression-oriented syntax
+
+### Semantics
+
+TypeScript and Haxe have different decisions on variable scoping. TypeScript, like JS, offers only function-level scope. Haxe however provides block-level scope, which is also offered by C/C++, Java, and C#. The difference is illustrated as follows:
 ```ts
 // TypeScript
 {
@@ -30,11 +88,13 @@ console.log(a); // ok, because `a` exist outside of a block
 trace(a); // error: Unknown identifier : a
 ```
 
-expression-oriented syntax
+Both TypeScript and Haxe have the enum type, but they are different things. A enum type in TypeScript is just a finite set of values. Enum in Haxe is a much more powerful concept called [(generalized) algebraic data type (GADT)](http://haxe.org/manual/types-enum-instance.html).
 
-On top of the JS syntax, TypeScript adds the ability to annotate types to variable, in the form of `var str:string;`. Haxe shares the same syntax, except all the types are first-letter upper-cased, i.e. `var str:String;`.
+Switch in Haxe is different than TypeScript/JS. It is in fact [pattern matching](http://haxe.org/manual/lf-pattern-matching.html).
 
 ### Typing system
+
+TypeScript is a structural type system.
 
 Both TypeScript and Haxe offer compile-time type inference, but the Haxe one is slightly more sophisticated in the sense that it is able to infer type from the first use of the variable instead of just the initial value. It is illustrated as follows:
 ```ts
@@ -77,11 +137,15 @@ s.nonexisting = 123;
 ```
 The same code above in Haxe will cause an compilation error and no output is produced.
 
-In this sense, Haxe is even more "typed" (has stricter typing) than TypeScript. On one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of properly type it. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, it is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but surely bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+Unlike Haxe, TypeScript has a few unsound cases. http://www.typescriptlang.org/Handbook#type-inference
+
+We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of properly type it. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, it is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but surely bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
 ### Code organization and generation
 
-### Functional programming
+package/module and file structure
+
+Mixins
 
 ### Compiler
 
