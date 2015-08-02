@@ -27,6 +27,61 @@ var list:Array<string> = ["a", "b", "c"];
 var list:Array<String> = ["a", "b", "c"];
 ```
 
+TODO: expression-oriented syntax
+
+TypeScript and Haxe have similar syntaxes for functions, but there are differences. e.g. optional parameter, notice the placement of `?`:
+```ts
+// TypeScript
+function greet(name?:string):string {
+	if (name) {
+		return "Hello, " + name;
+	} else {
+		return "Hello";
+	}
+}
+```
+```haxe
+// Haxe
+function greet(?name:String):String {
+	if (name != null) { // no implicit conversion to Bool
+		return "Hello, " + name;
+	} else {
+		return "Hello";
+	}
+}
+```
+Rest parameter:
+```ts
+// TypeScript
+function buildName(firstName: string, ...restOfName: string[]):string {
+	return firstName + " " + restOfName.join(" ");
+}
+```
+```haxe
+// Haxe does not allow writing function of variable-lengthed parameters.
+// But it let us declare such functions when 
+// writing extern using the special `haxe.extern.Rest` type.
+extern class Namebuilder {
+	public function build(first:String, rest:haxe.extern.Rest<String>):String;
+}
+```
+
+TODO: short lambda
+
+Function types in TypeScript is easy to understand, because it looks very similar to the arrow function notation:
+```ts
+// TypeScript
+var add:(a:number, b:number)=>number;
+```
+
+The Haxe one is unfortunately kind of a "wrong" choice, since it suggests [auto currying or auto partial application](https://en.wikipedia.org/wiki/Currying), which is not supported by Haxe.
+```haxe
+// Haxe
+var add:Float->Float->Float; // A function that takes 2 `Float`s and returns a `Float`.
+                             // It is NOT the same as `Float->(Float->Float)`,
+                             // nor equals to `(Float->Float)->Float`.
+```
+
 The syntaxes for class/interface definition of TypeScript and Haxe are slightly different:
 ```ts
 // TypeScript
@@ -68,11 +123,80 @@ class Greeter implements IGreeter {
 }
 ```
 
-expression-oriented syntax
+TypeScript also provides some syntactic sugar, named "parameter properties", for writing classes. The following two class definitions are semantically the same, but the former is written using "parameter properties".
+```ts
+// class definition with "parameter properties"
+class Person {
+	constructor(public name:string, private secret:string) {
+		
+	}
+}
+// normal class definition
+class Person {
+	name:string;
+	private secret:string;
+	constructor(name:string, secret:string) {
+		this.name = name;
+		this.secret = secret;
+	}
+}
+```
+
+Haxe does not provides built-in short class syntax. But it can be emulated quite easily with [build macros](http://haxe.org/manual/macro-type-building.html). The Haxe libraries, [dataclass](https://github.com/ciscoheat/dataclass) and [tink_lang](https://github.com/haxetink/tink_lang#direct-initialization), provide similar functionality with different syntaxes.
+
+The ways TypeScript and Haxe define property get/setters are very different. The TypeScript one is straight forward. The Haxe one is pretty unique.
+```ts
+// TypeScript
+class Person {
+	private _name:string
+	// if it is allowed to be read by the public, define the following
+	get name() {
+		return this._name;
+	}
+	// if it is allowed to be set by the public, define the following
+	set name(v:string) {
+		this._name = v;
+	}
+}
+```
+```haxe
+// Haxe
+class Person {
+	// property with getter and setter
+	// @:isVar auto generates the private `name`
+	@:isVar public var name(get, set):String;
+	public function get_name() {
+		return name;
+	}
+	public function set_name(v:String):String {
+		return name = v;
+	}
+
+	// read-only from other classes, but can be set by itself
+	public var gender(default, null):String;
+
+	// constant read-only property
+	public var type(default, never):String = "Person";
+
+	// set-only ver
+	public var birthday(null, set):Date;
+	function set_birthday(v:Date):Date {
+		return birthday = v;
+	}
+
+	// property that derived from something
+	public var age(get, never):Float;
+	function get_age():Float {
+		return computeAge(birthday);
+	}
+}
+```
+
+Overall, on the surface, TypeScript and Haxe are quite similar, with minor differences where one is slightly more verbose than the other, or the opposite. Haxe has better expression syntax, but TypeScript has better function syntax. However, the underlying semantics of their syntactically similar codes can be quite different. We will discuss those in the following section.
 
 ### Semantics
 
-TypeScript and Haxe have different decisions on variable scoping. TypeScript, like JS, offers only function-level scope. Haxe however provides block-level scope, which is also offered by C/C++, Java, and C#. The difference is illustrated as follows:
+TypeScript and Haxe have different decisions on variable scoping. TypeScript, like JS, offers only function-level scope for `var` declarations. Haxe however provides block-level scope, which is also offered by most block-structured language, like C/C++, Java, and C#. The difference is illustrated as follows:
 ```ts
 // TypeScript
 {
@@ -88,13 +212,54 @@ console.log(a); // ok, because `a` exist outside of a block
 trace(a); // error: Unknown identifier : a
 ```
 
+Generally, block scope is a better choice for a block-structured language. In fact, the creator of the JavaScript, [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), admitted that the design decision was made [due to a lack of time](https://twitter.com/brendaneich/status/349768501583548416).
+
+<span class="center">
+![JavaScript block scope? Aint nobody got time for that!](this>files/2015/js-block-scope-meme.jpg)
+</span>
+
+Of course, the ES6 block scoped `let` declaration is also supported by TypeScript. But it is kind of a pity that TypeScript has to maintain the old scoping strategy of `var` and goes to support `let` instead of "fixing" `var` declaration directly like Haxe...
+
 Both TypeScript and Haxe have the enum type, but they are different things. A enum type in TypeScript is just a finite set of values. Enum in Haxe is a much more powerful concept called [(generalized) algebraic data type (GADT)](http://haxe.org/manual/types-enum-instance.html).
 
 Switch in Haxe is different than TypeScript/JS. It is in fact [pattern matching](http://haxe.org/manual/lf-pattern-matching.html).
 
 ### Typing system
 
-TypeScript is a structural type system.
+TypeScript uses a structural duck-typing system, in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
+```ts
+class Point {
+	x:number;
+	y:number;
+}
+var pt:Point = { x:0, y:0 } // ok
+```
+
+The type system of Haxe is much more complex that it consists of [a number of different types](http://haxe.org/manual/types.html). Duck-typing is only allowed when assigning to variable of structure types:
+```haxe
+class Point {
+	public var x:Float;
+	public var y:Float;
+	public function new():Void {}
+}
+
+typedef PointStruct = {
+	x:Float,
+	y:Float
+}
+
+class Test {
+	static function main():Void {
+		// A Point instance has the same structure as PointStruct.
+		var p:PointStruct = new Point(); // ok
+
+		// An anonymous object is typed as a structure.
+		// It is not a Point instance even if they have the same structure.
+		var p:Point = { x: 0, y: 0}; // error: { y : Int, x : Int } should be Point
+	}
+}
+```
+
 
 Both TypeScript and Haxe offer compile-time type inference, but the Haxe one is slightly more sophisticated in the sense that it is able to infer type from the first use of the variable instead of just the initial value. It is illustrated as follows:
 ```ts
