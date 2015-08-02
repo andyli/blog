@@ -112,7 +112,7 @@ extern class Namebuilder {
 }
 ```
 
-TypeScript supports the [ES6 fat-arrow syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for creating functions. Haxe does not has any equivalent short-hand syntax [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). But turn out the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Also, with the help of macros, Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
+TypeScript supports the [ES6 fat-arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Haxe does not has any equivalent short-handed syntax for functions, [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). But turn out the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Moreover, with the help of [macros](http://haxe.org/manual/macro.html), Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
 ```ts
 // TypeScript
 var evens = [1, 2, 3].filter(n => n % 2 == 0);
@@ -120,7 +120,7 @@ var evens = [1, 2, 3].filter(n => n % 2 == 0);
 ```haxe
 // Haxe
 
-// default anonymous function declaration syntax
+// built-in anonymous function declaration syntax
 var evens = [1, 2, 3].filter(function(n) return n % 2 == 0);
 
 // tink_lang
@@ -188,6 +188,8 @@ class Greeter implements IGreeter {
 
 TypeScript also provides some syntactic sugar, named "parameter properties", for writing classes. The following two class definitions are semantically the same, but the former is written using "parameter properties".
 ```ts
+// TypeScript
+
 // class definition with "parameter properties"
 class Person {
 	constructor(public name:string, private secret:string) {
@@ -241,7 +243,7 @@ class Person {
 	// constant read-only property
 	public var type(default, never):String = "Person";
 
-	// set-only ver
+	// set-only property
 	public var birthday(null, set):Date;
 	function set_birthday(v:Date):Date {
 		return birthday = v;
@@ -255,7 +257,7 @@ class Person {
 }
 ```
 
-Overall, on the surface, TypeScript and Haxe are quite similar, with minor differences where one is slightly more verbose than the other, or the opposite. Haxe has better expression syntax, but TypeScript has better function syntax. However, the underlying semantics of their syntactically similar codes can be quite different. We will discuss those in the following section.
+Overall, on the surface, TypeScript and Haxe are quite similar, with minor differences where one is slightly more verbose than the other, or the opposite. Haxe has better expression syntax, but TypeScript has better function syntax. However, the underlying semantics of their syntactically similar codes can be quite different. Haxe is also extensible by the use of macros, which may transform the semantics of a given piece of code to implement new features. We will discuss more about the semantic differences of the two languages in the following section.
 
 ### Semantics
 
@@ -283,16 +285,117 @@ Generally, block scope is a better choice for a block-structured language. In fa
 
 Of course, the ES6 block scoped `let` declaration is also supported by TypeScript. But it is kind of a pity that TypeScript has to maintain the old scoping strategy of `var` and goes to support `let` instead of "fixing" `var` declaration directly like Haxe...
 
-`this`
+It is in a similar situation for the resolution of `this`. TypeScript [follows strictly the JS behavior](https://github.com/Microsoft/TypeScript/wiki/'this'-in-TypeScript). When `this` is inside a function/method, it is resolved dynamically. `this` may not always point to an instance of the enclosing "class", depended on how the function/method is called. Haxe "fixes" it to use the more natural lexical scoping, and making it always pointing to an instance of the enclosing "class". The difference is illustrated as follows:
+```ts
+// TypeScript
+class Counter {
+	private i = 0;
+	buggy(array:Array<any>) {
+		array.forEach(function() {
+			this.i++; // `this` is not the Counter instance...
+		});
+		return this.i;
+	}
+	// one way to fix is to alias `this` to a local variable
+	fixed1(array:Array<any>) {
+		var that = this;
+		array.forEach(function() {
+			that.i++;
+		});
+		return this.i;
+	}
+	// another way is to use arrow function, which resolves
+	// `this` in the natural way
+	fixed2(array:Array<any>) {
+		array.forEach(() => {
+			this.i++;
+		});
+		return this.i;
+	}
+}
 
-Both TypeScript and Haxe have the enum type, but they are different things. A enum type in TypeScript is just a finite set of values. Enum in Haxe is a much more powerful concept called [(generalized) algebraic data type (GADT)](http://haxe.org/manual/types-enum-instance.html).
+var ints = [1, 2, 3];
+console.log(new Counter().buggy(ints));  // 0
+console.log(new Counter().fixed1(ints)); // 3
+console.log(new Counter().fixed2(ints)); // 3
+```
+```haxe
+// Haxe
+class Counter {
+	var i = 0;
+	public function new(){}
+	public function correct(array:Array<Dynamic>) {
+		Lambda.iter(array, function(e) this.i++);
+		return this.i;
+	}
+}
+class Test {
+	static function main(){
+		var ints = [1, 2, 3];
+		trace(new Counter().correct(ints)); // 3
+	}
+}
+```
+We can see another reason why Haxe does not need ES6 arrow functions like TypeScript/JS - `this` inside a function is resolved naturally by default.
 
-Switch in Haxe is different than TypeScript/JS. It is in fact [pattern matching](http://haxe.org/manual/lf-pattern-matching.html).
+Both TypeScript and Haxe have enum types, but they are different things. A enum type in TypeScript is just a finite set of **values**. [Enum in Haxe](http://haxe.org/manual/types-enum-instance.html) is a powerful functional programming construct called [generalized algebraic data type (GADT)](https://en.wikipedia.org/wiki/Generalized_algebraic_data_type), which is more like a finite set of **types**. We may think of the TypeScript enum supports only a specific case of the Haxe enum. Both TypeScript and Haxe enums are meant to be used with switch, which is also semantically different as described next.
+
+The TypeScript switch statement is the plain-old C-style switch, which is kind of like a fancy group of if-else statements. [The Haxe switch expression](http://haxe.org/manual/expression-switch.html) is in fact yet another functional programming construct called [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching), which is often used with GADTs as well as other objects. Examples to illustrate the use enum and switch in TypeScript and Haxe:
+```ts
+// TypeScript
+enum Color {
+	Red,
+	Green,
+	Blue
+};
+
+// an Array<Color>
+var colors = [Color.Red, Color.Green, Color.Blue];
+
+switch (colors[0]) {
+	// every case here is a *value*
+	case Color.Red:
+		console.log("Red");
+		break;
+	case Color.Red: // can never be reached, but is fine
+		break;
+	// missing `case Color.Green`, `case Color.Blue`, and `default`, but fine too
+}
+```
+```haxe
+// Haxe
+enum Color {
+	Red;
+	Green;
+	Blue;
+	Rgb(r:Int, g:Int, b:Int); // an enum "constructor" may have arguments
+}
+
+class Test {
+	static function main() {
+		// an Array<Color>
+		var colors = [Red, Rgb(0, 0, 0)];
+
+		// switch in Haxe is also an expression
+		// note that there is NO fall-through, i.e. no `break` is needed
+		var redValue = switch (colors[0]) {
+			// every case here is a *pattern*, not *value*
+			// there will be compilation errors if there is missing or redundant cases
+			case Red: 255;
+			case Rgb(r, _, _): r;
+			default: 0;
+		}
+		trace(redValue); // 255
+	}
+}
+```
+We can see that the Haxe switch is more powerful that it can match against and "extract" the arguments (or even fields or array items) of the given object. It also performs exhaustiveness and useless pattern check to ensure there is no missing or redundant cases.
 
 ### Typing system
 
 TypeScript uses a structural duck-typing system, in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
 ```ts
+// TypeScript
 class Point {
 	x:number;
 	y:number;
@@ -300,8 +403,10 @@ class Point {
 var pt:Point = { x:0, y:0 } // ok
 ```
 
-The type system of Haxe is much more complex that it consists of [a number of different types](http://haxe.org/manual/types.html). Duck-typing is only allowed when assigning to variable of structure types:
+The type system of Haxe is much more complex that it consists of [a number of different types](http://haxe.org/manual/types.html). Duck-typing is only allowed when assigning to variables of structure types:
 ```haxe
+// Haxe
+
 class Point {
 	public var x:Float;
 	public var y:Float;
