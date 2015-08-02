@@ -112,9 +112,25 @@ extern class Namebuilder {
 }
 ```
 
-TODO: short lambda
+TypeScript supports the [ES6 fat-arrow syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for creating functions. Haxe does not has any equivalent short-hand syntax [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). But turn out the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Also, with the help of macros, Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
+```ts
+// TypeScript
+var evens = [1, 2, 3].filter(n => n % 2 == 0);
+```
+```haxe
+// Haxe
 
-Function types in TypeScript is easy to understand, because it looks very similar to the arrow function notation:
+// default anonymous function declaration syntax
+var evens = [1, 2, 3].filter(function(n) return n % 2 == 0);
+
+// tink_lang
+var evens = [1, 2, 3].filter(n => n % 2 == 0);
+
+// Slambda
+var evens = [1, 2, 3].filter.fn(_ % 2 == 0);
+```
+
+TypeScript and Haxe also differ in writing the types of function. The one in TypeScript is easy to understand, because it looks very similar to the arrow function notation:
 ```ts
 // TypeScript
 var add:(a:number, b:number)=>number;
@@ -189,7 +205,7 @@ class Person {
 }
 ```
 
-Haxe does not provides built-in short class syntax. But it can be emulated quite easily with [build macros](http://haxe.org/manual/macro-type-building.html). The Haxe libraries, [dataclass](https://github.com/ciscoheat/dataclass) and [tink_lang](https://github.com/haxetink/tink_lang#direct-initialization), provide similar functionality with different syntaxes.
+Haxe does not provides built-in short class syntax. But it can also be emulated quite easily with [build macros](http://haxe.org/manual/macro-type-building.html). The Haxe libraries, [dataclass](https://github.com/ciscoheat/dataclass) and [tink_lang](https://github.com/haxetink/tink_lang#direct-initialization), provide similar functionality with different syntaxes.
 
 The ways TypeScript and Haxe define property get/setters are very different. The TypeScript one is straight forward. The Haxe one is pretty unique.
 ```ts
@@ -266,6 +282,8 @@ Generally, block scope is a better choice for a block-structured language. In fa
 </span>
 
 Of course, the ES6 block scoped `let` declaration is also supported by TypeScript. But it is kind of a pity that TypeScript has to maintain the old scoping strategy of `var` and goes to support `let` instead of "fixing" `var` declaration directly like Haxe...
+
+`this`
 
 Both TypeScript and Haxe have the enum type, but they are different things. A enum type in TypeScript is just a finite set of values. Enum in Haxe is a much more powerful concept called [(generalized) algebraic data type (GADT)](http://haxe.org/manual/types-enum-instance.html).
 
