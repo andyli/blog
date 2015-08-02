@@ -262,7 +262,7 @@ trace(a); // error: Unknown identifier : a
 Generally, block scope is a better choice for a block-structured language. In fact, the creator of the JavaScript, [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), admitted that the design decision was made [due to a lack of time](https://twitter.com/brendaneich/status/349768501583548416).
 
 <span class="center">
-![JavaScript block scope? Aint nobody got time for that!](this>files/2015/js-block-scope-meme.jpg)
+![Implement block scope? Aint nobody got time for that!](this>files/2015/js-block-scope-meme.jpg)
 </span>
 
 Of course, the ES6 block scoped `let` declaration is also supported by TypeScript. But it is kind of a pity that TypeScript has to maintain the old scoping strategy of `var` and goes to support `let` instead of "fixing" `var` declaration directly like Haxe...
@@ -351,7 +351,7 @@ The same code above in Haxe will cause an compilation error and no output is pro
 
 Unlike Haxe, TypeScript has a few unsound cases. http://www.typescriptlang.org/Handbook#type-inference
 
-We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of properly type it. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, it is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but surely bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On the one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of properly type it. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, it is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but surely bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
 ### Code organization and generation
 
