@@ -27,9 +27,55 @@ var list:Array<string> = ["a", "b", "c"];
 var list:Array<String> = ["a", "b", "c"];
 ```
 
-TODO: expression-oriented syntax
+Although TypeScript and Haxe basic syntaxes look pretty much the same, but Haxe embodied a powerful functional programming concept that TypeScript/JS doesn't - the Haxe syntax is [expression-oriented](https://en.wikipedia.org/wiki/Expression-oriented_programming_language), which means [most of the constructs are expressions](this>2012/10/14/haxe-tips-everything-is-an-expression/) that can be evaluated to values. For things that we have to use a block (`{}`) in TypeScript/JS, we can use any expression in Haxe:
+```haxe
+// Haxe
 
-TypeScript and Haxe have similar syntaxes for functions, but there are differences. e.g. optional parameter, notice the placement of `?`:
+// function definition is an expression that
+// the function body can be any expression, not necessarily {}
+function add(a:Float, b:Float) return a + b;
+
+// loops, including for-loops, are expressions that
+// the loop body can be any expression, not necessarily {}
+for (i in 0...10)
+	trace("i is " + i);
+
+// if-else is also an expression that takes expressions
+if (isCool)
+	trace("yay!");
+else
+	trace("nay...");
+
+// you should have noticed all the above are expressions that takes expressions
+// that means we can treat everything like puzzle pieces
+function checkEvenOdd(ints:Array<Int>)
+	for (i in ints)
+		trace(
+			if (i % 2 == 0)
+				i + " is even!"
+			else
+				i + " is odd!"
+		);
+
+// Blocks are useless now?
+// Nop, a block is a powerful expression too!
+// It is evaluated as the last expression inside it.
+// Here is an example that use try-catch expression together with block expressions.
+var result =
+	try {
+		var a = computationThatMayThrow();
+		finalComputation(a);
+	} catch (exception:Dynamic) {
+		rollBack();
+		defaultValue();
+	}
+```
+
+<span class="center">
+![Yo dawg! I heard u like expressions! So we let you put expressions inside expressions!](this>files/2015/nested-expression-meme.jpg)
+</span>
+
+TypeScript and Haxe have similar syntaxes for functions, but there are some minor differences. e.g. optional parameter, notice the placement of `?`:
 ```ts
 // TypeScript
 function greet(name?:string):string {
@@ -74,12 +120,13 @@ Function types in TypeScript is easy to understand, because it looks very simila
 var add:(a:number, b:number)=>number;
 ```
 
-The Haxe one is unfortunately kind of a "wrong" choice, since it suggests [auto currying or auto partial application](https://en.wikipedia.org/wiki/Currying), which is not supported by Haxe.
+The Haxe one is unfortunately kind of a "wrong" choice, since it suggests there is [auto currying or auto partial application](https://en.wikipedia.org/wiki/Currying), which is not supported by Haxe.
 ```haxe
 // Haxe
 var add:Float->Float->Float; // A function that takes 2 `Float`s and returns a `Float`.
-                             // It is NOT the same as `Float->(Float->Float)`,
-                             // nor equals to `(Float->Float)->Float`.
+                             // Unlike those functional languages that use such syntax,
+                             // it is NOT the same as `Float->(Float->Float)`,
+                             // nor equals to `(Float->Float)->Float` in Haxe.
 ```
 
 The syntaxes for class/interface definition of TypeScript and Haxe are slightly different:
