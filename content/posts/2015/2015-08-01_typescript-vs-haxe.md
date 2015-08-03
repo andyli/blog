@@ -2,9 +2,11 @@ Title: TypeScript vs Haxe
 Tags: Haxe, JS
 Status: draft
 
-[TypeScript](https://github.com/Microsoft/TypeScript) is definitely one of the most well-known compile-to-JS languages nowadays. Positioned as a super-set of JavaScript, TypeScript brings in static-typing for writing large-scale application. [Haxe](http://haxe.org/) is similar to TypeScript in many aspects, particularly its JS-like syntax, static-typing, and module system. Among [the 9 Haxe compilation targets](http://haxe.org/documentation/introduction/compiler-targets.html), the JS target was one of the eldest ones. It was introduced [in March 2006](https://github.com/HaxeFoundation/haxe/blob/3.2.0/extra/CHANGES.txt#L1496-L1497), which was way before Microsoft released TypeScript [in 2012](https://en.wikipedia.org/wiki/TypeScript#History). In fact, Haxe is a language that compiles to JS, ahead of everyone else including TypeScript (2012), [CoffeeScript](http://coffeescript.org/) (2009), [Dart](https://www.dartlang.org/) (2011), and Java via [GWT](http://www.gwtproject.org/) (May 2006). So I wonder, which is the better compile-to-JS language, the (relatively) new shiny TypeScript, or the good-old mature Haxe?
+[TypeScript](https://github.com/Microsoft/TypeScript) is definitely one of the most well-known compile-to-JS languages nowadays. Designed as a super-set of JavaScript, TypeScript brings in static-typing for writing large-scale application. [Haxe](http://haxe.org/) is similar to TypeScript in many aspects, particularly its JS-like syntax, static-typing, and module system. Among [the 9 Haxe compilation targets](http://haxe.org/documentation/introduction/compiler-targets.html), the JS target was one of the eldest ones. It was introduced [in March 2006](https://github.com/HaxeFoundation/haxe/blob/3.2.0/extra/CHANGES.txt#L1496-L1497), which was way before Microsoft released TypeScript [in 2012](https://en.wikipedia.org/wiki/TypeScript#History). In fact, Haxe is a language that compiles to JS, ahead of everyone else including TypeScript (2012), [CoffeeScript](http://coffeescript.org/) (2009), [Dart](https://www.dartlang.org/) (2011), and Java via [GWT](http://www.gwtproject.org/) (May 2006). So I wonder, which is the better compile-to-JS language, the (relatively) new shiny TypeScript, or the good-old mature Haxe?
 
-I have been using Haxe for years and I'm now a member of the Haxe Foundation, contributing to Haxe daily. So I can be considered as a Haxe expert. But I didn't have much knowledge of TypeScript other than watched some presentations about it and read some docs on its website. To gain enough knowledge and experience of it to make the comparison as fair as possible, I took a MOOC course from edX, [Introduction to TypeScript](https://www.edx.org/course/introduction-typescript-microsoft-dev201x-0), and completed it. But nevertheless, I'm merely acknowledgeable. If there is any TypeScript experts reading this, feel free to point out my errors via commenting. Note that the differences mentioned below are the major ones - the comparison is not exhaustive.
+I have been using Haxe for years and I'm now a member of the Haxe Foundation, contributing to Haxe daily. So I can be considered as a Haxe expert. But I didn't have much knowledge of TypeScript other than watched some presentations about it and read some docs on its website. To gain enough knowledge and experience of it to make the comparison as fair as possible, I took a MOOC course from edX, [Introduction to TypeScript](https://www.edx.org/course/introduction-typescript-microsoft-dev201x-0), and completed it. I went through the [TypeScript handbook](http://www.typescriptlang.org/Handbook) and most of the [Github wiki pages](https://github.com/Microsoft/TypeScript/wiki). But nevertheless, I'm merely acknowledgeable. If there is any TypeScript experts reading this, feel free to point out my errors via commenting.
+
+In this blog post, we compare the language designs of TypeScript and Haxe in a few areas in different levels. On the surface, we look at the two syntaxes, then discuss the underlying differences in semantics. The analysis follows by digging into the type systems and the way the two languages organize and generate code. Note that we compare only the major differences in language design - the comparison is not exhaustive.
 
 ## Fight!
 
@@ -12,7 +14,7 @@ I have been using Haxe for years and I'm now a member of the Haxe Foundation, co
 
 TypeScript is designed as a super-set of JS. That means, any valid JS code is also valid TypeScript code. This makes porting code between TypeScript and JS very easily, since they share exactly the same basic syntax constructs.
 
-Haxe syntax is also very JS-like. But it is more technically correct to say that it is ECMAScript-like, or similar to ActionScript 3, since Haxe was historically built as an alternative to ActionScript 3 for authoring Flash swf contents. Anyway, the basic syntax constructs are mostly equals to JS's. One exception is the missing of classic C-style for-loop, i.e. `for (int i = 0 ; i < 10; i++) {}`, which is replaced by [`Iterator`](http://haxe.org/manual/lf-iterators.html) based for-loop, i.e. `for (i in 0...10) {}`.
+Haxe syntax is also very JS-like. But it is more technically correct to say that it is ECMAScript-like, or similar to ActionScript, since Haxe was historically built as an alternative to ActionScript for authoring Flash swf contents. Anyway, the basic syntax constructs are mostly equals to JS's. One exception is the missing of classic C-style for-loop, i.e. `for (int i = 0 ; i < 10; i++) {}`, which is replaced by [`Iterator` based for-loop](http://haxe.org/manual/expression-for.html), i.e. `for (i in 0...10) {}`.
 
 On top of the JS syntax, TypeScript adds the ability to annotate types to variable, in the form of `var str:string;`. Haxe shares the same syntax, except all the types are first-letter upper-cased, i.e. `var str:String;`.
 
@@ -75,7 +77,34 @@ var result =
 ![Yo dawg! I heard u like expressions! So we let you put expressions inside expressions!](this>files/2015/nested-expression-meme.jpg)
 </span>
 
-TypeScript and Haxe have similar syntaxes for functions, but there are some minor differences. e.g. optional parameter, notice the placement of `?`:
+The rule of semicolons is another thing that the Haxe syntax is better than the TypeScript one. TypeScript features automatic semicolon insertion, which means semicolon is optional in a lot of cases. Douglas Crockford [wrote it clearly](http://www.crockford.com/javascript/javascript.html), "semicolon insertion was a huge mistake". Semicolons in Haxe is not optional, making it impossible to make mistake as follows:
+```ts
+// TypeScript
+var add = function() {
+  var a = 1, b = 2
+  return
+    a + b
+}
+console.log(add()) // undefined, why?
+
+// the equivalent semicolon-inserted version:
+var add = function () {
+  var a = 1, b = 2;
+  return;
+    a + b;
+}
+```
+```haxe
+// Haxe
+var add = function() {
+	var a = 1, b = 2;
+	return
+		a + b;
+}
+trace(add()); // 3
+```
+
+TypeScript and Haxe have similar syntaxes for functions, but there are some minor differences regarding to parameters. E.g. for optional parameter, notice the placement of `?`:
 ```ts
 // TypeScript
 function greet(name?:string):string {
@@ -112,7 +141,7 @@ extern class Namebuilder {
 }
 ```
 
-TypeScript supports the [ES6 fat-arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Haxe does not has any equivalent short-handed syntax for functions, [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). But turn out the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Moreover, with the help of [macros](http://haxe.org/manual/macro.html), Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
+Another function syntax difference is that TypeScript supports the [ES6 fat-arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Haxe does not has any equivalent short-handed syntax for functions, [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). One major reason is that the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Moreover, with the help of [macros](http://haxe.org/manual/macro.html), Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
 ```ts
 // TypeScript
 var evens = [1, 2, 3].filter(n => n % 2 == 0);
@@ -257,7 +286,14 @@ class Person {
 }
 ```
 
-Overall, on the surface, TypeScript and Haxe are quite similar, with minor differences where one is slightly more verbose than the other, or the opposite. Haxe has better expression syntax, but TypeScript has better function syntax. However, the underlying semantics of their syntactically similar codes can be quite different. Haxe is also extensible by the use of macros, which may transform the semantics of a given piece of code to implement new features. We will discuss more about the semantic differences of the two languages in the following section.
+Overall, on the surface, TypeScript and Haxe are quite similar, with minor differences where one is slightly more verbose than the other, or the opposite. The significant differences are: 
+
+ * Haxe has better expression syntax.
+ * TypeScript has better function type syntax.
+ * TypeScript has more built-in short-hands for writing functions and classes.
+ * Haxe is extensible by the use of macros, which may transform the semantics of specific expressions.
+
+Although the syntaxes are mostly similar, the underlying semantics of the codes in the two languages can be quite different. We will discuss more about the semantic differences of the two languages in the following section.
 
 ### Semantics
 
@@ -338,9 +374,9 @@ class Test {
 ```
 We can see another reason why Haxe does not need ES6 arrow functions like TypeScript/JS - `this` inside a function is resolved naturally by default.
 
-Both TypeScript and Haxe have enum types, but they are different things. A enum type in TypeScript is just a finite set of **values**. [Enum in Haxe](http://haxe.org/manual/types-enum-instance.html) is a powerful functional programming construct called [generalized algebraic data type (GADT)](https://en.wikipedia.org/wiki/Generalized_algebraic_data_type), which is more like a finite set of **types**. We may think of the TypeScript enum supports only a specific case of the Haxe enum. Both TypeScript and Haxe enums are meant to be used with switch, which is also semantically different as described next.
+Both TypeScript and Haxe have enum types, but they are different things. A enum type in TypeScript is just a finite set of **values**. [Enum in Haxe](http://haxe.org/manual/types-enum-instance.html) is a powerful functional programming construct called [generalized algebraic data type (GADT)](https://en.wikipedia.org/wiki/Generalized_algebraic_data_type), which is more like a finite set of **types** (not real types in Haxe, just the concept). We may think of the TypeScript enum can only supports a subset of what the Haxe enum supports. Both TypeScript and Haxe enums are often used with switch, which is also semantically different as described next.
 
-The TypeScript switch statement is the plain-old C-style switch, which is kind of like a fancy group of if-else statements. [The Haxe switch expression](http://haxe.org/manual/expression-switch.html) is in fact yet another functional programming construct called [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching), which is often used with GADTs as well as other objects. Examples to illustrate the use enum and switch in TypeScript and Haxe:
+The TypeScript switch statement is the good old C-style switch, which is kind of like a fancy group of if-else statements. [The Haxe switch expression](http://haxe.org/manual/expression-switch.html) is in fact yet another functional programming construct called [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching). Here is the examples illustrating the use enum and switch in TypeScript and Haxe:
 ```ts
 // TypeScript
 enum Color {
@@ -379,7 +415,7 @@ class Test {
 		// switch in Haxe is also an expression
 		// note that there is NO fall-through, i.e. no `break` is needed
 		var redValue = switch (colors[0]) {
-			// every case here is a *pattern*, not *value*
+			// every case here is a *pattern*, not a *value*
 			// there will be compilation errors if there is missing or redundant cases
 			case Red: 255;
 			case Rgb(r, _, _): r;
@@ -391,6 +427,30 @@ class Test {
 ```
 We can see that the Haxe switch is more powerful that it can match against and "extract" the arguments (or even fields or array items) of the given object. It also performs exhaustiveness and useless pattern check to ensure there is no missing or redundant cases.
 
+TypeScript [does not have pattern matching, yet](https://github.com/Microsoft/TypeScript/issues/165), but it [supports the ES6 destructuring declarations and assignments](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#destructuring-in-declarations-and-assignments), which can be used for some of the pattern-matching features:
+```ts
+// TypeScript
+var point = [100, 0, 0];
+var [x, y, z] = point;
+console.log(x); // 100
+console.log(y); // 0
+console.log(z); // 0
+```
+```haxe
+// Haxe
+var point = [100, 0, 0];
+switch(point) {
+	case [x, y, z]:
+		trace(x); // 100
+		trace(y); // 0
+		trace(z); // 0
+	default:
+		throw "It is not in the form of [x, y, z]";
+}
+```
+
+By now we have discovered quite a few cases where TypeScript and Haxe give different semantics to the same syntax. We can see that TypeScript sticks to the JS standards as much as possible. Existing JS developers would pick up TypeScript without any fiction. Haxe however takes the other approach, "fixes" the [JS design flaws](http://www.crockford.com/javascript/javascript.html) and follows the behaviors used by other popular languages. As a result, developers with background other than JS would appreciate and less-likely to be surprised by the Haxe semantics. Moreover, Haxe also fuses functional programming concepts and JS-like syntax in a natural way.
+
 ### Typing system
 
 TypeScript uses a structural duck-typing system, in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
@@ -401,6 +461,20 @@ class Point {
 	y:number;
 }
 var pt:Point = { x:0, y:0 } // ok
+```
+We can even `implements`, not only `extends`, a class:
+```ts
+// TypeScript
+class Greeter {
+	greet():string {
+		return "hi";
+	}
+}
+class ChineseGreeter implements Greeter {
+	greet():string {
+		return "你好！";
+	}
+}
 ```
 
 The type system of Haxe is much more complex that it consists of [a number of different types](http://haxe.org/manual/types.html). Duck-typing is only allowed when assigning to variables of structure types:
@@ -474,7 +548,7 @@ The same code above in Haxe will cause an compilation error and no output is pro
 
 Unlike Haxe, TypeScript has a few unsound cases. http://www.typescriptlang.org/Handbook#type-inference
 
-We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On the one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of properly type it. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, it is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but surely bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On the one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of typing the program properly. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
 ### Code organization and generation
 
@@ -482,14 +556,6 @@ package/module and file structure
 
 Mixins
 
-### Compiler
-
-performance
-
 optimization
-
-### IDEs and tools
-
-### Community
 
 ## Conclusion
