@@ -605,11 +605,13 @@ var array:Array<haxe.extern.EitherType<String, Int>> = ["abc", 123]; // ok
 
 Static typing of TypeScript is made optional, such that all valid JS code is valid TypeScript code. TypeScript even allows compilation when there is a type error when using a properly typed variable:
 ```ts
+// TypeScript
 var author = {first:"Andy", last:"Li"};
-author.birthyear = 1988; //error: Property 'birthyear' does not exist on type '{ first: string; last: string; }'.
+author.birthyear = 1988; // error: Property 'birthyear' does not exist on type '{ first: string; last: string; }'.
 ```
 Although there is an error, the TypeScript compiler still outputs JS as follows:
 ```js
+// JavaScript
 var author = { first: "Andy", last: "Li" };
 author.birthyear = 1988;
 ```
@@ -626,7 +628,11 @@ We can see that, Haxe is even more "typed" (has strict and sound typing) than Ty
 
 ### Code organization and generation
 
-package/module and file structure
+TypeScript and Haxe employ different strategies for code organization and generation.
+
+For code organization, TypeScript is as flexible as JS that there are tons of options. TypeScript allows the `.ts` files to be placed in anywhere. We may instruct the TypeScript compiler to generate one `.js` file for one `.ts` file, or to concatenate multiple `.ts` output into a single `.js` file. We can optionally use the [module systems](http://www.typescriptlang.org/Handbook#modules), which there are two of them, internal and external modules. Internal modules are similar to namespaces. External modules are used when we want to output files in either the node.js ([CommonJS](http://wiki.commonjs.org/wiki/CommonJS)) way or the require.js ([AMD](https://github.com/amdjs/amdjs-api)) way. To reference other types declared in another `.ts` file, insert a special comment `/// <<reference path="path/to/file.ts" />` or use `import` and `require`, depending on what module system we're using.
+
+Haxe follows the Java approach, which means expressions are held by types (i.e. no top-level expression). All the types are compiled into a single `.js` file. The main entry point of a program is always a static main function of a class specified by the user. Every type is placed in a [module](http://haxe.org/manual/type-system-modules-and-paths.html). Haxe enforces a folder structure according to the use of packages/module. e.g. If there is a module, `net.onthewings.HelloWorld`, it must be located in a file named `HelloWorld.hx` in the folder `net/onthewings/` within one of the class paths searched by the Haxe compiler. Referencing other modules is done by using [`import`](http://haxe.org/manual/type-system-import.html).
 
 Mixins
 
