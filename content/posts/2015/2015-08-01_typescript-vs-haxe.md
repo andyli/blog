@@ -374,7 +374,7 @@ class Test {
 ```
 We can see another reason why Haxe does not need ES6 arrow functions like TypeScript/JS - `this` inside a function is resolved naturally by default.
 
-Both TypeScript and Haxe have enum types, but they are different things. A enum type in TypeScript is just a finite set of **values**. [Enum in Haxe](http://haxe.org/manual/types-enum-instance.html) is a powerful functional programming construct called [generalized algebraic data type (GADT)](https://en.wikipedia.org/wiki/Generalized_algebraic_data_type), which is more like a finite set of **types** (not real types in Haxe, just the concept). We may think of the TypeScript enum can only supports a subset of what the Haxe enum supports. Both TypeScript and Haxe enums are often used with switch, which is also semantically different as described next.
+Both TypeScript and Haxe have enum types, but they are different things. A enum type in TypeScript is just a finite set of **values** (integers to be exact). [Enum in Haxe](http://haxe.org/manual/types-enum-instance.html) is a powerful functional programming construct called [generalized algebraic data type (GADT)](https://en.wikipedia.org/wiki/Generalized_algebraic_data_type), which is more like a finite set of **types** (not real types in Haxe, just the concept). We may think of the TypeScript enum can only supports a subset of what the Haxe enum supports. Both TypeScript and Haxe enums are often used with switch, which is also semantically different as described next.
 
 The TypeScript switch statement is the good old C-style switch, which is kind of like a fancy group of if-else statements. [The Haxe switch expression](http://haxe.org/manual/expression-switch.html) is in fact yet another functional programming construct called [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching). Here is the examples illustrating the use enum and switch in TypeScript and Haxe:
 ```ts
@@ -427,7 +427,7 @@ class Test {
 ```
 We can see that the Haxe switch is more powerful that it can match against and "extract" the arguments (or even fields or array items) of the given object. It also performs exhaustiveness and useless pattern check to ensure there is no missing or redundant cases.
 
-TypeScript [does not have pattern matching, yet](https://github.com/Microsoft/TypeScript/issues/165), but it [supports the ES6 destructuring declarations and assignments](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#destructuring-in-declarations-and-assignments), which can be used for some of the pattern-matching features:
+TypeScript [does not have pattern matching, yet](https://github.com/Microsoft/TypeScript/issues/165), but it [supports the ES6 destructuring declarations and assignments](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#destructuring-in-declarations-and-assignments), which can be used for some of the pattern-matching use cases:
 ```ts
 // TypeScript
 var point = [100, 0, 0];
@@ -453,7 +453,11 @@ By now we have discovered quite a few cases where TypeScript and Haxe give diffe
 
 ### Typing system
 
-TypeScript uses a structural duck-typing system, in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
+TypeScript and Haxe feature similar basic types. TypeScript has `boolean`, `number`, `string`, `Array`, `any`, and `void`. Haxe has all of the TypeScript equivalents, `Bool`, `Float`, `String`, `Array`, `Dynamic`, and `Void`. In Haxe, there is also `Int` that do not exist in TypeScript. Of course, we have function types in both languages too.
+
+We can create custom types in both TypeScript and Haxe. In TypeScript, we may use class/interface and enum. In Haxe, we have class/interface, enum, typedef, and abstract.
+
+TypeScript uses a structural typing system (duck-typing), in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
 ```ts
 // TypeScript
 class Point {
@@ -477,7 +481,7 @@ class ChineseGreeter implements Greeter {
 }
 ```
 
-The type system of Haxe is much more complex that it consists of [a number of different types](http://haxe.org/manual/types.html). Duck-typing is only allowed when assigning to variables of structure types:
+The type system of Haxe is stronger. Duck-typing is only allowed when assigning to variables of structure types:
 ```haxe
 // Haxe
 
@@ -504,6 +508,71 @@ class Test {
 }
 ```
 
+Unlike TypeScript/JS, there is no implicit conversion from most types to `Bool`/`Float`/`Int` in Haxe, except when using [abstract](http://haxe.org/manual/types-abstract-implicit-casts.html). Some examples:
+```ts
+// TypeScript
+
+/*
+	Common uses of implicit conversion
+*/
+
+var inputStr = "";
+if (inputStr) { // implicit conversion from string to bool
+	// process
+} else {
+	alert("inputStr should not be empty");
+}
+
+var inputNum = 0;
+if (inputNum) { // implicit conversion from number to bool
+	// process
+} else {
+	alert("inputNum should be > 0");
+}
+
+/*
+	Crazy stuffs
+*/
+
+// http://wtfjs.com/2014/01/11/multiplying-arrays-and-objects
+[4] * [4] // 16
+[] * [] // 0
+[] * {} // NaN
+[4, 4] * [4, 4] // NaN
+({} * {}) // NaN
+
+// http://wtfjs.com/2013/04/18/true-story-bro
+'true' == true  // returns false
+// http://wtfjs.com/2013/03/06/false-isnt-false
+true == 'true'     // true
+false == 'false';  // false
+```
+```haxe
+// Haxe
+
+/*
+	Be explicit most of the times.
+*/
+
+var inputStr = "";
+if (inputStr == "") { // be explicit
+	// process
+} else {
+	js.Browser.alert("inputStr should not be empty");
+}
+
+var inputNum = 0;
+if (inputNum > 0) { // be explicit
+	// process
+} else {
+	js.Browser.alert("inputNum should be > 0");
+}
+
+/*
+	Compilation error when doing crazy stuffs
+*/
+'true' == true; // error: Bool should be String
+```
 
 Both TypeScript and Haxe offer compile-time type inference, but the Haxe one is slightly more sophisticated in the sense that it is able to infer type from the first use of the variable instead of just the initial value. It is illustrated as follows:
 ```ts
@@ -518,7 +587,7 @@ var str;     // var without init value nor type annotation is typed as `Unknown`
 str = "abc"; // once we assign a String to it, `str` is typed as `String`
 str = 123;   // error: Int should be String
 ```
-Haxe heavily relies on static typing, so it encourages strict typing as much as possible. It does not simply type a variable as `Dynamic` (the Haxe equivalent of `any` in TypeScript) when there is no init value nor type annotation. Instead, it will type the variable as `Unknown` (a [monomorph](http://haxe.org/manual/types-monomorph.html)), and will try to figure out the type in later usage of the variable. To declare a `Dynamic` variable, users have to explicitly state it (`var thing:Dynamic;`). Similarly, Haxe by default does not allow `Array` of mixed types, which is allowed by TypeScript:
+Haxe heavily relies on static typing, so it tries to be strict as much as possible. It does not simply type a variable as `Dynamic` (the Haxe equivalent of `any` in TypeScript) when there is no init value nor type annotation. Instead, it will type the variable as `Unknown` (a [monomorph](http://haxe.org/manual/types-monomorph.html)), and will try to figure out the type in later usage of the variable. To declare a `Dynamic` variable, users have to explicitly state it (`var thing:Dynamic;`). Similarly, Haxe by default does not allow `Array` of mixed types, which is allowed by TypeScript:
 ```ts
 // TypeScript
 var array = ["abc", 123]; // the type of array is (string | number)[]
@@ -536,19 +605,24 @@ var array:Array<haxe.extern.EitherType<String, Int>> = ["abc", 123]; // ok
 
 Static typing of TypeScript is made optional, such that all valid JS code is valid TypeScript code. TypeScript even allows compilation when there is a type error when using a properly typed variable:
 ```ts
-var s:string = "abc";
-s.nonexisting = 123; //error: Property 'nonexisting' does not exist on type 'string'.
+var author = {first:"Andy", last:"Li"};
+author.birthyear = 1988; //error: Property 'birthyear' does not exist on type '{ first: string; last: string; }'.
 ```
-which outputs JS as follows:
+Although there is an error, the TypeScript compiler still outputs JS as follows:
 ```js
-var s = "abc";
-s.nonexisting = 123;
+var author = { first: "Andy", last: "Li" };
+author.birthyear = 1988;
 ```
-The same code above in Haxe will cause an compilation error and no output is produced.
+The same code above in Haxe will cause an compilation error and no output is produced. But note that we can force the Haxe compiler to ignore the typing error:
+```haxe
+// Haxe
+var author = { first: "Andy", last: "Li" };
+untyped author.birthyear = 1988; // prefix with `untyped`
+```
 
-Unlike Haxe, TypeScript has a few unsound cases. http://www.typescriptlang.org/Handbook#type-inference
+Unlike Haxe, TypeScript has a few unsound cases. For instance, function arguments should be contravariant, but [they are bivariant in TypeScript](https://github.com/Microsoft/TypeScript/wiki/Type-Compatibility#function-argument-bivariance).
 
-We can see that, Haxe is even more "typed" (has stricter typing) than TypeScript. On the one hand, TypeScript being forgiving on typing error may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of typing the program properly. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+We can see that, Haxe is even more "typed" (has strict and sound typing) than TypeScript. On the one hand, TypeScript being forgiving on typing may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of typing the program properly. To be clear, optional typing is nice, but when type annotation exists and there is clearly a typing issue, the compiler should complain and stop. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
 ### Code organization and generation
 
