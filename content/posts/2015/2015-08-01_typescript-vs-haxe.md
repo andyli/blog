@@ -615,7 +615,7 @@ Although there is an error, the TypeScript compiler still outputs JS as follows:
 var author = { first: "Andy", last: "Li" };
 author.birthyear = 1988;
 ```
-The same code above in Haxe will cause an compilation error and no output is produced. But note that we can force the Haxe compiler to ignore the typing error:
+The same code above in Haxe will cause an compilation error and no output is produced. But note that we can force the Haxe compiler to ignore the type error:
 ```haxe
 // Haxe
 var author = { first: "Andy", last: "Li" };
@@ -624,15 +624,23 @@ untyped author.birthyear = 1988; // prefix with `untyped`
 
 Unlike Haxe, TypeScript has a few unsound cases. For instance, function arguments should be contravariant, but [they are bivariant in TypeScript](https://github.com/Microsoft/TypeScript/wiki/Type-Compatibility#function-argument-bivariance).
 
-We can see that, Haxe is even more "typed" (has strict and sound typing) than TypeScript. On the one hand, TypeScript being forgiving on typing may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore typing errors instead of typing the program properly. To be clear, optional typing is nice, but when type annotation exists and there is clearly a typing issue, the compiler should complain and stop. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+We can see that, Haxe is even more "typed" (has strict and sound typing) than TypeScript. On the one hand, TypeScript being forgiving on typing may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore type errors instead of typing the program properly. To be clear, optional typing is nice, but when type annotation exists and there is clearly a typing issue, the compiler should complain and stop. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
+
+<span class="center">
+![Call it a miracle! It compiles! Your type error is forgiven.](this>files/2015/type-error-is-forgiven-meme.jpg)
+</span>
 
 ### Code organization and generation
 
 TypeScript and Haxe employ different strategies for code organization and generation.
 
-For code organization, TypeScript is as flexible as JS that there are tons of options. TypeScript allows the `.ts` files to be placed in anywhere. We may instruct the TypeScript compiler to generate one `.js` file for one `.ts` file, or to concatenate multiple `.ts` output into a single `.js` file. We can optionally use the [module systems](http://www.typescriptlang.org/Handbook#modules), which there are two of them, internal and external modules. Internal modules are similar to namespaces. External modules are used when we want to output files in either the node.js ([CommonJS](http://wiki.commonjs.org/wiki/CommonJS)) way or the require.js ([AMD](https://github.com/amdjs/amdjs-api)) way. To reference other types declared in another `.ts` file, insert a special comment `/// <<reference path="path/to/file.ts" />` or use `import` and `require`, depending on what module system we're using.
+For code organization, TypeScript is as flexible as JS. A `.ts` file may contains any statements as well as function and class definitions. We can optionally use the [module systems](http://www.typescriptlang.org/Handbook#modules), which there are two of them, internal and external modules. Internal modules are similar to namespaces. External modules are used when we want to output files in either the node.js ([CommonJS](http://wiki.commonjs.org/wiki/CommonJS)) way or the require.js ([AMD](https://github.com/amdjs/amdjs-api)) way. Both of the module systems are able to export variables, functions, or types.
 
-Haxe follows the Java approach, which means expressions are held by types (i.e. no top-level expression). All the types are compiled into a single `.js` file. The main entry point of a program is always a static main function of a class specified by the user. Every type is placed in a [module](http://haxe.org/manual/type-system-modules-and-paths.html). Haxe enforces a folder structure according to the use of packages/module. e.g. If there is a module, `net.onthewings.HelloWorld`, it must be located in a file named `HelloWorld.hx` in the folder `net/onthewings/` within one of the class paths searched by the Haxe compiler. Referencing other modules is done by using [`import`](http://haxe.org/manual/type-system-import.html).
+Haxe follows the more restrictive Java approach for code organization. It does not allow expressions (including functions) to be place in the top-level. Instead, Haxe expressions are held by types (mainly classes) contained in a `.hx` file (i.e. [module](http://haxe.org/manual/type-system-modules-and-paths.html)). Each module may contain more than one types though. The main entry point of a Haxe program is a static main function of a class specified by the user.
+
+For file organization, TypeScript allows the `.ts` files to be placed in anywhere. We may instruct the TypeScript compiler to generate one `.js` file for each `.ts` file, or to concatenate multiple `.ts` output into a single `.js` file. To reference other types declared in another `.ts` file, insert a special comment `/// <<reference path="path/to/file.ts" />` or use `import` and `require`, depending on what module system we're using. 
+
+Haxe again follows the Java approach for file organization. It enforces a folder structure according to the use of packages/module. e.g. If there is a module, `net.onthewings.HelloWorld`, it must be located in a file named `HelloWorld.hx` in the folder `net/onthewings/` within one of the class paths searched by the Haxe compiler. The Haxe compiler compiles all the source files into a single `.js` file. Referencing other modules is done by using [`import`](http://haxe.org/manual/type-system-import.html).
 
 Mixins
 
