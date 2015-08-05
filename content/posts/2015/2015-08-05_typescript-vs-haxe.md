@@ -1,6 +1,9 @@
-Title: TypeScript vs Haxe
+Title: TypeScript vs Haxe, Which is the Better Compile-to-JS Language?
 Tags: Haxe, JS
-Status: draft
+
+<span class="center">
+![TypeScript vs Haxe](this>files/2015/ts-vs-haxe.svg)
+</span>
 
 [TypeScript](https://github.com/Microsoft/TypeScript) is definitely one of the most well-known compile-to-JS languages nowadays. Designed as a superset of JavaScript, TypeScript brings in static-typing for writing large-scale application. [Haxe](http://haxe.org/) is similar to TypeScript in many aspects, particularly its JS-like syntax, static-typing, and module system. Among [the 9 Haxe compilation targets](http://haxe.org/documentation/introduction/compiler-targets.html), the JS target was one of the eldest ones. It was introduced [in March 2006](https://github.com/HaxeFoundation/haxe/blob/3.2.0/extra/CHANGES.txt#L1496-L1497), which was way before Microsoft released TypeScript [in 2012](https://en.wikipedia.org/wiki/TypeScript#History). In fact, Haxe is a language that compiles to JS, ahead of everyone else including TypeScript (2012), [CoffeeScript](http://coffeescript.org/) (2009), [Dart](https://www.dartlang.org/) (2011), and Java via [GWT](http://www.gwtproject.org/) (May 2006). So I wonder, which is the better compile-to-JS language, the (relatively) new shiny TypeScript, or the good-old mature Haxe?
 
@@ -628,7 +631,7 @@ Unlike Haxe, TypeScript has a few unsound cases. For instance, function argument
 We can see that, Haxe is even more "typed" (has strict and sound typing) than TypeScript. On the one hand, TypeScript being forgiving on typing may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore type errors instead of typing the program properly. To be clear, optional typing is nice, but when type annotation exists and there is clearly a typing issue, the compiler should complain and stop. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
 <span class="center">
-![Call it a miracle! It compiles! Your type error is forgiven.](this>files/2015/type-error-is-forgiven-meme.jpg)
+![It's a miracle! It compiles! Your type error is forgiven.](this>files/2015/type-error-has-been-forgiven-meme.jpg)
 </span>
 
 ### Code organization and generation
@@ -649,7 +652,7 @@ TypeScript and Haxe continues to follow their design strategies consistently in 
 
 ## Conclusion
 
-TypeScript and Haxe are similar in many levels. They are both statically typed languages that are able to compile to JS. They have similar JS-like syntax and features.
+TypeScript and Haxe are similar in many aspects. They are both statically typed languages that are able to compile to JS. They have similar JS-like syntax and features.
 
 However, at the core, TypeScript and Haxe have different design philosophies. TypeScript is a superset of JS. It means it cannot modify the existing JS syntax and semantics. It adds a static type system and some new constructs (e.g. "proper" class/interface). It is not interested in optimizing the program in any way. Haxe looks like JS, but is more similar to other popular compiled languages like Java/C# regarding to semantics, the use of types, code organization, and optimizations. It also brings in a lot of advanced functional programming concepts.
 
