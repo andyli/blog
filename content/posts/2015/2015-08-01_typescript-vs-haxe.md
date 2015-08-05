@@ -141,7 +141,7 @@ extern class Namebuilder {
 }
 ```
 
-Another function syntax difference is that TypeScript supports the [ES6 fat-arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Haxe does not has any equivalent short-handed syntax for functions, [despite of being popularly requested](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c). One major reason is that the Haxe function declaration syntax is already pretty compact due to its expression-oriented nature. Moreover, with the help of [macros](http://haxe.org/manual/macro.html), Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
+Another function syntax difference is that TypeScript supports the [ES6 fat-arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Haxe does not has any equivalent short-handed syntax for functions. [Nicolas Cannasse](https://github.com/ncannasse), the creator of Haxe, [refuses to add such syntax](https://medium.com/@ncannasse/haxe-and-short-lambdas-c1f360f7c7c), despite of being popularly requested. One major reason is that the Haxe function definition syntax is already pretty compact due to its expression-oriented nature. Moreover, with the help of [macros](http://haxe.org/manual/macro.html), Haxe libraries (e.g. [tink_lang](https://github.com/haxetink/tink_lang#short-lambdas) and [Slambda](https://github.com/ciscoheat/slambda)) can implement syntaxes similar to, or even shorter than the TypeScript/ES6 one.
 ```ts
 // TypeScript
 var evens = [1, 2, 3].filter(n => n % 2 == 0);
@@ -149,7 +149,7 @@ var evens = [1, 2, 3].filter(n => n % 2 == 0);
 ```haxe
 // Haxe
 
-// built-in anonymous function declaration syntax
+// built-in anonymous function definition syntax
 var evens = [1, 2, 3].filter(function(n) return n % 2 == 0);
 
 // tink_lang
@@ -257,7 +257,7 @@ class Person {
 // Haxe
 class Person {
 	// property with getter and setter
-	// @:isVar auto generates the private `name`
+	// @:isVar auto generates a private `name`
 	@:isVar public var name(get, set):String;
 	public function get_name() {
 		return name;
@@ -297,7 +297,7 @@ Although the syntaxes are mostly similar, the underlying semantics of the codes 
 
 ### Semantics
 
-TypeScript and Haxe have different decisions on variable scoping. TypeScript, like JS, offers only function-level scope for `var` declarations. Haxe however provides block-level scope, which is also offered by most block-structured language, like C/C++, Java, and C#. The difference is illustrated as follows:
+TypeScript and Haxe have different decisions on variable scoping. TypeScript, like JS, offers only function-level scope for `var` declarations. Haxe however provides block-level scope, which is also offered by most block-structured languages, like C/C++, Java, and C#. The difference is illustrated as follows:
 ```ts
 // TypeScript
 {
@@ -313,7 +313,7 @@ console.log(a); // ok, because `a` exist outside of a block
 trace(a); // error: Unknown identifier : a
 ```
 
-Generally, block scope is a better choice for a block-structured language. In fact, the creator of the JavaScript, [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), admitted that the design decision was made [due to a lack of time](https://twitter.com/brendaneich/status/349768501583548416).
+Generally, block scope is a better choice for a block-structured language. In fact, the creator of JavaScript, [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), admitted that the design decision was made [due to a lack of time](https://twitter.com/brendaneich/status/349768501583548416).
 
 <span class="center">
 ![Implement block scope? Aint nobody got time for that!](this>files/2015/js-block-scope-meme.jpg)
@@ -321,7 +321,7 @@ Generally, block scope is a better choice for a block-structured language. In fa
 
 Of course, the ES6 block scoped `let` declaration is also supported by TypeScript. But it is kind of a pity that TypeScript has to maintain the old scoping strategy of `var` and goes to support `let` instead of "fixing" `var` declaration directly like Haxe...
 
-It is in a similar situation for the resolution of `this`. TypeScript [follows strictly the JS behavior](https://github.com/Microsoft/TypeScript/wiki/'this'-in-TypeScript). When `this` is inside a function/method, it is resolved dynamically. `this` may not always point to an instance of the enclosing "class", depended on how the function/method is called. Haxe "fixes" it to use the more natural lexical scoping, and making it always pointing to an instance of the enclosing "class". The difference is illustrated as follows:
+It is in a similar situation for the resolution of `this`. TypeScript [follows strictly the JS behavior](https://github.com/Microsoft/TypeScript/wiki/'this'-in-TypeScript). When `this` is inside a function/method, it is resolved dynamically. `this` may not always point to an instance of the enclosing "class", depended on how the function/method is called. Haxe "fixes" it to use the more natural lexical scoping, and making it always points to an instance of the enclosing "class". The difference is illustrated as follows:
 ```ts
 // TypeScript
 class Counter {
@@ -332,7 +332,7 @@ class Counter {
 		});
 		return this.i;
 	}
-	// one way to fix is to alias `this` to a local variable
+	// one way to fix this is to alias `this` to a local variable
 	fixed1(array:Array<any>) {
 		var that = this;
 		array.forEach(function() {
@@ -416,7 +416,7 @@ class Test {
 		// note that there is NO fall-through, i.e. no `break` is needed
 		var redValue = switch (colors[0]) {
 			// every case here is a *pattern*, not a *value*
-			// there will be compilation errors if there is missing or redundant cases
+			// there will be compilation errors if there are missing or redundant cases
 			case Red: 255;
 			case Rgb(r, _, _): r;
 			default: 0;
@@ -451,13 +451,13 @@ switch(point) {
 
 By now we have discovered quite a few cases where TypeScript and Haxe give different semantics to the same syntax. We can see that TypeScript sticks to the JS standards as much as possible. Existing JS developers would pick up TypeScript without any fiction. Haxe however takes the other approach, "fixes" the [JS design flaws](http://www.crockford.com/javascript/javascript.html) and follows the behaviors used by other popular languages. As a result, developers with background other than JS would appreciate and less-likely to be surprised by the Haxe semantics. Moreover, Haxe also fuses functional programming concepts and JS-like syntax in a natural way.
 
-### Typing system
+### Type system
 
-TypeScript and Haxe feature similar basic types. TypeScript has `boolean`, `number`, `string`, `Array`, `any`, and `void`. Haxe has all of the TypeScript equivalents, `Bool`, `Float`, `String`, `Array`, `Dynamic`, and `Void`. In Haxe, there is also `Int` that do not exist in TypeScript. Of course, we have function types in both languages too.
+TypeScript and Haxe feature similar basic types. TypeScript has `boolean`, `number`, `string`, `Array`, `any`, and `void`. Haxe has all of the TypeScript equivalents, `Bool`, `Float`, `String`, `Array`, `Dynamic`, and `Void`. In Haxe, there is also `Int` that do not exist in TypeScript. As previously mentioned, we have function types in both languages too.
 
 We can create custom types in both TypeScript and Haxe. In TypeScript, we may use class/interface and enum. In Haxe, we have class/interface, enum, typedef, and abstract.
 
-TypeScript uses a structural typing system (duck-typing), in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
+TypeScript uses a structural type system (duck-typing), in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
 ```ts
 // TypeScript
 class Point {
@@ -594,6 +594,7 @@ var array = ["abc", 123]; // the type of array is (string | number)[]
 ```
 ```haxe
 // Haxe
+
 var array = ["abc", 123]; // error: Arrays of mixed types are 
                           // only allowed if the type is forced to Array<Dynamic>
 
@@ -609,7 +610,7 @@ Static typing of TypeScript is made optional, such that all valid JS code is val
 var author = {first:"Andy", last:"Li"};
 author.birthyear = 1988; // error: Property 'birthyear' does not exist on type '{ first: string; last: string; }'.
 ```
-Although there is an error, the TypeScript compiler still outputs JS as follows:
+Although there is an error above, the TypeScript compiler still outputs JS as follows:
 ```js
 // JavaScript
 var author = { first: "Andy", last: "Li" };
@@ -634,23 +635,23 @@ We can see that, Haxe is even more "typed" (has strict and sound typing) than Ty
 
 TypeScript and Haxe employ different strategies for code organization and generation.
 
-For code organization, TypeScript is as flexible as JS. A `.ts` file may contains any statements as well as function and class definitions. We can optionally use the [module systems](http://www.typescriptlang.org/Handbook#modules), which there are three of them, internal, external, and the ES6 modules. Internal modules are similar to namespaces. External modules are used when we want to output files in either the node.js ([CommonJS](http://wiki.commonjs.org/wiki/CommonJS)) way or the require.js ([AMD](https://github.com/amdjs/amdjs-api)) way. The [ES6 modules](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#es6-modules) are effectively the external modules with a different syntax. All of the module systems are able to export variables, functions, and types, and can be mixed and matched at will.
+For code organization, TypeScript is as flexible as JS. A `.ts` file may contain statements as well as functions and class definitions. We can optionally use the [module systems](http://www.typescriptlang.org/Handbook#modules), which there are three of them, internal, external, and the ES6 modules. Internal modules are similar to namespaces. External modules are used when we want to output files in either the node.js ([CommonJS](http://wiki.commonjs.org/wiki/CommonJS)) way or the require.js ([AMD](https://github.com/amdjs/amdjs-api)) way. The [ES6 modules](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#es6-modules) are effectively the external modules with a different syntax. All of the module systems are able to export variables, functions, and types, and can be mixed and matched at will.
 
-Haxe follows the more restrictive Java approach for code organization. It does not allow expressions (including functions) to be place in the top-level. Instead, Haxe expressions are held by types (mainly classes) contained in a `.hx` file (i.e. [module](http://haxe.org/manual/type-system-modules-and-paths.html)). Each module may contain more than one types though. The main entry point of a Haxe program is a static main function of a class specified by the user.
+Haxe follows the more restrictive Java approach for code organization. It does not allow expressions (including functions) to be place in the top-level. Instead, Haxe expressions are held by types (mainly classes) contained in a `.hx` file (i.e. a  [module](http://haxe.org/manual/type-system-modules-and-paths.html)). Each module may contain more than one type. The main entry point of a Haxe program is a static main function of a class specified by the user.
 
 For file organization, TypeScript allows the `.ts` files to be placed in anywhere. We may instruct the TypeScript compiler to generate one `.js` file for each `.ts` file, or to concatenate multiple `.ts` output into a single `.js` file. To reference other types declared in another `.ts` file, insert a special comment `/// <<reference path="path/to/file.ts" />` or use `import` and `require`, depending on what module system we're using. 
 
 Haxe again follows the Java approach for file organization. It enforces a folder structure according to the use of packages/modules. e.g. If there is a module, `net.onthewings.HelloWorld`, it must be located in a file named `HelloWorld.hx` in the folder `net/onthewings/` within one of the class paths searched by the Haxe compiler. The Haxe compiler compiles all the source files into a single `.js` file. Referencing other modules is done by using [`import`](http://haxe.org/manual/type-system-import.html).
 
-Other than the different handling of "modules", different levels of optimization can be found in the outputs of TypeScript and Haxe. TypeScript does not do much fancy optimization when transpiling TypeScript code to JS code. It is mostly a one to one mapping, except it has to generate codes to implement features that is missing in traditional JS (e.g. arrow function is compiled to normal function when targeting ES3/5). Haxe however is able to perform a number of advanced optimizations. For example, [dead-code-elimination](http://haxe.org/manual/cr-dce.html) removes unused code to reduce output size and improve runtime performance. [Inlining](http://haxe.org/manual/class-field-inline.html) directly inserts user-specified function bodies in place of calls to them, effectively reduces number of function calls for runtime performance improvement. The experimental static analyzer available in [Haxe 3.2](http://haxe.org/download/version/3.2.0/) is able to perform constant propagation and expression-level dead-code-elimination.
+Other than the different handling of "modules", different levels of optimization can be found in the outputs of TypeScript and Haxe. TypeScript does not do much fancy optimization when transpiling TypeScript code to JS code. It is mostly a one to one mapping, except it has to generate codes to implement features that is missing in traditional JS (e.g. arrow function is compiled to normal function when targeting ES3/5). Haxe, however, is able to perform a number of advanced optimizations. For example, [dead-code-elimination](http://haxe.org/manual/cr-dce.html) removes unused code to reduce output size and improve runtime performance. [Inlining](http://haxe.org/manual/class-field-inline.html) directly inserts user-specified function bodies in place of calls to them, effectively reduces number of function calls for runtime performance improvement. The experimental static analyzer available in [Haxe 3.2](http://haxe.org/download/version/3.2.0/) is able to perform constant propagation and expression-level dead-code-elimination.
 
-TypeScript and Haxe continues to follow their design strategies consistently in the area of code organization and generation. TypeScript wants to be as flexible as and similar to JS. It supports all the JS code organization methods. It maintains a trivial mapping between source code and generated JS code. Haxe, however, borrows the concepts of other popular compiled languages. It enforce a single sensible source file structure and generates only a single JS file by default. It is able to perform various optimization on the program.
+TypeScript and Haxe continues to follow their design strategies consistently in the area of code organization and generation. TypeScript wants to be as flexible as and similar to JS. It supports all the JS code organization methods. It maintains a trivial mapping between source code and generated JS code. Haxe, however, borrows the concepts of other popular compiled languages. It enforce a single sensible source directory structure and generates only a single JS file by default. It is able to perform various optimizations on the program.
 
 ## Conclusion
 
-TypeScript and Haxe is similar in many levels. They are both statically typed languages that are able to compile to JS. They have similar JS-like syntax and features.
+TypeScript and Haxe are similar in many levels. They are both statically typed languages that are able to compile to JS. They have similar JS-like syntax and features.
 
-However, at the core TypeScript and Haxe have different design philosophies. TypeScript is a superset of JS. It means it cannot modify the existing JS syntax and semantics. It adds a static typing system and some new constructs (e.g. "proper" class/interface). It is not interested in optimizing the program in any way. Haxe looks like JS, but is more similar to other popular compiled languages like Java/C# regarding to semantics, the use of types, code organization, and optimizations. It also brings in a lot of advanced functional programming concepts.
+However, at the core, TypeScript and Haxe have different design philosophies. TypeScript is a superset of JS. It means it cannot modify the existing JS syntax and semantics. It adds a static type system and some new constructs (e.g. "proper" class/interface). It is not interested in optimizing the program in any way. Haxe looks like JS, but is more similar to other popular compiled languages like Java/C# regarding to semantics, the use of types, code organization, and optimizations. It also brings in a lot of advanced functional programming concepts.
 
 Which is the better compile-to-JS language? It depends. Existing JS developers will favor TypeScript as they are more similar in many ways. They can utilize their existing skills immediately. Non-JS developers with backgrounds like Java/C# or even from the functional programming world will appreciate Haxe more since it fixes a lot of weirdness of JS.
 
