@@ -8,8 +8,8 @@ Slug: haxe-tips-better-untyped-expression
 Remember to put the brackets
 ```haxe
     (untyped new JQuery("#images").imageLoader)({});
-//  ^                            ^
-//  |________these_______________|
+//  ^                                         ^
+//  |________these____________________________|
 ```
 
 ### Abstract
