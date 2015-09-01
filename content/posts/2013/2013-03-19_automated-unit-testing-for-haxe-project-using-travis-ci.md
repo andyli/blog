@@ -1,6 +1,6 @@
 Title: Automated unit-testing for Haxe project using Travis-CI
 Date: 2013-03-19 05:08
-Tags: Haxe
+Tags: Haxe, CI
 Slug: automated-unit-testing-for-haxe-project-using-travis-ci
 
 ### What is Travis-CI?
