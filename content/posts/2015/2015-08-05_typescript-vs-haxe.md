@@ -15,7 +15,7 @@ In this blog post, we compare the language designs of TypeScript and Haxe in a f
 
 ### Syntax
 
-TypeScript is designed as a superset of JS. That means, any valid JS code is also valid TypeScript code. This makes porting code between TypeScript and JS very easily, since they share exactly the same basic syntax constructs.
+TypeScript is designed as a superset of JS. That means, any valid JS code is also valid TypeScript code. This makes porting code between TypeScript and JS very easy, since they share exactly the same basic syntax constructs.
 
 Haxe syntax is also very JS-like. But it is more technically correct to say that it is ECMAScript-like, or similar to ActionScript, since Haxe was historically built as an alternative to ActionScript for authoring Flash swf contents. Anyway, the basic syntax constructs are mostly equals to JS's. One exception is the missing of classic C-style for-loop, i.e. `for (int i = 0 ; i < 10; i++) {}`, which is replaced by [`Iterator` based for-loop](http://haxe.org/manual/expression-for.html), i.e. `for (i in 0...10) {}`.
 
