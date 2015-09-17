@@ -456,11 +456,11 @@ By now we have discovered quite a few cases where TypeScript and Haxe give diffe
 
 ### Type system
 
-TypeScript and Haxe feature similar basic types. TypeScript has `boolean`, `number`, `string`, `Array`, `any`, and `void`. Haxe has all of the TypeScript equivalents, `Bool`, `Float`, `String`, `Array`, `Dynamic`, and `Void`. In Haxe, there is also `Int` that do not exist in TypeScript. As previously mentioned, we have function types in both languages too.
+TypeScript and Haxe feature similar basic types. TypeScript has `boolean`, `number`, `string`, `Array`, `any`, and `void`. Haxe has all of the TypeScript equivalents, `Bool`, `Float`, `String`, `Array`, `Dynamic`, and `Void`. In Haxe, there is also `Int` that does not exist in TypeScript. As previously mentioned, we have function types in both languages too.
 
 We can create custom types in both TypeScript and Haxe. In TypeScript, we may use class/interface and enum. In Haxe, we have class/interface, enum, typedef, and abstract.
 
-TypeScript uses a structural type system (duck-typing), in which all types can be expressed as interfaces. Types are compatible to each other as long as they has the same fields. We can assign anonymous object to a variable typed as a class instance:
+TypeScript uses a structural type system (duck-typing), in which all types can be expressed as interfaces. Types are compatible to each other as long as they have the same fields. We can assign anonymous object to a variable typed as a class instance:
 ```ts
 // TypeScript
 class Point {
