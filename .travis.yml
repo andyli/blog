@@ -13,7 +13,7 @@ script:
   - wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
   - unzip -qq google-cloud-sdk.zip
   - google-cloud-sdk/install.sh --usage-reporting false --path-update false --rc-path=~/.bashrc --bash-completion false --override-components=app
-  - google-cloud-sdk/bin/gcloud components update preview app --quiet
+  - google-cloud-sdk/bin/gcloud components update preview app
   - openssl aes-256-cbc -K $encrypted_3551f66ee127_key -iv $encrypted_3551f66ee127_iv -in "${TRAVIS_BUILD_DIR}/gae_key" -out blog-onthewings-8a1538b1718e.json -d
   - google-cloud-sdk/bin/gcloud auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
-  - google-cloud-sdk/bin/gcloud --project blog-onthewings preview app deploy --version 1 --quiet "${TRAVIS_BUILD_DIR}/app.yaml"
+  - google-cloud-sdk/bin/gcloud --project blog-onthewings preview app deploy --version 1 --verbosity=debug "${TRAVIS_BUILD_DIR}/app.yaml"
