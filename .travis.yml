@@ -1,5 +1,5 @@
 language: python
-python: '3.5'
+python: '2.7'
 sudo: false
 install:
   - cd .. && git clone https://github.com/getpelican/pelican-plugins.git && cd $TRAVIS_BUILD_DIR
@@ -8,6 +8,7 @@ install:
   - source activate blog
 script:
   - make publish
+  - source deactivate
   - cd $HOME
   - wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
   - unzip -qq google-cloud-sdk.zip
