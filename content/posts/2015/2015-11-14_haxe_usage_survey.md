@@ -58,7 +58,7 @@ Another interesting view to the data is the number of interested Haxe versions p
 ![Number of interested Haxe versions per respondent](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_version_count_grouped.png)
 </span>
 
-We can see that there is some interest in using more than one Haxe version (~20%), but the majority of respondents are interested in using only one target. That means it is not urgent to support installing multiple version of Haxe in a system. But of course it would be great to have a way to do so in the long run. [HVM](https://github.com/dpeek/hvm) sounds promising although I haven't tried.
+We can see that there is some interest in using more than one Haxe version (~20%), but the majority of respondents are interested in using only one target. That means it is not urgent to support installing multiple version of Haxe in a system. But of course it would be great to have a way to do so in the long run. [HVM](https://github.com/dpeek/hvm) sounds promising although I haven't tried. For testing purpose, one can easily [setup a TravisCI build matrix with multiple Haxe versions](http://docs.travis-ci.com/user/languages/haxe/#Choosing-Haxe-versions-to-test-against).
 
 For the installation method, I asked how Haxe was being installed:
 
@@ -77,4 +77,37 @@ Since I want to know what Haxe installation methods have to be improved, I also 
 As expected, most respondents prefer to use official installers as well as package managers. Note that the number of respondents preferred to using package managers is higher than the number of respondents actually used package managers to install Haxe. I believe it is because the Haxe packages were not updated until recently, so people opted to use another installation method. It means my recent effort in updating the Linux packages for the Haxe Foundation should be useful and you can start to use 
 package managers to install Haxe as you wished now :) I've also considered providing a Haxe Docker image, but given the interest is extremely low so I will save my effort for other important things for now.
 
+Let's take a look at the OS families being used for Haxe development. Note that I'm investigating the developer machines, which are the ones people install Haxe and do actually coding in them. I've included the usual 3 major desktop OS families: Windows, Mac, and Linux/BSD. Out of interest, I've also added "mobile OSes" as the forth OS family, because I think mobile devices are popular and there may be people who want to code on a tablet. The result is illustrated as follows:
 
+<span class="center">
+![Amount of interest in using given OS family for Haxe development](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_os.png)
+</span>
+
+Surprisingly, the number of respondents who stated interest in using mobile OSes for Haxe development is higher than the ones of Mac and Linux/BSD. Turn out some people [reported](https://groups.google.com/d/msg/haxelang/nxPTx2xfeUA/w-uYl3zCCAAJ) they had mistaken the question as the interest of developing for, but not on, the OSes. But still, even if we assume only half of the respondents understood the question well, there is still ~30% percent of respondents interested in developing on a mobile device!
+
+The difference between Mac and Linux/BSD is also interesting. Overall, there is higher interest in Linux/BSD than Mac. But, if we only consider the respondents who use Haxe professionally (the green and dark green portions), the interest in Mac is slightly higher.
+
+We then look into the interest in using individual versions of the OSes. The results for Windows and Mac versions are plotted as follows:
+
+<span class="center">
+![Which Windows version(s) do you use, or want to use, for Haxe development?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_os_win.png)
+</span>
+<span class="center">
+![Which Mac version(s) do you use, or want to use, for Haxe development?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_os_mac.png)
+</span>
+
+We can observe that most respondents are interested in using the latest three versions, but not the older ones.
+
+For Linux/BSD, I asked for the interested distros instead of releases to reduce the number of options. The result is plotted as follows:
+
+<span class="center">
+![Which Linux / BSD distro(s) do you use, or want to use, for Haxe development?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_os_linux.png)
+</span>
+
+I know that Ubuntu is super popular and there is indeed high interest in doing Haxe development on it. My recent package update effort already covered the two most requested ones here ([Ubuntu and Debian](this>2015/10/05/debian_package_and_ubuntu_ppa_for_haxe/), and in fact the PPA is also usable in Linux Mint). The distros that uses RPM are not very popular among our community, but I've covered [Fedora and openSUSE](2015/11/01/haxe_rpm_packages_for_fedora_and_opensuse/) anyway. And I wasn't aware of the popularity of Arch Linux, so this survey is proven useful to let me know about this. I've been [told](https://twitter.com/jonasmalaco/status/661055960249667584) that there are nice packages existed in the Arch Linux AUR, and I will check and co-maintain the packages if possible.
+
+The result for mobile OS versions:
+
+<span class="center">
+![Which mobile OS(es) do you use, or want to use, for Haxe development?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_os_mobile.png)
+</span>
