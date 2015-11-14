@@ -17,7 +17,7 @@ The first thing I asked in the questionnaire is the experience on using Haxe, in
 ![Do you use Haxe?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_exp.png)
 </span>
 
-Knowing that there are more than 160 professional Haxe users is pretty impressive to me.
+Having more than 160 professional Haxe users participated in this survey is pretty impressive to me.
 
 So, what is our community creating? It has been well-known that Haxe is popular among game developers. It is so popular to a point that for once [all the top three winners of the Ludum Dare game jam were all using Haxe](https://twitter.com/ncannasse/status/598041755540389888)... Here the second question asks what kind of things Haxe is being used or interested in using Haxe to build:
 
