@@ -51,7 +51,7 @@ We will then turns to analyze the development setup in the next question, which 
 ![Which version(s) of Haxe are you using, or want to use / test?](https://raw.githubusercontent.com/andyli/haxe-usage-survey/master/out/fig_version.png)
 </span>
 
-Over 90% of the respondents are using or interested in the using the 3.2 series. The interests of earlier versions are much less (< 10% of the respondents). It is good in the way that we can mainly focus on developing the latest version without the headache of backporting bug-fixes and features to the earlier versions. 
+Over 90% of the respondents are using or interested in using the 3.2 series. The interests of earlier versions are much less (< 10% of the respondents). It is good in the way that we can mainly focus on developing the latest version without the headache of backporting bug-fixes and features to the earlier versions. 
 
 Another interesting view to the data is the number of interested Haxe versions per respondent:
 
