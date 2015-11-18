@@ -3,6 +3,10 @@ Date: 2013-03-19 05:08
 Tags: Haxe, CI
 Slug: automated-unit-testing-for-haxe-project-using-travis-ci
 
+<span class="center">
+# Warning: This post is out-dated, see [updated post here](this>2015/09/02/continuous_improvement_on_continuous_integration_for_haxe_projects/)!
+</span>
+
 ### What is Travis-CI?
 
 [Travis-CI][] is "a hosted continuous integration service for the open
