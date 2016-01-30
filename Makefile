@@ -111,6 +111,9 @@ env_activate:
 env_deactivate:
 	source deactivate
 
+env_update:
+	conda update --all
+
 env_export:
 	conda env export --no-builds --file environment.yml
 	conda list -e > requirements.txt
