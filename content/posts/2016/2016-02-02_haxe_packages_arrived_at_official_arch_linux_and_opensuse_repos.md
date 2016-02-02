@@ -1,4 +1,4 @@
-Title: Haxe packages arrived at Official Arch Linux and openSUSE Repositories
+Title: Haxe Packages Arrived at Official Arch Linux and openSUSE Repositories
 Tags: Haxe, Arch Linux, openSUSE
 
 Yes, our Haxe and Neko packages have arrived at official Arch Linux and openSUSE repositories!
