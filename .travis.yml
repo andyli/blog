@@ -1,14 +1,11 @@
 language: python
-python: '2.7'
+python: '3.5'
 sudo: false
 install:
   - cd .. && git clone https://github.com/getpelican/pelican-plugins.git && cd $TRAVIS_BUILD_DIR
-  - pip install conda
-  - conda env create -f environment.yml
-  - source activate blog
+  - pip install -r requirements.txt
 script:
   - make publish
-  - source deactivate
   - cd $HOME
   - wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
   - unzip -qq google-cloud-sdk.zip
