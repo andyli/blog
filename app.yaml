@@ -3,6 +3,9 @@ api_version: 1
 threadsafe: no
 
 handlers:
+- url: /.well-known/acme-challenge
+  static_dir: acme-challenge
+  mime_type: text/plain
 - url: /wp-content/uploads/2009/11/(css-experiment_.+).php
   script: css-experiments/\1.py
 - url: /(.*)feed/
