@@ -34,15 +34,15 @@ The difference between mathematics and programming shown above is that,
 they use different kind of symbols(operators), so they have different
 [order of operation][].
 
-Google thinks that is 9:
+Google thinks that is 9:<br>
 [![Google thinks that is 9.](/files/2011/google.png)](http://www.google.com.hk/search?q=6%C3%B72(1%2B2))
 
-WolframAlpha thinks that is 9:
+WolframAlpha thinks that is 9:<br>
 [![WolframAlpha thinks that is 9.](/files/2011/wolframalpha.png)](http://www.wolframalpha.com/input/?i=6%C3%B72%281%2B2%29)
 
-My Casio calculator thinks that is 1:
+My Casio calculator thinks that is 1:<br>
 ![My
-Casio calculator thinks that is 1.](/files/2011/IMG_20110502_022439.jpg)
+Casio calculator thinks that is 1.](/files/2011/20160825_091451.jpg)
 
 One interesting thing is, even in programming, different programming
 languages may have different order of operation, i.e. they have different

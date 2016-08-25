@@ -2,20 +2,34 @@ language: python
 python: '2.7'
 sudo: false
 install:
-  - cd .. && git clone https://github.com/getpelican/pelican-plugins.git && cd $TRAVIS_BUILD_DIR
+  - pushd ..
+  -   git clone https://github.com/getpelican/pelican-plugins.git
+  - popd
   - pip install -r requirements.txt
   - npm install -g markdown-spellcheck
+  - npm install -g broken-link-checker
+  # install google-cloud-sdk
+  - pushd $HOME
+  -   wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
+  -   unzip -qq google-cloud-sdk.zip
+  -   google-cloud-sdk/install.sh --usage-reporting false --path-update false --rc-path=~/.bashrc --bash-completion false
+  -   google-cloud-sdk/bin/gcloud components install app-engine-python
+  -   google-cloud-sdk/bin/gcloud components update
+  -   google-cloud-sdk/bin/gcloud components list
+  #   https://code.google.com/p/google-cloud-sdk/issues/detail?id=321
+  -   google-cloud-sdk/bin/gcloud config set app/use_appengine_api false
+  -   openssl aes-256-cbc -K $encrypted_3551f66ee127_key -iv $encrypted_3551f66ee127_iv -in "${TRAVIS_BUILD_DIR}/gae_key" -out blog-onthewings-8a1538b1718e.json -d
+  -   google-cloud-sdk/bin/gcloud auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
+  - popd
+  # build the html files
+  - make html
+  # run local dev server
+  - dev_appserver.py --dev_appserver_log_level=error . &
 script:
+  # check spelling with markdown-spellcheck
   - mdspell "content/**/*.md" --ignore-numbers --ignore-acronyms --report
-  - make publish
-  - cd $HOME
-  - wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
-  - unzip -qq google-cloud-sdk.zip
-  - google-cloud-sdk/install.sh --usage-reporting false --path-update false --rc-path=~/.bashrc --bash-completion false
-  - google-cloud-sdk/bin/gcloud components update
-  - google-cloud-sdk/bin/gcloud components list
-  # https://code.google.com/p/google-cloud-sdk/issues/detail?id=321
-  - google-cloud-sdk/bin/gcloud config set app/use_appengine_api false
-  - openssl aes-256-cbc -K $encrypted_3551f66ee127_key -iv $encrypted_3551f66ee127_iv -in "${TRAVIS_BUILD_DIR}/gae_key" -out blog-onthewings-8a1538b1718e.json -d
-  - google-cloud-sdk/bin/gcloud auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
-  - yes | google-cloud-sdk/bin/gcloud --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml" #|| cat /home/travis/.config/gcloud/logs/*/*.log && false
+  # check relative links with broken-link-checker
+  - blc http://localhost:8000/ --recursive --exclude-external
+  # deploy
+  - make clean publish
+  - yes | google-cloud-sdk/bin/gcloud --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
