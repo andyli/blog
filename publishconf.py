@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://blog.onthewings.net'
+SITEURL = 'https://blog.onthewings.net'
 RELATIVE_URLS = False
 
 FEED_DOMAIN = 'http://feeds.feedburner.com'

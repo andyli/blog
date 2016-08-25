@@ -8,18 +8,23 @@ handlers:
   mime_type: text/plain
 - url: /wp-content/uploads/2009/11/(css-experiment_.+).php
   script: css-experiments/\1.py
+  secure: always
 - url: /(.*)feed/
   static_files: output/\1feed/atom.xml
   upload: output/(.*)feed/atom.xml
+  secure: always
 - url: /
   static_files: output/index.html
   upload: output/index.html
+  secure: always
 - url: /(.+)/
   static_files: output/\1/index.html
   upload: output/(.+)/index.html
+  secure: always
 - url: /(.*)
   static_files: output/\1
   upload: output/(.*)
+  secure: always
 
 skip_files:
 - .git
