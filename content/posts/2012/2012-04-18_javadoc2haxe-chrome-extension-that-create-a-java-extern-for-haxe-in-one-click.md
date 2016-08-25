@@ -13,7 +13,7 @@ little [Processing demos][] for him to shown during his talk. The Java
 target is very well designed such that using "native" Java class is
 extremely easy. It is very similar to [creating externs for Haxe/JS][].
 I used a little jQuery script to help me building extern from Javadoc
-pages (btw [@Dr_Emann][], [@razaina][] also had similar ideas). Later I
+pages (BTW [@Dr_Emann][], [@razaina][] also had similar ideas). Later I
 think it would be fun and useful to create a Chrome extension for the
 script. Since there is already [a Haxe extern of Chrome extension][], it
 is pretty easy to implement it in Haxe.
@@ -24,7 +24,7 @@ is pretty easy to implement it in Haxe.
 
 ### How to use
 
-Go to a Javadoc page (eg [Processing's][]). Select a class from the
+Go to a Javadoc page (e.g. [Processing's][]). Select a class from the
 class menu and you should see a orange icon next to the class name:
 
 ![Javadoc2Haxe button][]
@@ -40,7 +40,7 @@ unwanted methods(maybe referencing another Java type that you don't want
 to create extern for it).
 
 You're more than welcome to fill issues, or even fork the extension from
-[github][]. Just beware of its quick and dirty code ;)
+[Github][]. Just beware of its quick and dirty code ;)
 
   [Worldwide Haxe 2012]: http://wwx.haxe.org/
   [@cwaneck]: http://twitter.com/cwaneck

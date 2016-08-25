@@ -33,7 +33,7 @@ or traditional Chinese(top to bottom, right to left). See below:
 ![arrangments](/files/2010/arrangments.png)
 
 Not only Festival Walk, but also City University of Hong Kong has this
-arrangment:
+arrangement:
 
 ![Buttons in the lift of City University of Hong Kong][]
 

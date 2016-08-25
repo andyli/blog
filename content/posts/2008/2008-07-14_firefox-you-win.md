@@ -18,7 +18,7 @@ most powerful build-in functions since a long time ago, but it is
 lacking add-ons, or I think the add-ons do not act like the way they
 should be... they act like separate applications. Also, for every Opera
 build-in functions, or nearly any functions you may think of, there
-exist a equal (or better) add-on in Firefox. (btw, [this one][]
+exist a equal (or better) add-on in Firefox. (BTW, [this one][]
 rules...)
 
 Thirdly, Firefox is cross-platformed (Windows, Mac OSX, Linux). There is

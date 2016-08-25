@@ -29,7 +29,7 @@ both. :P
 Another problem is how to preform thresholding. First method is after
 calculating the pixel difference, add the difference in hue, saturation
 and brightness altogether with weightings and do a one-time threshold to
-the gray-scale image. Second method is calculate the difference and give
+the grayscale image. Second method is calculate the difference and give
 threshold limits to the three channels (H,S,V or H,S,L), only the pixels
 pass all the three thresholds will be white. First method should be more
 easily to incorporate with other filters developed for AR (like the very

@@ -49,10 +49,10 @@ Firefox Web developer Toolbar
 
 URL: <http://chrispederick.com/work/web-developer/>
 
-Here is yet another firefox extension. Actually this toolbar is a
+Here is yet another Firefox extension. Actually this toolbar is a
 must-have for web developers. The functions are too many, I try to name
 a few: button to resize your window to 800\*600 (or any other presets),
-button for W3C validation service, disable cache, disable javascript
+button for W3C validation service, disable cache, disable JavaScript
 etc.
 
   [HTML Validator in action]: /files/2008/tidy80_preview.png

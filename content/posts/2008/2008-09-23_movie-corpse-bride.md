@@ -11,6 +11,6 @@ song of the deads when the first time Victor meet them have told how
 positive they are: "Die, die we all pass away. But don't wear a frown
 cuz it's really okay".
 
-Another thing that is funny: Even when the dead want to punlish Barkis,
+Another thing that is funny: Even when the dead want to punish Barkis,
 they need to wait until Barkis die. It seems want to tell that even
 justice, can only come not in our living world.

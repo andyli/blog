@@ -44,11 +44,11 @@ Below is my favorite piece at the moment. I used [physaxe][] for physics
 simulation. Thousands of particles(in fact, tiny circles) are shot from
 outside of the canvas, producing trails of blue. When they collides,
 some red will be drawn, which look like sparks. The generating process
-is recorded, you can find it on [youtube][].  
+is recorded, you can find it on [Youtube][].  
 [!["20110113_2000 by on_the_wings, on Flickr"](http://farm6.static.flickr.com/5170/5351310168_eda6b6235f_z.jpg)](http://www.flickr.com/photos/andy-li/5351310168/)
 
 Finally, all the codes of the above pieces are open source, can be found
-in the description of individual flickr/youtube page. I'll post some
+in the description of individual Flickr/Youtube page. I'll post some
 more interesting ones next month.
 
 PS. Nicolas Barradeau is producing [a series of basics in generative

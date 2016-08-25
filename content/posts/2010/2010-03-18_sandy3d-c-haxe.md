@@ -17,7 +17,7 @@ are 3 I found, all targeting only Flash: [Sandy3D][], originally written
 in AS, has switched its trunk to Haxe; [Away3D][], again originally
 written in AS, now has a Haxe branch inside its SVN in active
 development; [Haxe3D][], developed by Nicolas(the creator of Haxe),
-written in Haxe from the very beginng, seems to be very light-weight but
+written in Haxe from the very beginning, seems to be very light-weight but
 I can't found much info about it.
 
 So I decide to work on one of them to enable a Haxe C++ 3D
@@ -29,7 +29,7 @@ which are the re-invented cross-platform Haxe version of the Flash API.
 With the help from [Hugh][] and Niel, project owner of [neash][] and
 developer of Sandy3D, most of the problems are solved. However as I can
 see, re-inventing the Flash API is a hard job as consideration of other
-target is also needed, eg. JS/Canvas. [I really hope Adobe can help
+target is also needed, e.g.. JS/Canvas. [I really hope Adobe can help
 this][].
 
 Currently some very basic demos of Sandy can be compiled to C++ and it
@@ -59,7 +59,7 @@ mStage.Broadcast(event);
     </pre>
     should be moved to the end of the do-while loop, just before `mStage.RenderAll();`
 
- 4. For mouse event in opengl mode to work, additional fix which required a recompile of nme is needed. I haven't tried yet. Now just ingore this...
+ 4. For mouse event in OpenGL mode to work, additional fix which required a recompile of nme is needed. I haven't tried yet. Now just ignore this...
 
  5. You should be able to use Sandy3D in C++ without the above patches for the next release of nme/neash. But for now, please do it.
 

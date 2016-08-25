@@ -88,7 +88,7 @@ OK 2 tests, 0 failed, 2 success
 
 Lastly, based on the return value of `runner.run()`, which
 is "all tests success or not", we exit the program properly as a best
-practice. It is used by many [CI][] softwares, for example [TravisCI][],
+practice. It is used by many [CI][] software, for example [TravisCI][],
 in order to get back the test result.
 
 There exist more advanced unit testing frameworks, like [munit][] and

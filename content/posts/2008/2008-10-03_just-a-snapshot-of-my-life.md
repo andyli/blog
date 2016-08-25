@@ -3,12 +3,12 @@ Date: 2008-10-03 09:02
 Slug: just-a-snapshot-of-my-life
 
 Now I'm setting in CCCU campus in Kowloon Bay. I just ate breakfast with
-Ca and she is now attending leature.
+Ca and she is now attending lecture.
 
-Here the enrivroment for working is quite nice: with wind, plants,
+Here the environment for working is quite nice: with wind, plants,
 seeing the students walking below... Just a little bit annoying is the
-wifi, which I need to steal others to use... I have no idea why here is
-no CityU wifi for students... And no power too (Although my MacBook
+Wi-Fi, which I need to steal others to use... I have no idea why here is
+no CityU Wi-Fi for students... And no power too (Although my MacBook
 tells me that there are still 4 hours before it sleeps).
 
 Actually I'm tired now since I haven't sleep last night. Yup, I was

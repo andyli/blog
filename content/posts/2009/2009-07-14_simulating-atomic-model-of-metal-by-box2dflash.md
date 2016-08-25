@@ -13,7 +13,7 @@ randomly, and then let the physics engine to solve all the collisions.
 When all the atoms stop moving, a single still of the metal structure
 will be formed.
 
-The atoms are only drawn on the screen when it is sleeping (ie. no
+The atoms are only drawn on the screen when it is sleeping (i.e.. no
 movement). It can save some time from not rendering them in each frame.
 
 <span style="color: #ff0000;">caution:</span> The browser will freeze

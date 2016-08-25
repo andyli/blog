@@ -24,7 +24,7 @@ Like those Flash-blockers, the blocked contents are replaced by a line
 of text, "Click to show xxxx". You may click on it to get back the
 blocked content.
 
-CanvasBlock is tested on FireFox 3.6 on Mac, FireFox 3.5 on Ubuntu and
+CanvasBlock is tested on Firefox 3.6 on Mac, Firefox 3.5 on Ubuntu and
 Chrome on Ubuntu. Other platforms should works too.
 
 ### Implementing the script
@@ -55,7 +55,7 @@ video and audio seems ok, but there is some problem of blocking canvas.
 #### Possibility of Freezing/Crashing
 
 I went to [ChromeExperiments][] and randomly picked [one][]. You know
-what? The browser freezed.
+what? The browser froze.
 
 So, look like after I blocked the canvas, the JS on the page which is
 used to draw thing on the canvas originally, is still there trying to
@@ -65,7 +65,7 @@ canvas, because different web page have different functions, so no way I
 can work on that. You can completely disable JS, but this is not a
 CanvasBlock should do.
 
-Browser freezed and an timeout message was shown after blocking canvas:
+Browser froze and an timeout message was shown after blocking canvas:
 ![Browser freezed and an timeout message was shown after blocking canvas](/files/2010/errorAfterBlockingCanvas.png)
 
 However, I have tested some more web page and they are ok with the
@@ -109,7 +109,7 @@ annoying than Flash ads...
 If you want to try, you may install the script from [CanvasBlock's page
 on userscripts.org][].
 
-You're also welcome to get the haXe source from [CanvasBlock's github
+You're also welcome to get the haXe source from [CanvasBlock's Github
 repo][].
 
   [ChromeExperiments]: http://www.chromeexperiments.com/

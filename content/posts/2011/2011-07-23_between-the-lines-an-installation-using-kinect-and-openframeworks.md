@@ -18,7 +18,7 @@ booth of [CityU Press][] (1D-A28).
 <div class="fb-post" data-href="https://www.facebook.com/cityupress/photos/a.10150280671799489.346130.96844704488/10150280672209489/?type=1" data-width="466"><div class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cityupress/photos/a.10150280671799489.346130.96844704488/10150280672209489/?type=1">Post</a> by <a href="https://www.facebook.com/cityupress">City University of Hong Kong Press</a>.</div></div>
 
 [Kinect][]([OpenNI][]) is used for motion tracking, running a program I
-wrote in C++ with [openFrameworks][]. Collision and softbody simulation
+wrote in C++ with [openFrameworks][]. Collision and soft body simulation
 is done by [Bullet][].
 
 ### Artist statement

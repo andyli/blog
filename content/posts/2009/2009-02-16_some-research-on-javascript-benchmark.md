@@ -27,7 +27,7 @@ like jQuery and Prototype, which is not quite appropriate to be ported.
 
 My target should be porting SunSpider. But there is still some things to
 be considered like whether to use AS's build-in library, coverage of
-Graphic manipulation etc. More researchs are needed ;-) .
+Graphic manipulation etc. More researches are needed ;-) .
 
   [SunSpider]: http://www2.webkit.org/perf/sunspider-0.9/sunspider.html
   [V8 Benchmark Suite]: http://v8.googlecode.com/svn/data/benchmarks/v3/run.html

@@ -5,9 +5,9 @@ Yes, our Haxe and Neko packages have arrived at official Arch Linux and openSUSE
 
 ## Haxe in the Arch Linux "community" repository
 
-There were already nice Haxe and Neko packages existed in the [Arch User Repository (AUR)](https://aur.archlinux.org/), which is somewhat like a Ubuntu PPA, except that AUR stores only source tar balls. It means that people using the AUR will still have to get the tar balls and then build the packages. It is, therefor, time-consuming.
+There were already nice Haxe and Neko packages existed in the [Arch User Repository (AUR)](https://aur.archlinux.org/), which is somewhat like a Ubuntu PPA, except that AUR stores only source tar balls. It means that people using the AUR will still have to get the tar balls and then build the packages. It is, therefore, time-consuming.
 
-The Haxe and Neko packages are now moved to ["community"](https://wiki.archlinux.org/index.php/official_repositories#community), which is one of the Arch Linux official repositories, which stores both source and binary packages. The Arch Linux package management tool, pacman, can directly install built packages from those official repositories. Therefor, installing Haxe and Neko is now as easy as issuing a single command: `sudo pacman -S haxe`.
+The Haxe and Neko packages are now moved to ["community"](https://wiki.archlinux.org/index.php/official_repositories#community), which is one of the Arch Linux official repositories, which stores both source and binary packages. The Arch Linux package management tool, pacman, can directly install built packages from those official repositories. Therefore, installing Haxe and Neko is now as easy as issuing a single command: `sudo pacman -S haxe`.
 
 Packages in the "community" repository can only be submitted and maintained by ["Trusted Users"](https://wiki.archlinux.org/index.php/Trusted_Users). The Haxe and Neko packages are kindly maintained by [Alexander Rødseth](https://aur.archlinux.org/account/xyproto). I will also try assist him to update the packages when new versions are released.
 

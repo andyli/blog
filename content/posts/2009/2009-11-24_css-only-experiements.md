@@ -1,11 +1,11 @@
-Title: CSS-only experiements
+Title: CSS-only experiments
 Date: 2009-11-24 16:35
-Tags: css, experiment
+Tags: CSS, experiment
 Slug: css-only-experiements
 
 In the last week I have tried to make some CSS-only experiments.
 Originally it's just an idea to play some effects with [CSS animation
-which now available in webkit][]. But at the end I am obsessed and
+which now available in Webkit][]. But at the end I am obsessed and
 making games with CSS... Yup, that's embedding game logic in the place
 which designed to be presentation layer only... :P
 
@@ -19,7 +19,7 @@ Video first, description follows:
 
 [Open experiment](/wp-content/uploads/2009/11/css-experiment_mouse-shadow.php)
 
-It works on webkit browsers only (Chrome, Safari).
+It works on Webkit browsers only (Chrome, Safari).
 
 What I want to create is just some old-school shadow, fading etc. Turn
 out using a deeply-nested div for the effect is quite stylish. The divs
@@ -32,7 +32,7 @@ performance because `div > div > div > ...` is just too slow...
 
 [Open experiment](/wp-content/uploads/2009/11/css-experiment_gear.php)
 
-Again, works on webkit browsers only (Chrome, Safari).
+Again, works on Webkit browsers only (Chrome, Safari).
 
 I find the deeply-nested div has quite a potential to make some more
 things, so here is another product of it. Swapping the CSS transition
@@ -55,11 +55,11 @@ This is a drawing board that you can click to draw pixel.
 
 I remembered there are hackers tried to get users' browsing history by
 using color-change of visited link. It impressed me to store valued in
-the browsing history. Originally I used links with hash values (ie. `<a
+the browsing history. Originally I used links with hash values (i.e.. `<a
 href="#123"></a>`) and it works in all the browsers... except IE. IE
 will turn the color when you click on it but it does not store it in the
 history. So I switched to use `iframe`, that is setting the links to
-open in the iframe and serve a dummy webpage with random URL...
+open in the iframe and serve a dummy web page with random URL...
 
 ## Click Challenge
 
@@ -67,7 +67,7 @@ open in the iframe and serve a dummy webpage with random URL...
 
 [Open experiment](/wp-content/uploads/2009/11/css-experiment_click-challenge.php)
 
-This one is webkit browsers only (Chrome, Safari).
+This one is Webkit browsers only (Chrome, Safari).
 
 This is the latest experiment I made, which is really a playable game.
 [CSS keyframe animation][] is used to simulate a timer. Lots of

@@ -22,7 +22,7 @@ newspaper articles:
 
 bbTV interviewed me and the news was once on the front page of Yahoo
 HK!  
-Click on the following image to view the video (or [here is the youtube
+Click on the following image to view the video (or [here is the Youtube
 version](http://www.youtube.com/watch?v=r2_syc4UTH8)):
 
 <a href="https://www.flickr.com/photos/andy-li/14850474257" title="Augmented Mirror on Yahoo HK front page by Andy Li, on Flickr"><img src="https://farm4.staticflickr.com/3906/14850474257_4b64050958_b.jpg" alt="Augmented Mirror on Yahoo HK front page"></a>

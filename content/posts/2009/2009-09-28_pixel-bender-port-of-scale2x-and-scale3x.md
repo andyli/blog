@@ -6,7 +6,7 @@ Slug: pixel-bender-port-of-scale2x-and-scale3x
 ![scale2x][]
 
 When I first saw the [Scale2x, scale3x AS3][] I am impressed. The
-algorithm is from [scale2x sourceforge project][] and the as3 port is
+algorithm is from [scale2x sourceforge project][] and the AS3 port is
 coded as a class that is very easy to reuse. Surely the AS3 port author
 nicoptere can make a PB port too as you may find out many PB cool stuff
 over [his blog][], but my pixel bending desire force me to do it myself

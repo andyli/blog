@@ -8,7 +8,7 @@ not expensive, cross platform, high frame rate(up to 120fps), no image
 compression etc. I've been using it in the past year and my experience
 is great.
 
-In my final year project, I have been exploring stereo camera, ie. using
+In my final year project, I have been exploring stereo camera, i.e.. using
 multiple cameras at the same time. It is not too difficult, just place
 the cameras side-by-side in the same plane, with [OpenCV][] you can
 calibrate them and compute a disparity map to get the depth info of the
@@ -27,7 +27,7 @@ less stable and sometimes it outputs corrupted frames.
 I have a bit more time these few days, so I try move back to Windows and
 port the code to use [haXe][]/C++ with [Code Laboratories][]'s CLEye
 SDK. I created a simple binding to the SDK and the result is pretty
-good. I have again put the code to github ([hxCLEye][]), and there is a
+good. I have again put the code to Github ([hxCLEye][]), and there is a
 sample program([Main.hx][]), which use the not-yet-released [nme2][]. It
 still needs to be optimized for the Bytes=\>BitmapData conversion, but
 it is quite stable I think.

@@ -7,20 +7,20 @@ I've recently updated [jQueryExtern][] to align with [jQuery 1.6.1][].
 To get it, use the usual `haxelib upgrade` (or `haxelib install
 jQueryExtern` if you have not installed it previously).
 
-I introduced some changes that would like to expain here:
+I introduced some changes that would like to explain here:
 
 ### package `jQuery`
 
 Finally jQueryExtern has its own package, `jQuery`. The previous
 `jQueryPlugins` package is also moved to `jQuery.plugins`.
 
-It is done because jQuery has more and more types, eg. [jqXHR][],
+It is done because jQuery has more and more types, e.g.. [jqXHR][],
 [Deferred][] and [Promise][] are introduced in jQuery 1.5. In the
 previous versions of jQueryExtern, most of them are prefixed by `JQuery`
 (`JQueryPromise`, `JQueryDeferred`, `JQueryEvent`) which is lengthy
 and redundant, with `jQuery` package, it is now safe to remove the
 prefix. In case of name collision, simply use the fully qualified names,
-eg `jQuery.Event`.
+e.g. `jQuery.Event`.
 
 To conclude, you should now `include jQuery.JQuery;` instead of `include
 JQuery;`.

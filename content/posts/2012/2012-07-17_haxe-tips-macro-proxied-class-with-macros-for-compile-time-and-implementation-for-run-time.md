@@ -164,7 +164,7 @@ class Test {
 
 Macro-proxied class provides a compile-time pre-processing stage for the
 methods. We can remap method call to another optimized method base on
-compile-time checking on the method arguments. eg. method overloading as
+compile-time checking on the method arguments. e.g.. method overloading as
 shown above.
 
 There is an implementation at run-time, with class and method names
@@ -178,7 +178,7 @@ Some ideas that may use macro-proxied class includes:
     native API.
 -   jQuery plug-in that is used by "using", for better variable argument
     length support.
--   [SPOD][], to merge [the macro version][] to the original verion.
+-   [SPOD][], to merge [the macro version][] to the original version.
 -   [hxLINQ][], like SPOD, to perform compile-time optimization on
     queries when possible.
 
@@ -247,7 +247,7 @@ stored in a `R`
 variable, would the macros or the run-time version of the methods work
 correctly?
 
-Moreover, the structure of a macro-proxied class is not preserved. ie.
+Moreover, the structure of a macro-proxied class is not preserved. i.e..
 `R` is not a
 structure type of `{
 function load(url:String):Dynamic; }`, which `R_impl` is, since

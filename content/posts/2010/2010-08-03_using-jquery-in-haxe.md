@@ -29,7 +29,7 @@ Since its put on haxelib, you can install it using the command:
 
 and then add `-lib jQueryExtern` in the hxml.
 
-OR, you can download the cutting edge version from github:
+OR, you can download the cutting edge version from Github:
 <http://github.com/andyli/jQueryExternForHaxe>, extract and place
 "JQuery.hx" (optionally with the "jQueryPlugins" folder) into your
 project source directory.
@@ -102,7 +102,7 @@ extern as `JQueryS.data()` and `new JQuery(...).data()`.
 
 And there are some extra methods appears in the extern comparing to the
 original jQuery. For example, there is `cssSet()`, and it is just the
-same as `css()` but limiting you to really setting a css property and it
+same as `css()` but limiting you to really setting a CSS property and it
 is properly typed as returning a JQuery object, so you can happily
 chaining the methods with code completion and type checking. All the
 extra methods are like that and they are all set as `inline`, so that

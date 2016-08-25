@@ -37,13 +37,13 @@ games is a mixed reality.
 
 Simulation requires modeling the logic or behavior of the simulation
 target (<cite title="Manovich, Lev. &quot;The Illusions.&quot; Manovich, Lev. The Language of New Media. Cambridge: The MIT Press, 2001. 162-167.">Manovich,
-The Illusions</cite>). Epic Win modeled a typical medieval themed RPG
-world in several ways. Firstly, it modeled the game logic, which is to
+The Illusions</cite>). Epic Win modelled a typical medieval themed RPG
+world in several ways. Firstly, it modelled the game logic, which is to
 complete missions (objectives) to gain points and collect game items in
 order to level up. In RPG, when the player level up, the ability of the
 player will be increased. Since a game cannot directly increase the
-player’s abilities in real life, Epic Win modeled this with virtual
-abilities of a RPG character, eg. “strength”, “intelligent” etc.
+player’s abilities in real life, Epic Win modelled this with virtual
+abilities of a RPG character, e.g.. “strength”, “intelligent” etc.
 Secondly, a typically RPG game has a story line. Epic Win simulated it
 by taking the seemly non-related real life objectives, map onto a
 logical narrative experience. Lastly, typical RPG uses a fantasy world.
@@ -103,7 +103,7 @@ Media. Cambridge: The MIT Press, 2001. 162-167.
 Manovich, Lev. "The poetics of augmented space." Visual Communication
 (2006): 219-240.
 
-Rattray, Tim. EpicWin Gives You Loot For Doing Your Chores. 18 Augest
+Rattray, Tim. EpicWin Gives You Loot For Doing Your Chores. 18 August
 2010. 30 Oct 2012 http://www.slidetoplay.com/story/epicwin-gives-you-loot-for-doing-your-chores.
 
 Tsai, Charles. Al Gore: 'Games Are the New Normal'. 22 June 2011. 30 Oct

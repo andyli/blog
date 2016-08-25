@@ -12,6 +12,6 @@ Update:
 
 Just found out that DreamWorks is working on "3D live-action motion
 picture" of Ghost in the Shell!  
-[DreamWorks to make 'Ghost' in 3-D][]
+[DreamWorks to make 'Ghost' in 3D][]
 
   [DreamWorks to make 'Ghost' in 3-D]: http://www.variety.com/article/VR1117984029.html?categoryid=13&cs=1&nid=2562

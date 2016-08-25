@@ -15,7 +15,7 @@ Automata][].
 
 The seed should be comma-separated values of 0-3.
 
-Quite a few things i want to try a long time ago have been used in this
+Quite a few things I want to try a long time ago have been used in this
 Flash assignment: dynamic sound creation, [SoundFX][],
 [Async-threading][], Vector, FP10's drawing API, FlashDevelop...
 

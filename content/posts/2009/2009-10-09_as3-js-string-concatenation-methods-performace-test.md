@@ -1,4 +1,4 @@
-Title: AS3/JS string concatenation methods performace test
+Title: AS3/JS string concatenation methods performance test
 Date: 2009-10-09 23:25
 Tags: experiment, Flash, JavaScript
 Slug: as3-js-string-concatenation-methods-performace-test

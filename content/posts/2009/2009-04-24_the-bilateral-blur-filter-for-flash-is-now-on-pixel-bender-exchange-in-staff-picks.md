@@ -9,7 +9,7 @@ selected as staff picks!
 Go and download it from the page: [Bilateral Blur Filter for Flash on
 Pixel Bender Exchange][]
 
-ps. That one is optimized, processing time oringinally is 2 - 3s , it's
+P.S.. That one is optimized, processing time originally is 2 - 3s , it's
 now 0.6 - 0.7s (for a 320\*240 image).
 
   [Bilateral Blur Filter for Flash on Pixel Bender Exchange]: http://www.adobe.com/cfusion/exchange/index.cfm?event=extensionDetail&loc=en_us&extid=1789025

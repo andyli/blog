@@ -12,7 +12,7 @@ The waveform in the program consists of 10 control points. The first
 point and the last point are fixed at zero so that the wave can be
 looped smoothly to form a sound wave. The controls points can be
 adjusted by dragging or by using keyboard. The points are assigned with
-keys labeled near them, which are number keys (+shift to move points up
+keys labelled near them, which are number keys (+shift to move points up
 instead of down). I recommend using the keyboard as you may adjust
 multiple points at the same time (which feels like using multitouch
 surface 8-) ).

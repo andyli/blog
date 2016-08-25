@@ -14,13 +14,13 @@ to develop RIAs. Using both declarative and scripting languages.
 Everything seemed not too difficult although the syntax is differ from
 C++ or ActionScript that I use most. But I think I would continue
 concentrating on Flash and Flex (or even try some haxe...) since JavaFX
-is still in development and it looks not running fast... fast enought to
+is still in development and it looks not running fast... fast enough to
 run games.
 
 The tutorial gave very simple demos of JavaFX and jMaki. You may find
 them from the link on top.
 
-ps. i met K and Marco there! I was worrying if I will be the only BscCM
+P.S.. I met K and Marco there! I was worrying if I will be the only BScCM
 yr1 student who really comes...
 
   [Sun Technology Campus Demo - Talk1]: http://groups.google.com/group/java-campus-user-group-hk/web/sun-technology-campus-demo---talk1

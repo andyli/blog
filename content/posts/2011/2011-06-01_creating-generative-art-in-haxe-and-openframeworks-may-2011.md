@@ -4,7 +4,7 @@ Tags: Art &amp; Design, experiment, Haxe, OpenFrameworks
 Slug: creating-generative-art-in-haxe-and-openframeworks-may-2011
 
 The fifth month of doing a piece of generative art everyday using
-[haXe][]and [openframeworks][]. As a reminder, all the pieces can be
+[haXe][]and [openFrameworks][]. As a reminder, all the pieces can be
 viewed from my [Flickr set][]. Also the haXe source code for generating
 those images can be found in the description in the corresponding Flickr
 page. Here below are the selected pieces made in this month:
@@ -26,8 +26,8 @@ Increased the spread's random factor, allowing it to spread a little bit
 backward.  
 [!["20110504_211026 by on_the_wings, on Flickr"](http://farm6.static.flickr.com/5142/5686582667_8fcba9d92f_z.jpg)](http://www.flickr.com/photos/andy-li/5686582667/)
 
-Keeped changing the spread implementation. This one keep increasing its
-hue from the center with a probability of reseting itself (to red).  
+Kept changing the spread implementation. This one keep increasing its
+hue from the center with a probability of resetting itself (to red).  
 [!["20110505_051547 by on_the_wings, on Flickr"](http://farm6.static.flickr.com/5110/5687880919_e45c27c5a8_z.jpg)](http://www.flickr.com/photos/andy-li/5687880919/)
 
 Made the spread much more unstable and let there be more than one

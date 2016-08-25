@@ -23,10 +23,10 @@ argument/return types.
 ### Limitation of @:overload
 
 The `@:overload`
-metadata is mainly designed for writing externs, ie. to describe the
+metadata is mainly designed for writing externs, i.e.. to describe the
 native overloaded methods but not creating one. The Haxe compiler
 wouldn't check with the function body if it is really performing in the
-way which `@:overload` metadatas
+way which `@:overload` metadata
 suggested. And definitely no runtime support if you do not implement it
 yourself.
 

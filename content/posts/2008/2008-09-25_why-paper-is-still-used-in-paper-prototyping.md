@@ -25,7 +25,7 @@ simultaneously.
 
 Maybe the rise of multitouch will solve this problem. Just like we move
 the paper in paper prototypes, we can move the virtual papers with our
-fingers when mutitouch is used. This is also the point why multitouch is
+fingers when multi-touch is used. This is also the point why multitouch is
 so welcomed by end-users.
 
 Furthermore, if you are still not satisfied, a 3D presentation of the

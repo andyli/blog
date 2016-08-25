@@ -18,7 +18,7 @@ make it as lightweight as possible.
 Developing in Flash would not face this problem because swf content runs
 inside the virtual machine. Although it has been claimed that Flash
 content runs relatively slower under Mac, but the different is not
-noticeable in most cases. And the preformance of ActionScript (3) is A
+noticeable in most cases. And the performance of ActionScript (3) is A
 LOT higher than JavaScript in any browser.
 
 When developing large scale CPU hungry web apps, you better use Flash

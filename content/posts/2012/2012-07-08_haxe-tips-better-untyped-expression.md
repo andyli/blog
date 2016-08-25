@@ -18,7 +18,7 @@ Static type system of Haxe helps you a lot by performing type-checking
 in the compilation phase. You will be notified errors before the
 application is run.
 
-Since some Haxe targets (eg. JS and PHP) are dynamic in nature, many of
+Since some Haxe targets (e.g.. JS and PHP) are dynamic in nature, many of
 the `native` libraries/frameworks are also very dynamic. You have to use
 the `untyped` keyword in Haxe very often to workaround the compiler
 type-checking.
@@ -50,7 +50,7 @@ For 2, adding a `untyped` keyword will shut the complier's mouth up:
 `untyped new JQuery("#images").imageLoader({});`.
 
 The above of course works, but you will lose many type-checking in the
-expression where are unnecessarily suppressed. Eg. if you forgot to
+expression where are unnecessarily suppressed. e.g.. if you forgot to
 define `config` in
 
 ```haXe

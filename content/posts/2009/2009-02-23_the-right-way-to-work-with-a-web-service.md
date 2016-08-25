@@ -39,7 +39,7 @@ There is no hope in that case?
 If you want HTML, no, there is no hope. But you might still implement
 other methods to work with the API.
 
-For example, Twitter is very similar to this case, mirco blogging with
+For example, Twitter is very similar to this case, micro blogging with
 plain text, but there is [TwitPic][], which store the picture in other
 server and insert the link of the picture to the tweet. Users of TwitPic
 is certainly seeing their picture displayed beautifully. And the normal

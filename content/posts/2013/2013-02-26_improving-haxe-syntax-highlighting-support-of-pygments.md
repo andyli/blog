@@ -32,7 +32,7 @@ time to let the Github guys updates their internal Pygments. But don't
 be sad, the future is here: I created a Chrome extension, [Pygmentx][],
 that replace the Haxe codes on Github (and [Gist][]) with the improved
 one. It only supports the normal file view at the moment, not diff view
-nor the previews on Gist user page at the moment. Btw, thanks Tong
+nor the previews on Gist user page at the moment. BTW, thanks Tong
 (a.k.a disktree) again for his [chrome.extension][] Haxe externs ;)
 
  

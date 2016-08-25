@@ -8,7 +8,7 @@ I am currently porting [The Synthesis ToolKit in C++][] to ActionScript
 \>10 more is coming.
 
 The performance is not yet optimized so real-time sound generation is
-not ready, and I don't know if as3 is fast enough to do that... Anyway
+not ready, and I don't know if AS3 is fast enough to do that... Anyway
 here below a early demo generates the ByteArray first and feeds it to
 the sound during playback.
 

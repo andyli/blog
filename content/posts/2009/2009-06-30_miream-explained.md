@@ -125,7 +125,7 @@ Where are the photo, video or other documentary?
 ------------------------------------------------
 
 We are organizing them. There will be a website dedicated for "The
-mirage series" (in weeks, hopefully). The url **will be announced in
+mirage series" (in weeks, hopefully). The URL **will be announced in
 this blog**. Or you can email me: <andy@onthewings.net>.
 
 * * * * *

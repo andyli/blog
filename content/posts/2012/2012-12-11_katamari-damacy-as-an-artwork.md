@@ -79,7 +79,7 @@ games in the permanent design collection of The Museum of Modern Art
 ### Bibliography
 
 Antonelli, Paola. Video Games: 14 in the Collection, for Starters. 29
-Novermber 2012. 4 December 2012
+November 2012. 4 December 2012
 http://www.moma.org/explore/inside_out/2012/11/29/video-games-14-in-the-collection-for-starters/.
 
 Colgan, Mike. Review - Me and My Katamari. 18 April 2006. 3 December

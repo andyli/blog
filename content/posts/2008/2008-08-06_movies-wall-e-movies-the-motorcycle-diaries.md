@@ -5,7 +5,7 @@ Slug: movies-wall-e-movies-the-motorcycle-diaries
 
 Wall-E is a great 3D animation movie. I heard people saying the movie is
 so boring, but I really found it meaningful and funny. Maybe people are
-expecting a movie for children, which can make them laugth and have fun,
+expecting a movie for children, which can make them laugh and have fun,
 but I think Wall-E is a animation for adults, at least I was watching it
 seriously.
 

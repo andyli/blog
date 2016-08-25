@@ -10,7 +10,7 @@ Slug: automated-unit-testing-for-haxe-project-using-travis-ci
 ### What is Travis-CI?
 
 [Travis-CI][] is "a hosted continuous integration service for the open
-source community". It is tightly integrated with [github][], once we
+source community". It is tightly integrated with [Github][], once we
 enabled its commit hook, whenever there is a new commit, or a pull
 request, on any branch, it will automatically build and run the unit
 test and notify us any problem respecting to certain commits.
@@ -20,7 +20,7 @@ test and notify us any problem respecting to certain commits.
 It gives us an extra level of safety, which safety is what we Haxe users
 love, after all that's one of the reasons to use a strictly typed
 language over a dynamic one. Travis-CI's unit test on pull request is
-particularly useful, which we can instantly identify on the github pull
+particularly useful, which we can instantly identify on the Github pull
 request page any incoming changes that breaks our specification.
 
 And did I mention this great hosted service is in fact free for open
@@ -59,7 +59,7 @@ script:
 ```
 
 Note that at the time of writing, Travis-CI is running 64bit Ubuntu 12.4
-VMs, and the ppa we used above will install Haxe 3.0RC and Neko 2.0.
+VMs, and the PPA we used above will install Haxe 3.0RC and Neko 2.0.
 
 Every command specified in the "script" section is actual test and
 **should exit with code 0 if it pass or non-0 if fail**. The above

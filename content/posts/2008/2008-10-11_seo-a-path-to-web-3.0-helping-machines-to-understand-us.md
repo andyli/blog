@@ -12,11 +12,11 @@ realize the similarities between web 3.0 and the concept of SEO.
 
 One of the proposed key concept
 of web 3.0 is machines will understand our web contents, or let say our
-contents will be formated to be understood by machines. Nowadays there
+contents will be formatted to be understood by machines. Nowadays there
 is a technology "[semantic web][]" that introduces similar ideas. The
 idea is like improving usability of our web contents, not only to humans
 but to machines too. And that is what we are doing for SEO propose: one
-of the reasons we use div and css instead of table to build navigation
+of the reasons we use div and CSS instead of table to build navigation
 menus, is to make sure Google understand which is menu and which is
 content.
 

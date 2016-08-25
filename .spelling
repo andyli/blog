@@ -1,0 +1,651 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+haxe
+academia.edu
+andy
+onthewings.net
+pycon
+unconference
+CityU
+JavaFX
+ActionScript
+P.S.
+BScCM
+orz
+modeling
+bezier
+TweenMax
+cross-platformed
+movie
+DreamWorks
+movies
+Ars
+Evangelion
+Linz
+moodle
+mysql
+SWFAddress
+swf
+MacBook
+wordpress
+div
+anymore
+plz
+PaperVision3D
+InnoCentre
+XBox
+showreel
+SaaS
+eMule
+Webkit
+SunSpider
+Dromaeo
+jQuery
+FlashDevelop
+Vimeo
+JQuery
+ok
+lol
+colored
+pixelbender
+color
+async
+Miream
+thresholding
+traveling
+colors
+grayscale
+bicubic
+resampling
+PhotoShop
+neighbor
+BrainFuck
+Brainfuck
+StackOverflow
+config
+Sandy3D
+Away3D
+Haxe3D
+nme
+hxcpp
+haxelib
+casalib
+casahx
+tweening
+neko
+params
+ppl
+swfobject
+Github
+OpenFrameworks
+TextMate
+Gedit
+hotkey
+hxSerial
+Arduino
+OpenCV
+hxCLEye
+extern
+hxml
+externs
+node.js
+hscript
+templo
+NekoML
+jQueryExtern
+Modernizr
+hxOpenFrameworks
+hxColorToolkit
+Box2D
+lite
+std
+RtAudio
+favorite
+Youtube
+math
+openFrameworks
+cpp
+XCode
+hxRtAudio
+hxOpenFramework
+dir
+WolframAlpha
+perlin
+neighbors
+center
+colorful
+typedef
+Kinect
+OpenNI
+jittering
+Cauê
+Waneck
+plugin
+ndll
+hxLINQ
+Panda3D
+G3Asia
+stringly
+enum
+InnoCarnival
+behavior
+fulfillments
+uptick
+immersiveness
+contradictive
+favor
+SimCity
+artifacts
+Pygments
+Bitbucket
+haxers
+Haxe2
+Pygmentx
+a.k.a
+exe
+non-0
+flambe
+HaxePunk
+TravisCI
+homebrew
+AppVeyor
+dll
+PowerShell
+BezelCursor
+EZ-Sketching
+analyze
+OpenFL
+OCaml
+npm
+CoffeeScript
+edX
+Cannasse
+enums
+destructuring
+behaviors
+init
+contravariant
+bivariant
+require.js
+analyzer
+HaxeCI
+HKOSCon
+transcompilation
+timezone
+interop
+Cyberport
+openSUSE
+Ludum
+pyextern
+pacman
+ - content/posts/2008/2008-06-09_going-to-ria-tutorial-java-technology-behind-web-20.md
+going-to-ria-tutorial-java-technology-behind-web-20
+Talk1
+RIAs
+jMaki
+yr1
+ - content/posts/2008/2008-06-09_moving-to-wordpress.md
+moving-to-wordpress
+uhhooh
+ - content/posts/2008/2008-06-11_a-great-3d-flash-website.md
+a-great-3d-flash-website
+ - content/posts/2008/2008-06-15_opera-95.md
+opera-95
+acid3
+ - content/posts/2008/2008-06-17_playful-media-bsccm-special-interest-group-showcase-2008.md
+playful-media-bsccm-special-interest-group-showcase-2008
+ - content/posts/2008/2008-06-18_our-work-is-in-cityu-news.md
+our-work-is-in-cityu-news
+ - content/posts/2008/2008-06-22_crazy-3d-modaling-technology-video-trace.md
+crazy-3d-modaling-technology-video-trace
+VideoTrace
+ - content/posts/2008/2008-06-25_photo-of-mirage.md
+ar
+ - content/posts/2008/2008-06-27_project-images-into-other-peoples-photo.md
+Fulgurator
+ - content/posts/2008/2008-06-30_hk-iphone-plan.md
+hk-iphone-plan
+ - content/posts/2008/2008-07-04_ghost-in-the-shell-stand-alone-complex.md
+armor
+Appleseed
+soooooo
+session9
+ - content/posts/2008/2008-07-09_my-sem-b-result.md
+my-sem-b-result
+ - content/posts/2008/2008-07-14_firefox-you-win.md
+firefox-you-win
+ - content/posts/2008/2008-07-21_movie-hancock.md
+movie-hancock
+ - content/posts/2008/2008-07-26_how-to-hold-a-key-without-your-hands-on-a-stardard-keyboard.md
+how-to-hold-a-key-without-your-hands-on-a-stardard-keyboard
+ - content/posts/2008/2008-07-31_movie-ghost-in-the-shell-2-innocence.md
+movie-ghost-in-the-shell-2-innocence
+ - content/posts/2008/2008-08-13_i-will-go-to-ars-electronica.md
+i-will-go-to-ars-electronica
+ - content/posts/2008/2008-08-26_movie-evangelion-101-you-are-not-alone.md
+movie-evangelion-101-you-are-not-alone
+ - content/posts/2008/2008-09-02_here-im-in-linz-austria.md
+here-im-in-linz-austria
+ - content/posts/2008/2008-09-08_already-a-week-in-linz.md
+already-a-week-in-linz
+ - content/posts/2008/2008-09-12_cs-3382-web-usability-design-and-engineering.md
+cs-3382-web-usability-design-and-engineering
+ - content/posts/2008/2008-09-13_setting-up-moodle-1.9.2.md
+setting-up-moodle-1
+config.php
+ - content/posts/2008/2008-09-23_movie-corpse-bride.md
+deads
+cuz
+Barkis
+ - content/posts/2008/2008-09-25_why-paper-is-still-used-in-paper-prototyping.md
+Multimodel
+ - content/posts/2008/2008-10-06_p2p-in-flash.md
+p2p-in-flash
+web-Js
+ - content/posts/2008/2008-10-06_the-heat-of-layout-redesign.md
+Xanga
+Obasanjo
+ - content/posts/2008/2008-10-11_seo-a-path-to-web-3.0-helping-machines-to-understand-us.md
+seo-a-path-to-web-3
+0-helping-machines-to-understand-us
+ - content/posts/2008/2008-10-14_a-few-interesting-thing-i-saw-tonight-on-the-internet.md
+a-few-interesting-thing-i-saw-tonight-on-the-internet
+odopod
+ - content/posts/2008/2008-10-15_lets-go-get-the-flash-player-10.md
+lets-go-get-the-flash-player-10
+ - content/posts/2008/2008-10-26_down-in-the-assignment-hell-my-computers-are-going-to-die.md
+1920x1200
+Alienware's
+ - content/posts/2008/2008-10-31_my-first-processing-work-bullethell.md
+BulletHell
+my-first-processing-work-bullethell
+processing.js.
+ - content/posts/2008/2008-11-07_just-finished-the-transmedia-exchange-presentation-and-im-on-cityu-news-again.md
+Transmedia
+just-finished-the-transmedia-exchange-presentation-and-im-on-cityu-news-again
+Opss
+ - content/posts/2008/2008-11-08_a-little-rose-my-first-stop-motion-animation.md
+Keung
+orz3
+ - content/posts/2008/2008-11-08_cityus-usability-testing-lab.md
+cityus-usability-testing-lab
+Chun
+heatmaps
+ - content/posts/2008/2008-11-12_get-the-flash-cs4-trial.md
+get-the-flash-cs4-trial
+25-Line
+ - content/posts/2008/2008-11-15_some-free-tools-for-usabilityaccessibility-testing.md
+some-free-tools-for-usabilityaccessibility-testing
+ - content/posts/2008/2008-12-06_guess-what-i-am.md
+guess-what-i-am
+ - content/posts/2008/2008-12-08_animation-showreel-2008.md
+animation-showreel-2008
+ - content/posts/2008/2008-12-11_multi-touch-screen-on-macbook-test-1.md
+multi-touch-screen-on-macbook-test-1
+ - content/posts/2009/2009-01-17_time-for-me-to-start-blogging-on-web-20.md
+time-for-me-to-start-blogging-on-web-20
+ - content/posts/2009/2009-01-25_quick-way-to-put-desktop-apps-online.md
+Winamp
+ - content/posts/2009/2009-02-05_here-is-another-reason-flash-is-better-than-ajax-for-web-apps.md
+here-is-another-reason-flash-is-better-than-ajax-for-web-apps
+AppleInsider
+r40220
+ - content/posts/2009/2009-02-16_some-research-on-javascript-benchmark.md
+some-research-on-javascript-benchmark
+Math.random
+ - content/posts/2009/2009-02-23_the-right-way-to-work-with-a-web-service.md
+TwitPic
+ - content/posts/2009/2009-03-02_meanings-behind-the-fancy-transition-effects.md
+script.aculo.us
+ - content/posts/2009/2009-03-12_multi-threading-simulation.md
+pixastic
+Box2D.js
+ - content/posts/2009/2009-03-18_generative-art-assignment-cellular-automata.md
+SoundFX
+Async-threading
+ - content/posts/2009/2009-03-22_the-synthesis-toolkit-in-as3.md
+the-synthesis-toolkit-in-as3
+ByteArray
+ - content/posts/2009/2009-03-27_multimedia-element-in-the-web-without-sound-and-video.md
+mov
+Quicktime
+swfdec
+ - content/posts/2009/2009-04-08_deep-linking-for-ajax.md
+deep-linking-for-ajax
+useit.com
+Cantrell
+Asual
+ - content/posts/2009/2009-04-14_bilateral-blur-by-pixel-bender.md
+9x9
+2s
+ - content/posts/2009/2009-04-24_the-bilateral-blur-filter-for-flash-is-now-on-pixel-bender-exchange-in-staff-picks.md
+3s
+0.7s
+ - content/posts/2009/2009-05-20_vector-sound-wave-morphing.md
+Degrafa
+AdvancedCubicBezier
+WavEncoder
+popforge
+ - content/posts/2009/2009-05-23_flartoolkit-trick-use-a-colored-marker.md
+FLARtoolkit
+flartoolkit-trick-use-a-colored-marker
+FLARmanager
+FLARSingleMarkerDetector
+FLARMultiMarkerDetector
+FLARSingleRedMarkerDetector
+detectMarkerLite
+IFLARRgbRaster
+BitmapData
+ColorTransform
+ - content/posts/2009/2009-06-07_pv3d-async-threading-asyncrenderengine.md
+Async
+pv3d-async-threading-asyncrenderengine
+BasicRenderEngine
+AsyncBasicRenderEngine
+showBusyCursor
+RenderStatistics
+renderScene
+renderLayers
+ - content/posts/2009/2009-06-30_miream-explained.md
+miream-explained
+PhotoSynth
+ - content/posts/2009/2009-07-14_simulating-atomic-model-of-metal-by-box2dflash.md
+Box2DFlash
+simulating-atomic-model-of-metal-by-box2dflash
+ - content/posts/2009/2009-07-19_miream-documentary-interview.md
+miream-documentary-interview
+ - content/posts/2009/2009-08-18_playing-with-chroma-key-and-thresholding-in-flash-with-pixel-bender.md
+gf
+ - content/posts/2009/2009-09-19_presentation-slide-for-software-freedom-day-hk-2009.md
+presentation-slide-for-software-freedom-day-hk-2009
+ - content/posts/2009/2009-09-28_pixel-bender-port-of-scale2x-and-scale3x.md
+Scale2x
+Scale3x
+pixel-bender-port-of-scale2x-and-scale3x
+scale3x
+scale2x
+sourceforge
+nicoptere
+Posterizer
+4-color-only
+ - content/posts/2009/2009-10-08_brainflash-the-as3-brainfuck-interpreter.md
+BrainFlash
+brainflash-the-as3-brainfuck-interpreter
+Panu
+Kalliokoski's
+ - content/posts/2009/2009-10-09_as3-js-string-concatenation-methods-performace-test.md
+as3-js-string-concatenation-methods-performace-test
+str
+concateString
+str.concat
+array.push
+array.join
+vector.push
+vector.join
+byteArray.writeUTFBytes
+byteArray.readUTFBytes
+byteArray.length
+byteArray.writeMultiByte
+us-ascii
+byteArray.readMultiByte
+str.length
+TextArea
+concat
+x7000
+ - content/posts/2009/2009-11-24_css-only-experiements.md
+css-only-experiements
+divs
+iframe
+keyframe
+ - content/posts/2009/2009-12-10_chroma-key-and-thresholding-in-flash-pixel-bender-revised.md
+pbk
+ - content/posts/2010/2010-01-23_possibly-the-worst-lift-button-arrangement-i-have-ever-met.md
+possibly-the-worst-lift-button-arrangement-i-have-ever-met
+ - content/posts/2010/2010-02-02_a-greasemonkey-script-for-you-to-try-the-amazingawesomegreatincredible-ipad-web-experience.md
+Greasemonkey
+a-greasemonkey-script-for-you-to-try-the-amazingawesomegreatincredible-ipad-web-experience
+GreaseMonkey
+swfs
+ - content/posts/2010/2010-02-19_colorblink-an-air-app-that-simulates-how-color-blind-people-see-flash-and-images.md
+Colorblink
+colorblink-an-air-app-that-simulates-how-color-blind-people-see-flash-and-images
+ - content/posts/2010/2010-03-18_sandy3d-c-haxe.md
+sandy3d-c-haxe
+neash
+Niel
+IBitmapDrawable.hx
+Lib.hx
+neash.Timer.CheckTimers
+Event.ENTER
+_FRAME
+mStage.Broadcast
+ - content/posts/2010/2010-04-06_casahx-casa-lib-for-haxe.md
+casahx-casa-lib-for-haxe
+ - content/posts/2010/2010-04-13_canvasblock-a-gm-script-to-block-canvas-tag-should-we-or-can-we.md
+CanvasBlock
+canvasblock-a-gm-script-to-block-canvas-tag-should-we-or-can-we
+xxxx
+ChromeExperiments
+userscripts.org
+ - content/posts/2010/2010-05-06_haxe-for-interactivitycreative-coding.md
+haxe-for-interactivitycreative-coding
+eclihx
+Bespin
+Casa
+nme2
+ofSerial
+stk-in-as3
+saqoosha
+ - content/posts/2010/2010-06-08_using-multiple-ps3eye-cameras-with-haxe-cpp.md
+PS3Eye
+using-multiple-ps3eye-cameras-with-haxe-cpp
+120fps
+PS3Eyes
+CLEye
+Main.hx
+ - content/posts/2010/2010-07-07_augmented-mirror-my-latest-project.md
+BSc
+ - content/posts/2010/2010-08-03_using-jquery-in-haxe.md
+using-jquery-in-haxe
+JQuery.hx
+jQueryPlugins
+ - content/posts/2010/2010-09-18_haxe-libraries-to-get-your-project-started.md
+lib.haxe.org
+haxe.org
+WebOS
+Jeash
+haxegui
+openpyrohx
+OpenPyro
+waxe
+wxWidgets
+Appcelerator
+haXigniter
+CodeIgniter
+Poko
+Toolkat
+haxetacy
+bdog-node
+hxNode
+hxasc
+htemplate
+bdog-dojo
+haXe-modernizr
+udraw
+colortoolkit
+gm2d
+Physaxe
+Box2Dhx
+JiglibHaxe
+JiglibFlash
+Jiglib
+hxSL4A
+as3-signals
+Stax
+ - content/posts/2010/2010-10-18_how-to-know-objects-are-really-gced-in-flash-as3.md
+GC'ed
+how-to-know-objects-are-really-gced-in-flash-as3
+wonderfl
+ - content/posts/2010/2010-12-19_method-chaining-and-fluent-interface-in-haxe.md
+TweenLite
+TweenLiteVars
+SpecialHorse
+ - content/posts/2011/2011-01-15_creating-generative-art-in-haxe-and-openframeworks.md
+creating-generative-art-in-haxe-and-openframeworks
+ofSoundStream
+setCircleResolution
+physaxe
+Barradeau
+ - content/posts/2011/2011-02-22_creating-generative-art-in-haxe-and-openframeworks-feb-2011.md
+creating-generative-art-in-haxe-and-openframeworks-feb-2011
+PhysX
+soooo
+Tron-style
+Penner
+ - content/posts/2011/2011-03-26_hxopenframeworks-is-now-on-haxelib.md
+hxopenframeworks-is-now-on-haxelib
+32bit
+ - content/posts/2011/2011-04-04_creating-generative-art-in-haxe-and-openframeworks-march-2011.md
+creating-generative-art-in-haxe-and-openframeworks-march-2011
+Lindelöf
+clothx
+traer
+ - content/posts/2011/2011-05-02_six-divided-by-two-bracket-one-plus-two.md
+6÷2
+ - content/posts/2011/2011-05-05_creating-generative-art-in-haxe-and-openframeworks-april-2011.md
+creating-generative-art-in-haxe-and-openframeworks-april-2011
+xy-plane
+ - content/posts/2011/2011-06-01_creating-generative-art-in-haxe-and-openframeworks-may-2011.md
+creating-generative-art-in-haxe-and-openframeworks-may-2011
+ - content/posts/2011/2011-06-12_haxe-jqueryextern-update-align-with-1-6-1-jquery-package.md
+haxe-jqueryextern-update-align-with-1-6-1-jquery-package
+jqXHR
+ - content/posts/2011/2011-06-24_generative-art-in-haxe-and-openframeworks-final-round-showcasing-in-playful-media-2011.md
+generative-art-in-haxe-and-openframeworks-final-round-showcasing-in-playful-media-2011
+Zatepyakin
+FluidSolver
+ - content/posts/2011/2011-07-23_between-the-lines-an-installation-using-kinect-and-openframeworks.md
+between-the-lines-an-installation-using-kinect-and-openframeworks
+1D-A28
+ - content/posts/2012/2012-03-04_head-tracking-motion-parallax-3d-in-haxe-flash.md
+head-tracking-motion-parallax-3d-in-haxe-flash
+Wiimote
+doob
+Boffswana
+Kooima
+hxmarilena
+flash.xml.XML
+Xml
+FaceTracker
+ - content/posts/2012/2012-04-18_javadoc2haxe-chrome-extension-that-create-a-java-extern-for-haxe-in-one-click.md
+Javadoc2Haxe
+javadoc2haxe-chrome-extension-that-create-a-java-extern-for-haxe-in-one-click
+wwx
+cwaneck
+Javadoc
+_Emann
+razaina
+ - content/posts/2012/2012-07-08_haxe-tips-better-untyped-expression.md
+tl
+dr
+jQuery.JQuery
+imageLoader
+ReferenceError
+ - content/posts/2012/2012-07-13_haxe-tips-advanced-method-overloading-with-macros.md
+jQuery.get
+dataType
+ - content/posts/2012/2012-07-17_haxe-tips-macro-proxied-class-with-macros-for-compile-time-and-implementation-for-run-time.md
+FastMath
+macro-proxie
+ - content/posts/2012/2012-08-17_augmented-mirror-at-siggraph-2012.md
+augmented-mirror-at-siggraph-2012
+ - content/posts/2012/2012-09-02_haxe-advanced-conditional-compilation.md
+IE11-specific
+IE99-specific
+CompilationOption
+ - content/posts/2012/2012-11-02_augmented-mirror-at-innocarnival-2012.md
+augmented-mirror-at-innocarnival-2012
+bbTV
+ - content/posts/2012/2012-11-07_the-simulation-and-hyperreality-aspect-of-epic-win.md
+Sims
+Manovich
+Werbach
+Tsai
+Kino-Eye
+Rattray
+Simulacra
+EpicWin
+ - content/posts/2012/2012-12-11_katamari-damacy-as-an-artwork.md
+Katamari
+Damacy
+katamari
+Colgan
+Keita
+Takahashi
+Sino
+Antonelli
+Cando
+Oli
+ - content/posts/2013/2013-02-26_improving-haxe-syntax-highlighting-support-of-pygments.md
+improving-haxe-syntax-highlighting-support-of-pygments
+macro-reification
+disktree
+chrome.extension
+ - content/posts/2013/2013-03-04_hxml-tricks-every-haxe-user-should-know.md
+nmml
+phantomjs
+all.hxml
+MainPage.hxml
+ContactPage.hxml
+AlbumPage.hxml
+ - content/posts/2013/2013-03-19_automated-unit-testing-for-haxe-project-using-travis-ci.md
+automated-unit-testing-for-haxe-project-using-travis-ci
+Travis-CI's
+travis.yml
+64bit
+3.0RC
+ - content/posts/2013/2013-04-25_setting-up-a-processing-android-project-in-eclipse.md
+AndroidMode
+Processing.app
+MainActivity
+processing.core.PApplet
+android.app.Activity
+proclipsing
+ - content/posts/2013/2013-05-14_jqueryextern-2-0-0-alpha-1.md
+alpha.1
+jqueryextern-2-0-0-alpha-1
+ - content/posts/2013/2013-05-18_haxe-unit-the-unit-testing-package-bundled-in-haxe-std-library.md
+haxe.unit
+StringTools
+munit
+utest
+ - content/posts/2015/2015-06-23_im-now-working-for-the-haxe-foundation.md
+4-year-long
+Hongbo
+parseXML
+ - content/posts/2015/2015-08-05_typescript-vs-haxe.md
+Compile-to-JS
+compile-to-JS
+JS-like
+tink
+_lang
+Slambda
+dataclass
+Eich
+monomorph
+CommonJS
+Non-JS
+ - content/posts/2015/2015-10-05_debian_package_and_ubuntu_ppa_for_haxe.md
+eyecreate
+PPAs
+ - content/posts/2015/2015-10-10_upcoming_haxe_talks_LondonJavaScriptCommunity_PyConHK.md
+30pm
+ - content/posts/2015/2015-11-01_haxe_rpm_packages_for_fedora_and_opensuse.md
+W.M.
+devel
+Tumbleweed
+ - content/posts/2016/2016-02-02_haxe_packages_arrived_at_official_arch_linux_and_opensuse_repos.md
+Rødseth

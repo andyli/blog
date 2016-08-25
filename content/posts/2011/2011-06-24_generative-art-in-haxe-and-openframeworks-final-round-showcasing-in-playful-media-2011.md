@@ -43,7 +43,7 @@ Some more saturated color with complementary color scheme.
 Reduced opacity, the circles merged nicely to each other.  
 [!["20110607_232554 by on_the_wings, on Flickr"](http://farm6.static.flickr.com/5038/5808750022_7a6cf51dbd_z.jpg)](http://www.flickr.com/photos/andy-li/5808750022/)
 
-Simplified but surprisely eye-catching vector-style flower.  
+Simplified but surprisingly eye-catching vector-style flower.  
 [!["20110610_222235 by on_the_wings, on Flickr"](http://farm4.static.flickr.com/3340/5818378888_f2d437b0e9_z.jpg)](http://www.flickr.com/photos/andy-li/5818378888/)
 
 I ported Eugene Zatepyakin(in-spirit)'s AS3 [FluidSolver][] to haXe and
