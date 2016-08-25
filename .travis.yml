@@ -13,13 +13,13 @@ install:
   -   wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
   -   unzip -qq google-cloud-sdk.zip
   -   google-cloud-sdk/install.sh --usage-reporting false --path-update false --rc-path=~/.bashrc --bash-completion false
-  -   google-cloud-sdk/bin/gcloud components install app-engine-python
-  -   google-cloud-sdk/bin/gcloud components update
-  -   google-cloud-sdk/bin/gcloud components list
+  -   google-cloud-sdk/bin/gcloud --quiet components install app-engine-python
+  -   google-cloud-sdk/bin/gcloud --quiet components update
+  -   google-cloud-sdk/bin/gcloud --quiet components list
   #   https://code.google.com/p/google-cloud-sdk/issues/detail?id=321
-  -   google-cloud-sdk/bin/gcloud config set app/use_appengine_api false
+  -   google-cloud-sdk/bin/gcloud --quiet config set app/use_appengine_api false
   -   openssl aes-256-cbc -K $encrypted_3551f66ee127_key -iv $encrypted_3551f66ee127_iv -in "${TRAVIS_BUILD_DIR}/gae_key" -out blog-onthewings-8a1538b1718e.json -d
-  -   google-cloud-sdk/bin/gcloud auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
+  -   google-cloud-sdk/bin/gcloud --quiet auth activate-service-account --key-file blog-onthewings-8a1538b1718e.json
   - popd
   # build the html files
   - make html
@@ -32,4 +32,4 @@ script:
   - blc http://localhost:8000/ --recursive --exclude-external
   # deploy
   - make clean publish
-  - yes | google-cloud-sdk/bin/gcloud --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
+  - google-cloud-sdk/bin/gcloud --quiet --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
