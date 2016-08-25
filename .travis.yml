@@ -25,7 +25,7 @@ install:
   # build the html files
   - make html
   # run local dev server
-  - dev_appserver.py --dev_appserver_log_level=error . &
+  - ~/google-cloud-sdk/bin/dev_appserver.py --dev_appserver_log_level=error . &
 script:
   # check spelling with markdown-spellcheck
   - mdspell "content/**/*.md" --ignore-numbers --ignore-acronyms --report
@@ -33,4 +33,4 @@ script:
   - blc http://localhost:8080/ --recursive --exclude-external
   # deploy
   - make clean publish
-  - google-cloud-sdk/bin/gcloud --quiet --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
+  - ~/google-cloud-sdk/bin/gcloud --quiet --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
