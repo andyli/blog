@@ -29,7 +29,7 @@ script:
   # check spelling with markdown-spellcheck
   - mdspell "content/**/*.md" --ignore-numbers --ignore-acronyms --report
   # check relative links with broken-link-checker
-  - blc http://localhost:8000/ --recursive --exclude-external
+  - blc http://localhost:8080/ --recursive --exclude-external
   # deploy
   - make clean publish
   - google-cloud-sdk/bin/gcloud --quiet --project blog-onthewings app deploy --version 1 "${TRAVIS_BUILD_DIR}/app.yaml"
