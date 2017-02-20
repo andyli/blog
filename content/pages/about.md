@@ -7,7 +7,9 @@ Slug: about
 
 I am Li Wing Ho Andy and this is my personal blog.
 
-I'm a member of the [Haxe Foundation](http://haxe.org/foundation/). I have just completed my PhD study in the [School of Creative Media](http://www.scm.cityu.edu.hk/), [City University of Hong
+I am a member of the [Haxe Foundation](http://haxe.org/foundation/).
+I am currently working as a senior researcher in TCL Corporate Research (Hong Kong) Co., Limited.
+I completed my PhD study in the [School of Creative Media](http://www.scm.cityu.edu.hk/), [City University of Hong
 Kong](http://www.cityu.edu.hk/), where I also obtained my bachelor degree, [Bachelor of Science in Creative Media](http://sweb.cityu.edu.hk/bsccm/).
 
 I'm interested in programming language theories as well as mobile user interface, interactivity, installation art and generative graphics.
@@ -18,6 +20,8 @@ Contact email : [andy@onthewings.net](mailto:andy@onthewings.net)
 
 ## Talks I Gave
 
+ * [Hong Kong Code Conf 2016](http://hongkong.codeconf.io/)
+    * Talk - "Why I chose to master a language no one knows" ([slides](https://docs.google.com/presentation/d/1kc0Fc9iHgdMQedfsaov4B1E0NUP1hVpYs4NPYaeOYOM/edit?usp=sharing))
  * [PyCon HK 2015](http://2015.pycon.hk/)
     * Talk - "Haxe, a statically-typed language that compiles to Python (and more)" ([slides](https://docs.google.com/presentation/d/1AsLWiqnN0FVbIL2PZ3EC198Hc0l--K3vTysE4WemOn4/edit?usp=sharing))
  * [London JavaScript Community online meetup (2015-10-15)](http://www.meetup.com/London-JavaScript-Community/events/224686660/)
