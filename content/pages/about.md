@@ -22,6 +22,8 @@ Contact email : [andy@onthewings.net](mailto:andy@onthewings.net)
 
  * [Hong Kong Code Conf 2016](http://hongkong.codeconf.io/)
     * Talk - "Why I chose to master a language no one knows" ([slides](https://docs.google.com/presentation/d/1kc0Fc9iHgdMQedfsaov4B1E0NUP1hVpYs4NPYaeOYOM/edit?usp=sharing))
+ * [Hong Kong Open Source Conference 2016](https://2016.opensource.hk/)
+    * Talk - "apt-get install <my_software>: Packaging for Linux" ([slides](https://docs.google.com/presentation/d/1Bp6-YPJc8H99eKwd82GWde22nQYSkrs6WgxIRx3rp30/edit?usp=sharing))
  * [PyCon HK 2015](http://2015.pycon.hk/)
     * Talk - "Haxe, a statically-typed language that compiles to Python (and more)" ([slides](https://docs.google.com/presentation/d/1AsLWiqnN0FVbIL2PZ3EC198Hc0l--K3vTysE4WemOn4/edit?usp=sharing))
  * [London JavaScript Community online meetup (2015-10-15)](http://www.meetup.com/London-JavaScript-Community/events/224686660/)
