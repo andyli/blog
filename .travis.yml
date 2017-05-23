@@ -4,6 +4,8 @@ sudo: false
 install:
   - pushd ..
   -   git clone https://github.com/getpelican/pelican-plugins.git
+  -   cd pelican-plugins
+  -   git reset --hard a9690c48863a959c1d041013651aaed6124d6d1d
   - popd
   - pip install -r requirements.txt
   - nvm install 6.4.0
