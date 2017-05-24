@@ -620,7 +620,7 @@ var author = { first: "Andy", last: "Li" };
 untyped author.birthyear = 1988; // prefix with `untyped`
 ```
 
-Unlike Haxe, TypeScript has a few unsound cases. For instance, function arguments should be contravariant, but [they are bivariant in TypeScript](https://github.com/Microsoft/TypeScript/wiki/Type-Compatibility#function-argument-bivariance).
+Unlike Haxe, TypeScript has a few unsound cases. For instance, function arguments should be contravariant, but [they are bivariant in TypeScript](https://www.typescriptlang.org/docs/handbook/type-compatibility.html#function-parameter-bivariance).
 
 We can see that, Haxe is even more "typed" (has strict and sound typing) than TypeScript. On the one hand, TypeScript being forgiving on typing may be handy when we know what we're doing. On the other hand, I'm not sure if it is good because it will somehow encourage people to ignore type errors instead of typing the program properly. To be clear, optional typing is nice, but when type annotation exists and there is clearly a typing issue, the compiler should complain and stop. One historical example of being error-forgiving caused issues in the long term is Internet Explorer. IE was so forgiving that people didn't care about syntax errors nor web standards... Well, error-forgiveness is [good for end users](http://blog.codinghorror.com/javascript-and-html-forgiveness-by-default/), but bad for developers. Maybe it has become a Microsoft tradition - to encourage bad coding practice via forgiveness :(
 
