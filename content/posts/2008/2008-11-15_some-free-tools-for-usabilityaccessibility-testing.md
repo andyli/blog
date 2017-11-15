@@ -20,7 +20,7 @@ add-on, there is close to no delay in validation. Also, when you double
 click its icon, all the errors and warnings (optional accessibility
 issues too!) are shown up with html source. It is real handy!
 
-Note that there are two avalible validation engines in HTML Validator,
+Note that there are two available validation engines in HTML Validator,
 Tiny and OpenSP. OpenSP is the one running behind W3C Validation
 Service.
 

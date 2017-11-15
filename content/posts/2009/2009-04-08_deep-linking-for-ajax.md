@@ -17,7 +17,7 @@ What is Deep Linking
 
 Deep Linking is a URL that point to a specific resource like a web page
 or a file. User can access the resource directly through the URL without
-further navigation (ie. bypassing "home" or "portal" page).
+further navigation (i.e.. bypassing "home" or "portal" page).
 
 Why is Deep Linking Important
 -----------------------------
@@ -40,7 +40,7 @@ only be triggered to shown by script will be ignored by (most of the)
 search engines. So deep linking has its value of SEO.
 
 To conclude, it is the matter of usability. Wherever the deep links are
-presented, eg. bookmark menu, search results, they are more usable since
+presented, e.g.. bookmark menu, search results, they are more usable since
 they are more likely to satisfy users' needs and nearly all web-related
 software works with deep links since it is the architecture of the web.
 
@@ -48,7 +48,7 @@ The Situation of AJAX
 ---------------------
 
 Since the contents of AJAX sites are loaded by script in client side,
-they do not own a URL by default. ie. There is no deep link to that
+they do not own a URL by default. i.e.. There is no deep link to that
 loaded content. It is a product of what AJAX intended to do: to prevent
 reloading of the whole page.
 
@@ -60,7 +60,7 @@ the change of URL but not the change of content.
 Most of the time it does not matter since the loaded content is very
 small and subtle, for example validation of forms or log in result or
 hot posts. They are not the main content of the page so no deep link is
-reasonable.But if there are some cases that the main content is loaded
+reasonable. But if there are some cases that the main content is loaded
 by AJAX, deep linking should be implemented.
 
 * * * * *

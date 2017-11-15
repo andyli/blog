@@ -41,7 +41,7 @@ It's a bit long, but really informative:
 > 
 > The creative process starts
 > with studying the visual elements of the painting (twilight sky, bridge,
-> scream head, etc.) and analyzes the image’s composition (curves, depth
+> scream head, etc.) and analyses the image’s composition (curves, depth
 > and perspectives) in relations to the anguish and fearful emotional
 > expressions. With aids from precious computation, the painting was
 > translated into 3D pixels then later replaced with 3mm metal balls.
