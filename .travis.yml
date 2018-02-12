@@ -17,7 +17,7 @@ install:
   -   wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip
   -   unzip -qq google-cloud-sdk.zip
   -   google-cloud-sdk/install.sh --usage-reporting false --path-update false --rc-path=~/.bashrc --bash-completion false
-  -   google-cloud-sdk/bin/gcloud --quiet components install app-engine-python
+  -   google-cloud-sdk/bin/gcloud --quiet components install app-engine-python app-engine-python-extras
   -   google-cloud-sdk/bin/gcloud --quiet components update
   -   google-cloud-sdk/bin/gcloud --quiet components list
   #   https://code.google.com/p/google-cloud-sdk/issues/detail?id=321
