@@ -433,6 +433,7 @@ neash.Timer.CheckTimers
 Event.ENTER
 _FRAME
 mStage.Broadcast
+Event.ENTER_FRAME
  - content/posts/2010/2010-04-06_casahx-casa-lib-for-haxe.md
 casahx-casa-lib-for-haxe
  - content/posts/2010/2010-04-13_canvasblock-a-gm-script-to-block-canvas-tag-should-we-or-can-we.md
@@ -559,6 +560,7 @@ cwaneck
 Javadoc
 _Emann
 razaina
+Dr_Emann
  - content/posts/2012/2012-07-08_haxe-tips-better-untyped-expression.md
 tl
 dr
@@ -649,6 +651,7 @@ Eich
 monomorph
 CommonJS
 Non-JS
+tink_lang
  - content/posts/2015/2015-10-05_debian_package_and_ubuntu_ppa_for_haxe.md
 eyecreate
 PPAs
@@ -661,4 +664,5 @@ Tumbleweed
  - content/posts/2016/2016-02-02_haxe_packages_arrived_at_official_arch_linux_and_opensuse_repos.md
 Rødseth
  - content/pages/about.md
+my_software
 _software
